@@ -6,18 +6,19 @@ module.exports = function(grunt) {
   require('time-grunt')(grunt);
 
   var jsFileList = [
-    'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js',
-    'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js',
-    'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/button.js',
-    'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js',
-    'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js',
-    'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js',
-    'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js',
-    'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js',
-    'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js',
-    'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js',
-    'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js',
-    'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js',
+    // 'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js',
+    // 'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js',
+    // 'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/button.js',
+    // 'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js',
+    // 'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js',
+    // 'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js',
+    // 'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js',
+    // 'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js',
+    // 'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js',
+    // 'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js',
+    // 'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js',
+    // 'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js',
+    'assets/vendor/isotope/dist/isotope.pkgd.min.js',
     'assets/js/plugins/*.js',
     'assets/js/_*.js'
   ];
