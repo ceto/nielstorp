@@ -22,6 +22,15 @@ function roots_setup() {
   // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
   // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
+  
+  add_image_size('large31',1500, 500, true);
+  add_image_size('medium31',1200, 400, true);
+  add_image_size('small31', 768, 256, true);
+
+
+  add_image_size('small11',768, 768, true);
+  add_image_size('tiny11',480, 480, true);
+
 
   // Add post formats
   // http://codex.wordpress.org/Post_Formats

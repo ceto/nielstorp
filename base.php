@@ -1,7 +1,7 @@
 <?php get_template_part('templates/head'); ?>
 <body <?php body_class(); ?>>
 
-  <!--[if lt IE 8]>
+  <!--[if lt IE 9]>
     <div class="alert alert-warning">
       <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'roots'); ?>
     </div>
@@ -17,11 +17,11 @@
       <main class="main" role="main">
         <?php include roots_template_path(); ?>
       </main><!-- /.main -->
-      <?php if (roots_display_sidebar()) : ?>
+      <?php/* if (roots_display_sidebar()) : ?>
         <aside class="sidebar" role="complementary">
           <?php include roots_sidebar_path(); ?>
         </aside><!-- /.sidebar -->
-      <?php endif; ?>
+      <?php endif; */?>
     </div><!-- /.content -->
   </div><!-- /.wrap -->
 

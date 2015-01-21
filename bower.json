@@ -18,6 +18,7 @@
     "bootstrap-sass-official": "3.3.3",
     "respond": "1.4.2",
     "normalize.css": "3.0.2",
-    "isotope": "2.1"
+    "isotope": "2.1",
+    "ionicons": "2.0.1"
   }
 }

@@ -1,6 +1,7 @@
 /*============ Colors Definition ===========*/
 
-
+$nt-white:#dcdcdc;
+$nt-black:#2E2F2C;
 
 
 
@@ -12,7 +13,7 @@
 /*============= Fonts Definition =================*/
 
 $serif: Georgia, serif;
-$sans-serif: 'Museo Sans', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+$sans-serif: 'Open Sans', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
 
 
 /*============ Breakpoints Definition ==========*/
@@ -24,3 +25,10 @@ $s3: 1024px;
 $s4: 1280px;
 $s5: 1600px;
 $maximum: $s5;
+
+
+
+$em2: 20em;
+$em3: 32em;
+$em4: 48em;
+$em5: 64em;
