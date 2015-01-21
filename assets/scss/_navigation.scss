@@ -1,0 +1,177 @@
+.navbar {
+  @include clearfix();
+}
+
+.navbar__header {
+  @include bp($s2) {
+    float: left;
+  }
+}
+
+.navbar__brand {
+  display: block;
+
+  width: 193px;
+  height: 29px;
+  margin: .5em 0;
+
+  background-image: url('../img/logo_mini.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+
+  @include hide-text();
+  @include bp($s4) {
+    width: 439px;
+    height: 30px;
+
+    background-image: url('../img/logo_full.png');
+  }
+}
+
+.navbar__toggle {
+  display: block;
+  float: right;
+  float: right;
+
+  width: 30px;
+  height: 30px;
+
+  text-align: right;
+
+  @include bp($s2) {
+    display: none;
+  }
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+  i {
+    font-size: 30px;
+    //margin-top: -5px;
+  }
+}
+
+
+
+/******** MAin Navigation ******/
+.nav--main {
+  margin: 0 -0.5em;
+  padding: 0 0;
+
+  @include clearfix();
+  @include bp($s2) {
+    float: right;
+    margin:0 0;
+    padding:0 0;
+  }
+  li {
+    font-size: 1.5em;
+    line-height: 1;
+
+    margin: 0 0 1px;
+    padding: 0;
+
+    list-style-type: none;
+
+    text-align: center;
+
+    color: $nt-white;
+
+    @include bp($s2) {
+      font-size: 1em;
+
+
+      float: left;
+			
+			margin-bottom: 0;
+      margin-left: .333em;
+    }
+    @include bp($s4) {
+      font-size: 1.125em;
+    }
+    &.active,
+    &:hover,
+    &:focus {
+      color: $nt-black;
+      background-color: $nt-white;
+    }
+    > a {
+      display: block;
+
+      padding: .875em .666em;
+
+      text-decoration: none;
+      text-transform: uppercase;
+
+      color: inherit;
+      &:hover,
+      &:focus {
+        color: inherit;
+        background-color: inherit;
+      }
+    }
+  }
+}
+
+
+
+/******* Sub Navigation *******/
+
+.nav--sub {
+  margin: 0 -0.5em;
+  padding: 0 0;
+
+  @include clearfix();
+  @include bp($s2) {
+    float: right;
+    margin:0 0;
+    padding:0 0;
+  }
+  li {
+    font-size: 1em;
+    line-height: 1;
+
+    margin: 0 0 1px;
+    padding: 0;
+
+    list-style-type: none;
+
+    text-align: center;
+
+    color: $nt-white;
+
+    @include bp($s2) {
+      font-size: 1em;
+
+      float: left;
+      
+      margin-bottom: 0;
+      margin-left: .333em;
+    }
+    @include bp($s2) {
+      font-size: 0.875em;
+    }
+    &.active,
+    &:hover,
+    &:focus {
+      color: $nt-black;
+      background-color: $nt-white;
+    }
+    > a {
+      display: block;
+
+      padding: 1em .666em;
+
+      text-decoration: none;
+      text-transform: uppercase;
+
+      color: inherit;
+      &:hover,
+      &:focus {
+        color: inherit;
+        background-color: inherit;
+      }
+    }
+  }
+}
+
