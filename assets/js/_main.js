@@ -61,3 +61,60 @@ var UTIL = {
 $(document).ready(UTIL.loadEvents);
 
 })(jQuery); // Fully reference jQuery after this point.
+
+
+
+
+
+
+jQuery( document ).ready(function( $ ) {
+
+
+  var $container = $('#js-isotopegrid');
+  $container.isotope({
+    itemSelector: '.js-isotopeitem',
+    layoutMode: 'fitRows',
+    animationOptions: {
+      duration: 750,
+      easing: 'linear',
+      queue: false
+    }
+  });
+
+
+
+
+
+  $container.imagesLoaded( function() {
+    $container.isotope('layout');
+    $('.js-isotopegrid').addClass('is-loaded');
+
+  });
+
+// var $container = $('#js-isotopegrid').imagesLoaded( function() {
+//   $container.isotope({
+//     itemSelector: '.js-isotopeitem',
+//     layoutMode: 'fitRows',
+//     animationOptions: {
+//       duration: 750,
+//       easing: 'linear',
+//       queue: false
+//     }
+//   });
+
+// });
+
+  $('.js-isotopefilter__item a').click( function(e) {
+    e.preventDefault();
+    $('.js-isotopefilter__item').removeClass('active');
+    $(this).parent().addClass('active');
+    var filterValue = $(this).attr('data-filter-value');
+    $container.isotope({ filter: filterValue });
+  });
+});
+
+
+
+
+
+

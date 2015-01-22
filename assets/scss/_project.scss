@@ -4,7 +4,9 @@
 	}
 }
 .project__gallery {
+	margin:0 -1em 2em -1em;
 	@include bp($s2) {
+		margin:0 0 2em;
 		float:left;
 		width:66.666%;
 	}
@@ -16,42 +18,90 @@
 .project__header {
 	font-size: 0.875em;
 	@include bp($s2) {
+		font-size: 0.75em;
 		float:left;
 		width:33.333%;
-		padding-left: 2em;
+		padding-left: 1.5em;
+	}
+	@include bp($s3) {
+		font-size: 0.875em;
+		padding-left: 2.5em;
+	}
+	@include bp($s4) {
+
+		//padding-left: 3em;
 	}
 	@include bp($s5) {
+		//font-size: 1em;
 		width:50%;
+		padding-left: 5em;
 	}
 }
 
 .project__title {
 	font-weight: 900;
+	font-size: 2.25em;
+	line-height: 1;
+	margin:0 0 1.5em;
 }
 
 .project__content {	
 	@include clearfix();
 	margin: 1em 0 0;
+	font-size: 0.875em;
 
 	clear:both;
 	@include bp($s2) {
-		font-size: 0.875em;
+		
 		max-width: 66.666%;
 	}	
 	@include bp($s5) {
-		font-size: 0.875em;
+		//font-size: 1em;
 		clear:none;
 		float:left;
 		width:50%;
-		padding-left: 2em;
+		padding-left: 5em;
+	}
+	
+	.pd {
+		margin-top: 0;
+		font-size: 1.25em;
+	}
+}
+
+.project__params {
+	line-height: 1.4;
+
+}
+
+.param__title{
+	font-size: 1.25em;
+	margin:0 0 1em;
+}
+.param__item {
+	margin:0 0 0.5em;
+	span {
+		font-weight: 700;	
 	}
 }
 
 
-
+.project__related {
+	margin: 2em 0 4em;
+	.related__title {
+		font-weight: 300;
+		font-size: 1.125em;
+		margin:0 0 1em;
+	}
+}
 
 
 /********** Squared style *******/
+
+
+.projectgrid {
+
+}
 
 .projectsquare {
 	@include clearfix();
@@ -75,12 +125,14 @@
 }
 
 .projectsquare__figure {
-	
+	height: 0;
+	padding-top: 100%;
 	a {
 
 	}
 	img {
 		display: block;
+		margin-top:-100%;
 	}
 }
 

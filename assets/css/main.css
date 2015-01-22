@@ -2550,18 +2550,22 @@ td, th {
 .ion-xbox:before {
   content: "\f30c"; }
 
+html {
+  background-color: #2E2F2C; }
+
 body {
   background-color: #2E2F2C;
   color: #dcdcdc;
   font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
-  font-weight: 300; }
+  font-weight: 300;
+  line-height: 1.4; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   text-transform: uppercase; }
 
 .wrapper {
-  padding: 0 0.5em;
+  padding: 0 1em;
   margin: 0 auto; }
   .wrapper:before, .wrapper:after {
     content: " ";
@@ -2618,6 +2622,10 @@ figure {
 .alert {
   margin: 6em 0 1em; }
 
+.banner {
+  position: relative;
+  z-index: 9; }
+
 .sec__header {
   border-top: 1px solid #dcdcdc; }
 
@@ -2625,7 +2633,7 @@ figure {
   font-size: 1.333em;
   line-height: 1em;
   margin: 0;
-  padding: 0.5em 0; }
+  padding: 0.666em 0; }
 
 .navbar:before, .navbar:after {
   content: " ";
@@ -2749,7 +2757,7 @@ figure {
       background-color: #dcdcdc; }
     .nav--sub li > a {
       display: block;
-      padding: 1em 0.666em;
+      padding: 1.25em 0.666em;
       text-decoration: none;
       text-transform: uppercase;
       color: inherit; }
@@ -2774,7 +2782,7 @@ figure {
       padding: 0 17%; } }
 
 .post__figure {
-  margin: 0 -0.5em 1em; }
+  margin: 0 -1em 1em; }
   @media only screen and (min-width: 768px) {
     .post__figure {
       margin: 0 0 1em; } }
@@ -2825,30 +2833,43 @@ figure {
   .project--single {
     margin-top: 2em; } }
 
-@media only screen and (min-width: 768px) {
-  .project__gallery {
-    float: left;
-    width: 66.666%; } }
-@media only screen and (min-width: 1600px) {
-  .project__gallery {
-    width: 50%; } }
+.project__gallery {
+  margin: 0 -1em 2em -1em; }
+  @media only screen and (min-width: 768px) {
+    .project__gallery {
+      margin: 0 0 2em;
+      float: left;
+      width: 66.666%; } }
+  @media only screen and (min-width: 1600px) {
+    .project__gallery {
+      width: 50%; } }
 
 .project__header {
   font-size: 0.875em; }
   @media only screen and (min-width: 768px) {
     .project__header {
+      font-size: 0.75em;
       float: left;
       width: 33.333%;
-      padding-left: 2em; } }
+      padding-left: 1.5em; } }
+  @media only screen and (min-width: 1024px) {
+    .project__header {
+      font-size: 0.875em;
+      padding-left: 2.5em; } }
   @media only screen and (min-width: 1600px) {
     .project__header {
-      width: 50%; } }
+      width: 50%;
+      padding-left: 5em; } }
 
 .project__title {
-  font-weight: 900; }
+  font-weight: 900;
+  font-size: 2.25em;
+  line-height: 1;
+  margin: 0 0 1.5em; }
 
 .project__content {
   margin: 1em 0 0;
+  font-size: 0.875em;
   clear: both; }
   .project__content:before, .project__content:after {
     content: " ";
@@ -2857,15 +2878,35 @@ figure {
     clear: both; }
   @media only screen and (min-width: 768px) {
     .project__content {
-      font-size: 0.875em;
       max-width: 66.666%; } }
   @media only screen and (min-width: 1600px) {
     .project__content {
-      font-size: 0.875em;
       clear: none;
       float: left;
       width: 50%;
-      padding-left: 2em; } }
+      padding-left: 5em; } }
+  .project__content .pd {
+    margin-top: 0;
+    font-size: 1.25em; }
+
+.project__params {
+  line-height: 1.4; }
+
+.param__title {
+  font-size: 1.25em;
+  margin: 0 0 1em; }
+
+.param__item {
+  margin: 0 0 0.5em; }
+  .param__item span {
+    font-weight: 700; }
+
+.project__related {
+  margin: 2em 0 4em; }
+  .project__related .related__title {
+    font-weight: 300;
+    font-size: 1.125em;
+    margin: 0 0 1em; }
 
 /********** Squared style *******/
 .projectsquare {
@@ -2892,8 +2933,12 @@ figure {
     .projectsquare {
       width: 16.666%; } }
 
-.projectsquare__figure img {
-  display: block; }
+.projectsquare__figure {
+  height: 0;
+  padding-top: 100%; }
+  .projectsquare__figure img {
+    display: block;
+    margin-top: -100%; }
 
 .projectsquare__datapanel {
   position: absolute;
@@ -2921,4 +2966,22 @@ figure {
 .projectsquare__details {
   margin: 0.5em 0;
   font-size: 0.875em; }
+
+.home {
+  min-height: 100vh;
+  background-image: url('../img/hero_small.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; }
+  @media only screen and (min-width: 1024px) {
+    .home {
+      background-image: url('../img/hero.jpg'); } }
+
+.home__banner {
+  min-height: 3em;
+  background-color: #2E2F2C;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; }
 /*# sourceMappingURL=main.css.map */

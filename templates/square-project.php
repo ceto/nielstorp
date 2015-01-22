@@ -1,4 +1,16 @@
-<article <?php post_class('projectsquare'); ?>>
+<?php
+  $termik = array();
+  $ures = array();
+  $nagytermlist=array_merge(
+    get_the_terms( $post->ID, 'projects' )?get_the_terms( $post->ID, 'projects' ):$ures
+  );
+  foreach ( $nagytermlist as $term ) { $termik[] = $term->slug; }
+  $projcat=join(" ", $termik );
+?>
+  
+
+
+<article <?php post_class($projcat.' js-isotopeitem projectsquare'); ?>>
   
   <figure class="projectsquare__figure">
   	<a href="<?php the_permalink(); ?>">

@@ -19,6 +19,7 @@
     "respond": "1.4.2",
     "normalize.css": "3.0.2",
     "isotope": "2.1",
-    "ionicons": "2.0.1"
+    "ionicons": "2.0.1",
+    "imagesloaded": "3.1.8"
   }
 }

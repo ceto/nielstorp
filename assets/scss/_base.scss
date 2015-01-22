@@ -1,8 +1,12 @@
+html {
+  background-color: $nt-black;
+}
 body {
 	background-color: $nt-black;
 	color: $nt-white;
 	font-family: $sans-serif;
 	font-weight: 300;
+  line-height: 1.4;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -13,7 +17,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .wrapper {
 	@include clearfix();
-	padding:0 0.5em;
+	padding:0 1em;
 	margin:0 auto;
 	@include bp($s2) {
     padding: 0 2em;

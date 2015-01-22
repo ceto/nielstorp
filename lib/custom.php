@@ -34,6 +34,7 @@ function nt_project_init() {
 		'has_archive'        => 'projects',
 		'hierarchical'       => false,
 		'menu_position'      => null,
+		'yarpp_support'			 => true,
 		'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' )
 	);
 
@@ -103,6 +104,11 @@ function nt_project_metaboxes( array $meta_boxes ) {
 		// 'cmb_styles' => false, // false to disable the CMB stylesheet
 		'fields'        => array(
 			array(
+				'name' => __( 'Subtitle', 'nielstorp' ),
+				'id'   => $prefix . 'subtitle',
+				'type' => 'text',
+			),
+			array(
 				'name' => __( 'Location', 'nielstorp' ),
 				'id'   => $prefix . 'location',
 				'type' => 'text',
@@ -115,7 +121,7 @@ function nt_project_metaboxes( array $meta_boxes ) {
 			array(
 				'name' => __( 'Client', 'nielstorp' ),
 				'id'   => $prefix . 'client',
-				'type' => 'text_small',
+				'type' => 'text_medium',
 			),
 			array(
 				'name' => __( 'Client URL', 'nielstorp' ),
@@ -259,3 +265,36 @@ function nt_post_class($classes) {
   return $classes;
 }
 add_filter('post_class', 'nt_post_class');
+
+
+
+
+
+
+function nt_modify_num_projempl($query)
+{
+    if ( ($query->is_main_query()) && ($query->is_tax('projects') || $query->is_tax('department') || $query->is_post_type_archive(array('project','employee')) ) && (!is_admin()) ) {
+      $query->set('posts_per_page', -1);
+      if ( !($query->is_category() ) ) {
+        $query->set('orderby', 'title');
+        $query->set('order', 'ASC');
+      }
+
+      
+    }
+
+}
+ 
+add_action('pre_get_posts', 'nt_modify_num_projempl');
+
+
+
+# Deregister style files
+function nt_DequeueYarppStyle()
+{
+  wp_dequeue_style('yarppRelatedCss');
+  wp_deregister_style('yarppRelatedCss');
+}
+add_action('wp_footer', 'nt_DequeueYarppStyle');
+
+
