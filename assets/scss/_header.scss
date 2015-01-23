@@ -7,8 +7,14 @@
 }
 
 .sec__header__title {
-	font-size: 1.333em;
+	font-size: 1.125em;
 	line-height: 1em;
 	margin:0;
 	padding:0.666em 0;
+	@include bp($s2) {
+		float:left;
+	}
+	@include bp($s3) {
+		font-size:1.333em;
+	}
 }

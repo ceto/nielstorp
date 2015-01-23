@@ -111,6 +111,44 @@ jQuery( document ).ready(function( $ ) {
     var filterValue = $(this).attr('data-filter-value');
     $container.isotope({ filter: filterValue });
   });
+
+
+
+
+  /******** Masterslider ******/
+
+
+    $('#project__theslider').masterslider({
+      width:1920,    // slider standard width
+      height:1024,   // slider standard height
+      space:0,
+      preload:3,
+      autoplay:true,
+      fullwidth:true,
+      autoHeight:true,
+      view:"fade",
+      layout:"boxed",
+      controls : {
+          arrows : {autohide:true},
+          thumblist : {
+            autohide:false,
+            inset:false,
+            width:160,
+            height:90,
+            space:20
+          }
+      }
+    });
+
+
+
+  $('.fulltoggle').click( function(e) {
+    e.preventDefault();
+    $('.project--single').toggleClass('fullgallery--shown');
+    $('#project__theslider').masterslider('setup');
+  });
+ 
+
 });
 
 

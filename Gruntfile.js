@@ -20,6 +20,7 @@ module.exports = function(grunt) {
     // 'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js',
     'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js',
     'assets/vendor/isotope/dist/isotope.pkgd.min.js',
+    'assets/vendor/masterslider/masterslider.js',
     'assets/js/plugins/*.js',
     'assets/js/_*.js'
   ];

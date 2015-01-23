@@ -1,5 +1,6 @@
 <div class="sec__header">
 	<div class="wrapper wrapper--wide">  
+			<h1 class="sec__header__title">Projects</h1>
 	  <ul class="nav nav--sub js-isotopefilter">
 		
 		<li class="js-isotopefilter__item filter__item-all active">
@@ -19,6 +20,6 @@
 
 
 		</ul>
-		<h1 class="sec__header__title">Projects</h1>
+
 	</div>
 </div>

@@ -2,8 +2,37 @@
   <article <?php post_class('project--single'); ?>>
   <div class="wrapper wrapper--wide">
     <section class="project__gallery">
-      <?php the_post_thumbnail('medium11') ?>
+			
+			<?php 
+				$galleryfiles = get_post_meta( $post->ID , '_pdata_gallery', 1 );
+				if ($galleryfiles!='') {
+			?>
+        <a href="#" class="fulltoggle"><i class="ion ion-arrow-resize"></i></a>
+				<div class="project__theslider master-slider ms-skin-default" id="project__theslider">
+					<?php foreach ( (array) $galleryfiles as $attachment_id => $attachment_url ) { ?>
+						<?php 
+							$image_url_array = wp_get_attachment_image_src($attachment_id, 'full', true);
+							$image_url = $image_url_array[0];
+							$thumb_url_array = wp_get_attachment_image_src($attachment_id, 'tiny169', true);
+							$thumb_url = $thumb_url_array[0];
+						?>
+
+						<div class="ms-slide">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/vendor/masterslider/blank.gif" data-src="<?php echo $image_url; ?>" alt="<?php the_title(); ?>"/>
+							<img src="<?php echo $thumb_url; ?>" width="480" height="270" alt="<?php the_title(); ?>" class="ms-thumb"/>
+							<div class="ms-info"><?php the_title(); ?></div>
+						</div>
+					<?php } ?>
+				</div>
+			<?php } else { the_post_thumbnail('large169'); } ?>
+		
+
+
+
     </section>
+
+
+
 
     <header class="project__header">
       <h1 class="project__title"><?php the_title(); ?></h1>

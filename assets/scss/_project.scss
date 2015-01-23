@@ -4,6 +4,8 @@
 	}
 }
 .project__gallery {
+//	transition: width .6s ease;
+
 	margin:0 -1em 2em -1em;
 	@include bp($s2) {
 		margin:0 0 2em;
@@ -13,13 +15,35 @@
 	@include bp($s5) {
 		width:50%;
 	}
+
+	@include bp($s2) {
+		.fullgallery--shown & {
+			width:100%;
+			float:none;
+		}
+	}
+
+	.fulltoggle {
+		position: absolute;
+		right:0.5em;
+		top:0.5em;
+		z-index: 11;
+		color:$nt_white;
+		font-size: 2em;
+		line-height: 1;
+		text-decoration: none;
+		display: none;
+		@include bp($s2) {
+			display: block;
+		}
+	}
 }
 
 .project__header {
 	font-size: 0.875em;
 	@include bp($s2) {
 		font-size: 0.75em;
-		float:left;
+		float:right;
 		width:33.333%;
 		padding-left: 1.5em;
 	}
@@ -36,10 +60,12 @@
 		width:50%;
 		padding-left: 5em;
 	}
+
+
 }
 
 .project__title {
-	font-weight: 900;
+	font-weight: 800;
 	font-size: 2.25em;
 	line-height: 1;
 	margin:0 0 1.5em;
@@ -50,17 +76,20 @@
 	margin: 1em 0 0;
 	font-size: 0.875em;
 
-	clear:both;
+	//clear:both;
 	@include bp($s2) {
 		
 		max-width: 66.666%;
 	}	
 	@include bp($s5) {
 		//font-size: 1em;
-		clear:none;
+		//clear:none;
 		float:left;
 		width:50%;
 		padding-left: 5em;
+		.fullgallery--shown & {
+			padding-left: 0;
+		}
 	}
 	
 	.pd {

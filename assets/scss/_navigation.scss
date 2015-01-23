@@ -11,15 +11,21 @@
 .navbar__brand {
   display: block;
 
-  width: 193px;
-  height: 29px;
+  width: 148px;
+  height: 26px;
   margin: .5em 0;
 
   background-image: url('../img/logo_mini.png');
   background-repeat: no-repeat;
   background-position: left center;
+  background-size: 100% auto;
 
   @include hide-text();
+  
+  @include bp($s3) {
+    width: 175px;
+    height: 30px;
+  }
   @include bp($s4) {
     width: 439px;
     height: 30px;
@@ -28,9 +34,15 @@
   }
 }
 
+
+
+
+
+
+
+
 .navbar__toggle {
   display: block;
-  float: right;
   float: right;
 
   width: 30px;
@@ -47,25 +59,56 @@
   }
   i {
     font-size: 30px;
-    //margin-top: -5px;
+    margin-top: -2px;
+  }
+}
+
+input[type="checkbox"]#nav__toggle {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+
+  &:checked + .navbar__navigation {
+    height: auto;
+    visibility:visible;
+    opacity:1;
+  }
+}
+
+.navbar__navigation {
+  height: 0;
+  visibility: hidden; 
+  opacity:0;
+  overflow: hidden;
+  margin: 0 -1em;
+  
+  @include bp($s2) {
+    margin:0 0;
+    height: auto;
+    visibility:visible;
+    opacity:1;
   }
 }
 
 
 
+
 /******** MAin Navigation ******/
+
+
 .nav--main {
-  margin: 0 -0.5em;
+  margin: 0 0em;
   padding: 0 0;
 
   @include clearfix();
   @include bp($s2) {
     float: right;
-    margin:0 0;
-    padding:0 0;
   }
   li {
-    font-size: 1.5em;
+    font-size: 1.333em;
     line-height: 1;
 
     margin: 0 0 1px;
@@ -78,7 +121,7 @@
     color: $nt-white;
 
     @include bp($s2) {
-      font-size: 1em;
+      font-size: 0.875em;
 
 
       float: left;
@@ -86,8 +129,12 @@
 			margin-bottom: 0;
       margin-left: .333em;
     }
+    @include bp($s3) {
+      font-size: 1em;
+    }
+
     @include bp($s4) {
-      font-size: 1.125em;
+      font-size: 1em;
     }
     &.active,
     &:hover,
@@ -98,7 +145,7 @@
     > a {
       display: block;
 
-      padding: .875em .666em;
+      padding: 1em .666em;
 
       text-decoration: none;
       text-transform: uppercase;
@@ -118,7 +165,7 @@
 /******* Sub Navigation *******/
 
 .nav--sub {
-  margin: 0 -0.5em;
+  margin: 0 0;
   padding: 0 0;
 
   @include clearfix();
@@ -128,10 +175,11 @@
     padding:0 0;
   }
   li {
-    font-size: 1em;
+    font-size: 0.75em;
     line-height: 1;
+    display: inline-block;
 
-    margin: 0 0 1px;
+    margin: 0 -1px 1px;
     padding: 0;
 
     list-style-type: none;
@@ -141,16 +189,22 @@
     color: $nt-white;
 
     @include bp($s2) {
-      font-size: 1em;
+      font-size: 0.75em;
 
       float: left;
-      
+      margin-right: 0;
       margin-bottom: 0;
-      margin-left: .333em;
+      margin-left: 1px;
+      display: block;
     }
-    @include bp($s2) {
+
+    @include bp($s3) {
       font-size: 0.875em;
     }
+
+
+
+
     &.active,
     &:hover,
     &:focus {

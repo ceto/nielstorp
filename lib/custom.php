@@ -140,6 +140,13 @@ function nt_project_metaboxes( array $meta_boxes ) {
 				'id'   => $prefix . 'built',
 				'type' => 'text_small',
 			),
+			array(
+				'name' => 'Photo Gallery',
+				'desc' => 'Add some high resolution project photo. You can select multiple files from the popup',
+				'id' => $prefix . 'gallery',
+				'type' => 'file_list',
+				'preview_size' => array( 160, 90 ), 
+			),
 
 		),
 	);
