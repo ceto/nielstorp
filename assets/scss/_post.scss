@@ -64,9 +64,7 @@
 
 .post__meta {
 	font-size: 0.875em;
-	p {
-		margin:0;
-	}
+	font-style: italic;
 	a {
 		color:inherit;
 		text-decoration: none;
@@ -74,5 +72,46 @@
 		&:hover, &:focus {
 			border-bottom-color:$nt-white;
 		}
+	}
+}
+
+.meta__author {
+	display: inline;
+	margin:0;
+	padding:0;
+	margin-right: 0.5em;
+}
+
+.meta__categories {
+	margin:0;
+	padding:0;
+	display: inline;
+
+	li {
+		list-style-type: none;
+		margin:0;
+		padding:0;
+		display: inline;
+		&:after {
+			content:', ';
+		}
+		&:last-of-type:after {
+			content:'';
+		}
+	}
+}
+
+
+
+.gallery {
+	margin:2em -1em;
+	@include bp($s2) {
+		margin:2em -16%;
+	}
+	@include bp($s3) {
+		margin:2em -22%;
+	}
+	@include bp($s4) {
+		margin:2em -26%;
 	}
 }

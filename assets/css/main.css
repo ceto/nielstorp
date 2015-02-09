@@ -2795,7 +2795,7 @@ input[type="checkbox"]#nav__toggle {
     @media only screen and (min-width: 1024px) {
       .nav--sub li {
         font-size: 0.875em; } }
-    .nav--sub li.active, .nav--sub li:hover, .nav--sub li:focus {
+    .blog .nav--sub li.cat-item-all, .nav--sub li.current-cat, .nav--sub li.active, .nav--sub li:hover, .nav--sub li:focus {
       color: #2E2F2C;
       background-color: #dcdcdc; }
     .nav--sub li > a {
@@ -2862,15 +2862,46 @@ input[type="checkbox"]#nav__toggle {
       margin-top: 0; } }
 
 .post__meta {
-  font-size: 0.875em; }
-  .post__meta p {
-    margin: 0; }
+  font-size: 0.875em;
+  font-style: italic; }
   .post__meta a {
     color: inherit;
     text-decoration: none;
     border: 1px solid transparent; }
     .post__meta a:hover, .post__meta a:focus {
       border-bottom-color: #dcdcdc; }
+
+.meta__author {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  margin-right: 0.5em; }
+
+.meta__categories {
+  margin: 0;
+  padding: 0;
+  display: inline; }
+  .meta__categories li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline; }
+    .meta__categories li:after {
+      content: ', '; }
+    .meta__categories li:last-of-type:after {
+      content: ''; }
+
+.gallery {
+  margin: 2em -1em; }
+  @media only screen and (min-width: 768px) {
+    .gallery {
+      margin: 2em -16%; } }
+  @media only screen and (min-width: 1024px) {
+    .gallery {
+      margin: 2em -22%; } }
+  @media only screen and (min-width: 1280px) {
+    .gallery {
+      margin: 2em -26%; } }
 
 @media only screen and (min-width: 768px) {
   .project--single {
@@ -3669,7 +3700,7 @@ input[type="checkbox"]#nav__toggle {
   margin-left: -1px; }
 
 /* retina */
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .ms-skin-default .ms-slide .ms-slide-vpbtn, .ms-skin-default .ms-video-btn, .ms-skin-default .ms-slide .ms-slide-vcbtn, .ms-skin-default .ms-nav-next, .ms-skin-default .ms-nav-prev, .ms-skin-default .ms-bullet {
     background-image: url(../vendor/masterslider/skins/jbv/light-skin-1-retina.png);
     background-size: 152px 225px; }

@@ -41,10 +41,10 @@ function roots_gallery($attr) {
     'icontag'    => '',
     'captiontag' => '',
     'columns'    => 4,
-    'size'       => 'thumbnail',
+    'size'       => 'tiny169',
     'include'    => '',
     'exclude'    => '',
-    'link'       => ''
+    'link'       => 'none'
   ), $attr));
 
   $id = intval($id);
@@ -113,11 +113,130 @@ function roots_gallery($attr) {
 
   return $output;
 }
-if (current_theme_supports('bootstrap-gallery')) {
-  remove_shortcode('gallery');
-  add_shortcode('gallery', 'roots_gallery');
-  add_filter('use_default_gallery_style', '__return_null');
+
+
+
+/**
+ * Clean up gallery_shortcode()
+ *
+ * Re-create the [gallery] shortcode and use thumbnails styling from Bootstrap
+ * The number of columns must be a factor of 12.
+ *
+ * @link http://getbootstrap.com/components/#thumbnails
+ */
+function nt_gallery($attr) {
+  $post = get_post();
+
+  static $instance = 0;
+  $instance++;
+
+  if (!empty($attr['ids'])) {
+    if (empty($attr['orderby'])) {
+      $attr['orderby'] = 'post__in';
+    }
+    $attr['include'] = $attr['ids'];
+  }
+
+  $output = apply_filters('post_gallery', '', $attr);
+
+  if ($output != '') {
+    return $output;
+  }
+
+  if (isset($attr['orderby'])) {
+    $attr['orderby'] = sanitize_sql_orderby($attr['orderby']);
+    if (!$attr['orderby']) {
+      unset($attr['orderby']);
+    }
+  }
+
+  extract(shortcode_atts(array(
+    'order'      => 'ASC',
+    'orderby'    => 'menu_order ID',
+    'id'         => $post->ID,
+    'itemtag'    => '',
+    'icontag'    => '',
+    'captiontag' => '',
+    'columns'    => 4,
+    'size'       => 'tiny169',
+    'include'    => '',
+    'exclude'    => '',
+    'link'       => ''
+  ), $attr));
+
+  $id = intval($id);
+
+
+  if ($order === 'RAND') {
+    $orderby = 'none';
+  }
+
+  if (!empty($include)) {
+    $_attachments = get_posts(array('include' => $include, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby));
+
+    $attachments = array();
+    foreach ($_attachments as $key => $val) {
+      $attachments[$val->ID] = $_attachments[$key];
+    }
+  } elseif (!empty($exclude)) {
+    $attachments = get_children(array('post_parent' => $id, 'exclude' => $exclude, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby));
+  } else {
+    $attachments = get_children(array('post_parent' => $id, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby));
+  }
+
+  if (empty($attachments)) {
+    return '';
+  }
+
+  if (is_feed()) {
+    $output = "\n";
+    foreach ($attachments as $att_id => $attachment) {
+      $output .= wp_get_attachment_link($att_id, $size, true) . "\n";
+    }
+    return $output;
+  }
+
+  $unique = (get_query_var('page')) ? $instance . '-p' . get_query_var('page'): $instance;
+  $output = '<div class="gallery gallery-' . $id . '-' . $unique . '">';
+  $output .='<div class="gallery__theslider master-slider ms-skin-default">'."\n";
+
+  $i = 0;
+  foreach ($attachments as $id => $attachment) {
+    $fullimage =wp_get_attachment_image_src( $id, 'full', false);
+    switch($link) {
+      default:
+        $image = wp_get_attachment_image($id, $size, false, array('class' => 'ms-thumb thumbnail img-thumbnail',  ));
+        break;
+    }
+    $image = '<img src="'.get_stylesheet_directory_uri().'/assets/vendor/masterslider/blank.gif" data-src="'.$fullimage['0'].'"/>'." \n".$image;
+
+    $output .= '<div class="ms-slide">'." \n". $image;
+
+    if (trim($attachment->post_excerpt)) {
+      $output .= '<div class="ms-info">' . wptexturize($attachment->post_excerpt) . '</div>';
+    }
+
+    $output .= " \n".'</div>'. "\n";
+    $i++;
+
+  }
+
+  $output .= '</div>'. "\n";
+
+  return $output;
 }
+
+remove_shortcode('gallery');
+add_shortcode('gallery', 'nt_gallery');
+add_filter('use_default_gallery_style', '__return_null');
+
+
+
+
+
+
+
+
 
 /**
  * Add class="thumbnail img-thumbnail" to attachment items
