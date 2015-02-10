@@ -128,32 +128,61 @@
 /********** Squared style *******/
 
 
-.projectgrid {
+.projectgrid, .employeegrid {
+	margin:0 0.5%;
+	margin-top:-1%;
+	@include bp($s1) {
+		margin:0 0.25%;
+		margin-top:-0.5%;
 
+	}
+	@include bp($s2) {
+		margin:0 0.25%;
+		margin-top:-0.5%;
+	}
+	@include bp($s3) {
+		margin:0 0.1666%;
+		margin-top:-0.333%;
+	}
+	@include bp($s5) {
+		margin:0 0.125%;
+		margin-top:-0.25%;
+	}
 }
 
-.projectsquare {
+.square {
 	@include clearfix();
 	position: relative;
-	width:50%;
+	//width:50%;
+	width:48%;
+	margin:1%;
+
 	float:left;
 	background-color: black;
 	overflow:hidden;
 	@include bp($s1) {
-		width:33.333%;
+		//width:33.333%;
+		width:32.333%;
+		margin:0.5%;
 	}
 	@include bp($s2) {
-		width:25%;
+		//width:25%;
+		width:24%;
+		margin:0.5%;
 	}
 	@include bp($s3) {
-		width:20%;
+		//width:20%;
+		width:19.333%;
+		margin:0.333%;
 	}
 	@include bp($s5) {
-		width:16.666%;
+		//width:16.666%;
+		width:16.1666%;
+		margin:0.25%;
 	}
 }
 
-.projectsquare__figure {
+.square__figure {
 	height: 0;
 	padding-top: 100%;
 	a {
@@ -162,10 +191,12 @@
 	img {
 		display: block;
 		margin-top:-100%;
+		width:100%;
+		height:auto;
 	}
 }
 
-.projectsquare__datapanel {
+.square__datapanel {
 	position:absolute;
 	bottom:-100%;
 	left:0;
@@ -175,11 +206,11 @@
 	line-height: 1;
 
 
-	.projectsquare:hover &, .projectsquare:focus & {
+	.square:hover &, .square:focus & {
 		bottom:0;
 	}
 
-	a {
+	> a, .linka {
 		padding:0.75em 0.75em;
 		display: block;
 		color:inherit;
@@ -187,17 +218,25 @@
 	}
 }
 
-.projectsquare__title {
+.square__title {
 	margin:0;
 	padding:0;
 	color:$nt_white;
 	font-size: 1em;
 
-	text-transform: normal;
+	text-transform: nono;
 	
 }
 
-.projectsquare__details {
+.square__details {
 	margin:0.5em 0;
 	font-size: 0.875em;
+	line-height: 1.125;
+	a {
+		color:inherit;
+		text-decoration: none;
+		&:hover, &:focus {
+			color:#fff;
+		}
+	}
 }

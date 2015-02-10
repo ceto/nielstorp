@@ -255,7 +255,7 @@ function nt_employee_metaboxes( array $meta_boxes ) {
 			),
 			array(
 				'name' => __( 'Telephone', 'nielstorp' ),
-				'id'   => $prefix . 'size',
+				'id'   => $prefix . 'tel',
 				'type' => 'text_medium',
 			),
 		)

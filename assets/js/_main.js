@@ -70,7 +70,7 @@ $(document).ready(UTIL.loadEvents);
 jQuery( document ).ready(function( $ ) {
 
 
-  var $container = $('#js-isotopegrid');
+  var $container = $('.js-isotopegrid');
   $container.isotope({
     itemSelector: '.js-isotopeitem',
     layoutMode: 'fitRows',

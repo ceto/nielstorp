@@ -4,7 +4,7 @@
 
 .navbar__header {
   @include bp($s2) {
-    float: left;
+    float: right;
   }
 }
 
@@ -105,7 +105,7 @@ input[type="checkbox"]#nav__toggle {
 
   @include clearfix();
   @include bp($s2) {
-    float: right;
+    float: left;
   }
   li {
     font-size: 1.333em;
@@ -127,7 +127,7 @@ input[type="checkbox"]#nav__toggle {
       float: left;
 			
 			margin-bottom: 0;
-      margin-left: .333em;
+      margin-right: .333em;
     }
     @include bp($s3) {
       font-size: 1em;
@@ -170,7 +170,7 @@ input[type="checkbox"]#nav__toggle {
 
   @include clearfix();
   @include bp($s2) {
-    float: right;
+    float: left;
     margin:0 0;
     padding:0 0;
   }
@@ -179,7 +179,7 @@ input[type="checkbox"]#nav__toggle {
     line-height: 1;
     display: inline-block;
 
-    margin: 0 -1px 1px;
+    margin: 0 0 1px 0;
     padding: 0;
 
     list-style-type: none;
@@ -194,7 +194,7 @@ input[type="checkbox"]#nav__toggle {
       float: left;
       margin-right: 0;
       margin-bottom: 0;
-      margin-left: 1px;
+      margin-right: 1px;
       display: block;
     }
 
