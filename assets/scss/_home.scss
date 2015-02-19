@@ -1,12 +1,14 @@
 .home {
-	min-height: 100vh;
-	background-image: url('../img/hero_small.jpg');
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-	@include bp($s3){
-		background-image: url('../img/hero.jpg');
+	.document {
+		background-image: url('../img/hero_small.jpg');
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		@include bp($s3){
+			background-image: url('../img/hero.jpg');
+		}
 	}
+
 }
 
 .home__banner {

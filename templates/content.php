@@ -5,6 +5,13 @@
 	  		<a href="<?php the_permalink(); ?>">
 					<?php the_post_thumbnail('large31'); ?>
 	  		</a>
+        <?php if (get_post_meta( $post->ID , '_postdata_video', 1 )) :?>
+          <div class="archive__icons">
+            <a class="popup--video" href="<?php echo get_post_meta( $post->ID , '_postdata_video', 1 ); ?>">
+              <i class="ion ion-ios-videocam"></i>
+            </a>
+          </div>
+        <?php endif; ?>
 	  	</figure>
   	</div>
     <div class="wrapper wrapper--wide">

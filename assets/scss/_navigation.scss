@@ -72,21 +72,25 @@ input[type="checkbox"]#nav__toggle {
   opacity: 0;
 
   &:checked + .navbar__navigation {
-    height: auto;
-    visibility:visible;
+    //height: auto;
+    height: 25em;
+    //visibility:visible;
     opacity:1;
   }
 }
 
 .navbar__navigation {
+  //min-height: 0;
   height: 0;
-  visibility: hidden; 
+  //visibility: hidden; 
   opacity:0;
   overflow: hidden;
   margin: 0 -1em;
-  
+  transition: opacity .2s ease-in, height .2s ease-in;
+
   @include bp($s2) {
     margin:0 0;
+    min-height: none;
     height: auto;
     visibility:visible;
     opacity:1;
@@ -162,6 +166,79 @@ input[type="checkbox"]#nav__toggle {
 
 
 
+
+/***** Filter Csuszat *****/
+
+
+
+
+@media only screen and (max-width: $s2) {
+
+  .subtoggler {
+    @include clearfix();
+    font-size: 1.125em;
+    line-height: 1em;
+    margin:0;
+    padding:0.666em 0.75em;
+    border-top: 1px solid $nt_white;
+    
+    a {
+      color:inherit;
+      text-decoration: none;
+    }
+
+    .subnav-toggle {
+  
+    }
+
+    .subtoggler__title {
+      text-transform: uppercase;
+      float:right;
+    }
+  }
+
+  .sec__header {
+    @include clearfix();
+    width:12em;
+    float:left;
+
+    transition: margin .4s ease;
+    
+    margin-left: -100%;
+    .subnav_isactive & {
+      margin-left: 0;
+    }
+
+  }
+
+
+  .csuszat {
+    position: relative;
+    @include clearfix();
+    min-height: 100vh;
+    
+    width: 100%;
+    margin: 0 auto;
+    
+    float:left;
+    
+    margin-right:0;
+    transition: margin .4s ease;
+    .subnav_isactive & {
+      margin-right: -100%;
+    }
+
+  }
+
+}
+
+
+.subtoggler {
+  @include bp($s2) {
+    display: none;
+  }
+}
+
 /******* Sub Navigation *******/
 
 .nav--sub {
@@ -177,18 +254,20 @@ input[type="checkbox"]#nav__toggle {
   li {
     font-size: 0.75em;
     line-height: 1;
-    display: inline-block;
+    display: block;
 
     margin: 0 0 1px 0;
     padding: 0;
 
     list-style-type: none;
 
-    text-align: center;
+    text-align: left;
 
     color: $nt-white;
 
     @include bp($s2) {
+      display: inline-block;
+      text-align: center;
       font-size: 0.75em;
 
       float: left;

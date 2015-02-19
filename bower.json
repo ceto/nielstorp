@@ -20,6 +20,7 @@
     "normalize.css": "3.0.2",
     "isotope": "2.1",
     "ionicons": "2.0.1",
-    "imagesloaded": "3.1.8"
+    "imagesloaded": "3.1.8",
+    "magnific-popup": "1.0.0"
   }
 }

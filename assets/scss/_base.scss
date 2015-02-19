@@ -50,6 +50,12 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 
+
+.document {
+  min-height: 100vh;
+  min-height: calc(100vh - 48px);
+}
+
 /****** Some Resets *****/
 
 

@@ -1,0 +1,21 @@
+.sitefooter {
+	@include clearfix();
+	clear:both;
+	
+	margin-top: 4em;
+	a {
+		color:$gray;
+		text-decoration: none;
+		border-bottom: 1px solid transparent;
+		&:hover, &:focus {
+			color:$nt-white;
+			border-bottom-color:currentColor;
+		}
+	}
+}
+
+.sitefooter__left {
+	padding:1em 0 2em;
+	border-top: 1px solid $gray	;
+	font-size: 0.875em;
+}

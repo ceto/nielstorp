@@ -12,7 +12,7 @@
     get_template_part('templates/header');
   ?>
 
-  <div class="wrap container" role="document">
+  <div class="document" role="document">
     <div class="content row">
       <main class="main" role="main">
         <?php include roots_template_path(); ?>

@@ -70,6 +70,27 @@ $(document).ready(UTIL.loadEvents);
 jQuery( document ).ready(function( $ ) {
 
 
+
+  $('.subnav-toggle').click(function(){
+    $( this ).toggleClass('active');
+    $('.sec__header').toggleClass('is_show');
+    $('body').toggleClass('subnav_isactive');
+  });
+
+
+
+    $('.popup--video, .popup--youtube, .popup--vimeo, .popup--gmaps').magnificPopup({
+      disableOn: 320,
+      type: 'iframe',
+      mainClass: 'mfp-fade',
+      removalDelay: 160,
+      preloader: false,
+
+      fixedContentPos: false
+    });
+
+
+
   var $container = $('.js-isotopegrid');
   $container.isotope({
     itemSelector: '.js-isotopeitem',
@@ -106,6 +127,9 @@ jQuery( document ).ready(function( $ ) {
 
   $('.js-isotopefilter__item a').click( function(e) {
     e.preventDefault();
+    $('body').removeClass('subnav_isactive');
+    $('.sec__header').removeClass('is_show');
+
     $('.js-isotopefilter__item').removeClass('active');
     $(this).parent().addClass('active');
     var filterValue = $(this).attr('data-filter-value');
@@ -172,6 +196,12 @@ jQuery( document ).ready(function( $ ) {
           }
       }
     });
+
+
+
+
+
+
 
 });
 

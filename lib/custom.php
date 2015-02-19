@@ -141,6 +141,18 @@ function nt_project_metaboxes( array $meta_boxes ) {
 				'type' => 'text_small',
 			),
 			array(
+				'name' => __( 'Project video', 'nielstorp' ),
+				'desc' => __( 'add a youtube/vimeo url (first slide in gallery)', 'nielstorp' ),
+				'id'   => $prefix . 'video',
+				'type' => 'text_url',
+			),
+			array(
+				'name' => __( 'Video start image', 'nielstorp' ),
+				'desc' => __( 'add a cover/start image for the video above (same aspect ratio)', 'nielstorp' ),
+				'id'   => $prefix . 'videoimg',
+				'type' => 'file',
+			),
+			array(
 				'name' => 'Photo Gallery',
 				'desc' => 'Add some high resolution project photo. You can select multiple files from the popup',
 				'id' => $prefix . 'gallery',
@@ -257,6 +269,33 @@ function nt_employee_metaboxes( array $meta_boxes ) {
 				'name' => __( 'Telephone', 'nielstorp' ),
 				'id'   => $prefix . 'tel',
 				'type' => 'text_medium',
+			),
+		)
+	);
+
+	return $meta_boxes;
+}
+
+
+
+/******** Posts Metaboxes *******/
+add_filter( 'cmb2_meta_boxes', 'nt_posts_metaboxes' );
+function nt_posts_metaboxes( array $meta_boxes ) {
+	$prefix = '_postdata_';
+	$meta_boxes['post_metabox'] = array(
+		'id'            => 'post_metabox',
+		'title'         => __( 'Some additional item', 'nielstorp' ),
+		'object_types'  => array( 'post', ), // Post type
+		'context'       => 'normal',
+		'priority'      => 'high',
+		'show_names'    => true, // Show field names on the left
+		// 'cmb_styles' => false, // false to disable the CMB stylesheet
+		'fields'        => array(
+			array(
+				'name' => __( 'Featured video', 'nielstorp' ),
+				'desc' => __( 'add a youtube/vimeo url if exists', 'nielstorp' ),
+				'id'   => $prefix . 'video',
+				'type' => 'text_url',
 			),
 		)
 	);

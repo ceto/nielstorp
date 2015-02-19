@@ -1,5 +1,6 @@
 <div class="sec__header">
-	<div class="wrapper wrapper--wide">  
+	<div class="wrapper wrapper--wide">
+		<h1 class="sec__header__title"><?php _e('News','nt'); ?></h1>  
 	  <ul class="nav nav--sub">
 		  <?php 
 				$args = array(
@@ -13,6 +14,6 @@
 				wp_list_categories( $args ); 
 			?>
 		</ul>
-		<h1 class="sec__header__title"><?php echo roots_title(); ?></h1>
+		
 	</div>
 </div>

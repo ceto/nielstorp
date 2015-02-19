@@ -4,6 +4,13 @@
       <div class="wrapper wrapper--wide">
         <figure class="post__figure">
           <?php the_post_thumbnail('large31'); ?>
+            <?php if (get_post_meta( $post->ID , '_postdata_video', 1 )) :?>
+              <div class="post__icons">
+                <a class="popup--video" href="<?php echo get_post_meta( $post->ID , '_postdata_video', 1 ); ?>">
+                  <i class="ion ion-ios-play"></i>
+                </a>
+              </div>
+            <?php endif; ?>
         </figure>
       </div>
       <div class="wrapper wrapper--wide">

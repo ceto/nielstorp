@@ -18,6 +18,7 @@ module.exports = function(grunt) {
     // 'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js',
     // 'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js',
     // 'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js',
+    'assets/vendor/magnific-popup/dist/jquery.magnific-popup.min.js',
     'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js',
     'assets/vendor/isotope/dist/isotope.pkgd.min.js',
     'assets/vendor/masterslider/masterslider.js',

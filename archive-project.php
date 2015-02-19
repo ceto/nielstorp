@@ -1,16 +1,12 @@
 <?php get_template_part('templates/header', 'projects'); ?>
 
-<?php if (!have_posts()) : ?>
-  <div class="wrapper wrapper--normal">
-    <div class="alert alert-warning">
-      <?php _e('Sorry, no results were found.', 'roots'); ?>
+
+  <div class="wrapper wrapper--fullwidth csuszat">
+    <div class="subtoggler">
+      <a href="#" class="subnav-toggle"><i class="ion ion-funnel"></i></a>
+      <span class="subtoggler__title">Projects</span>
     </div>
-  </div>
-  <?php get_search_form(); ?>
-<?php endif; ?>
 
-
-  <div class="wrapper wrapper--fullwidth">
     <section id="js-isotopegrid" class="js-isotopegrid projectgrid">
 
         <?php while (have_posts()) : the_post(); ?>

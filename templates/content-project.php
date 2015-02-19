@@ -7,9 +7,27 @@
 				$galleryfiles = get_post_meta( $post->ID , '_pdata_gallery', 1 );
 				if ($galleryfiles!='') {
 			?>
-        <a href="#" class="fulltoggle"><i class="ion ion-arrow-resize"></i></a>
+        <a href="#" class="fulltoggle"><i class="ion ion-arrow-expand"></i></a>
 				<div class="project__theslider master-slider ms-skin-default" id="project__theslider">
-					<?php foreach ( (array) $galleryfiles as $attachment_id => $attachment_url ) { ?>
+					
+          <?php if (get_post_meta( $post->ID , '_pdata_video', 1 )) :?>
+            <?php 
+              $image_url_array = wp_get_attachment_image_src(get_post_meta( $post->ID , '_pdata_videoimg_id', 1 ), 'full', true);
+              $image_url = $image_url_array[0];
+              $thumb_url_array = wp_get_attachment_image_src(get_post_meta( $post->ID , '_pdata_videoimg_id', 1 ), 'tiny169', true);
+              $thumb_url = $thumb_url_array[0];
+            ?>
+            <div class="ms-slide">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/vendor/masterslider/blank.gif" data-src="<?php echo $image_url; ?>" alt="<?php the_title(); ?>"/>
+              <img src="<?php echo $thumb_url; ?>" width="480" height="270" alt="<?php the_title(); ?>" class="ms-thumb"/>
+              <a href="<?php echo str_replace('watch?v=','embed/',get_post_meta( $post->ID , '_pdata_video', 1 )); ?>" data-type="video">
+                <?php the_title(); ?> video
+              </a>
+              <div class="ms-info"><?php _e('Press play to start video','nt');   ?></div>
+            </div>
+          <?php endif; ?>
+
+          <?php foreach ( (array) $galleryfiles as $attachment_id => $attachment_url ) { ?>
 						<?php 
 							$image_url_array = wp_get_attachment_image_src($attachment_id, 'full', true);
 							$image_url = $image_url_array[0];
