@@ -3157,6 +3157,18 @@ input[type="checkbox"]#nav__toggle {
     .nav--main li.active, .nav--main li:hover, .nav--main li:focus {
       color: #2E2F2C;
       background-color: #dcdcdc; }
+    .post-type-archive-project .nav--main li.menu-news, .single-project .nav--main li.menu-news {
+      color: #dcdcdc;
+      background-color: transparent; }
+    .post-type-archive-project .nav--main li.menu-projects, .single-project .nav--main li.menu-projects {
+      color: #2E2F2C;
+      background-color: #dcdcdc; }
+    .post-type-archive-employee .nav--main li.menu-news {
+      color: #dcdcdc;
+      background-color: transparent; }
+    .post-type-archive-employee .nav--main li.menu-employees {
+      color: #2E2F2C;
+      background-color: #dcdcdc; }
     .nav--main li > a {
       display: block;
       padding: 1em 0.666em;
