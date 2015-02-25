@@ -1,4 +1,4 @@
-<?php if ((wp_get_post_parent_id()==71) || is_page(71)): ?>
+<?php if ((wp_get_post_parent_id(get_the_id())==71) || is_page(71)): ?>
 <div class="sec__header">
 	<div class="wrapper wrapper--wide">  
 			<h1 class="sec__header__title">About</h1>
