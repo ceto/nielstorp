@@ -1,0 +1,196 @@
+.timeline {
+	position: relative;
+	&:after {
+			content: '';
+			position: absolute;
+			top:2em;
+			bottom: 0;
+			margin:0 auto;
+			left:1.25em;
+			display:block;
+			width:2px;
+			background-color: $gray;
+			@include bp($s2) {
+				left:2.25em;
+			}
+			@include bp($s3) {
+				top:0;
+				left:50%;
+				width:1px;
+			}
+	}
+
+
+	.inner {
+		@include clearfix();
+		margin-left: 2em;
+		@include bp($s2) {
+			margin-left: 3em;
+		}
+		@include bp($s3) {
+			margin-left: 0;
+		}
+		
+	}
+}
+
+
+.panel {
+	//@include clearfix();
+	margin: 2em 0;
+	text-align: left;
+
+	@include bp($s3) {
+		display: block;
+		width:42%;
+		margin:4em 0;
+		float:left;
+		clear:left;
+		
+		&:nth-child(2n) {
+			float:right;
+			clear:none;
+			//clear:right;
+
+		}
+
+		&:first-child{
+			margin-top: 0;
+		}
+	}
+}
+
+.panel__header {
+	background-color: #000;
+	
+	
+}
+
+.panel__fig {
+
+}
+
+.panel__title {
+	position: relative;
+	padding:1em;
+	margin:0;
+	font-size: 1.125em;
+	line-height: 1.2;
+	//font-weight: 800;
+	&:after {
+		position:absolute;
+		display: block;
+		content: '';
+		width:0;
+		height:0;
+		
+		top:20%;	
+		right:100%;
+		border-left:none;	
+		border-right:0.75em solid #000;
+		border-top:0.75em solid transparent;
+		border-bottom:0.75em solid transparent;
+	}
+	@include bp($s3) {
+		.panel:nth-child(2n+1) &:after {
+			//display: none;
+			left:100%;
+			border-right: none;
+			border-left:0.75em solid #000;
+
+		}
+	}
+
+
+
+	&:before {
+		position:absolute;
+		display: block;
+		content: '';
+		width:1em;
+		height:1em;
+		border:5px solid $nt-black;
+		background-color: $gray;
+		top:26%;
+		left:-2em;
+		z-index:2;
+		@include bp($s2) {
+			left:-2.875em;
+			
+		}
+		@include bp($s3) {
+			left:auto;
+			right:-21.25%;
+		}
+		@include bp($s4) {
+			left:auto;
+			right:-21%;
+		}
+		@include bp($s5) {
+			left:auto;
+			right:-20.7%;
+		}
+
+	}
+	
+	@include bp($s3) {
+		.panel:nth-child(2n) &:before {
+			left:-21%;
+			right:auto;
+		}
+	}
+	@include bp($s4) {
+		.panel:nth-child(2n) &:before {
+			left:-20.666%;
+			right:auto;
+		}
+	}
+	@include bp($s5) {
+		.panel:nth-child(2n) &:before {
+			left:-20.6%;
+			right:auto;
+		}
+	}
+
+
+	//.panel:nth-child(2n) & {
+
+	// 	&:after {
+	// 		left:auto;
+	// 		right:100%;
+	// 		border-left:none;	
+	// 		border-right:0.75em solid #000;
+	// 		border-top:0.75em solid transparent;
+	// 		border-bottom:0.75em solid transparent;
+	// 	}
+	// 	&:before {
+	// 		left:auto;
+	// 		right:117.125%;
+	// 	}
+	
+
+	//}
+}
+.panel__body {
+	//@include clearfix();
+	font-size: 0.875em;
+	background-color: #fff;
+	color:$nt-black;
+	padding:1.25em;
+}
+.panel__footer {
+	text-align: right;
+	border-top: 1px solid $nt-white;
+	background-color: #fff;
+	color:$gray;
+	padding:1.25em;
+
+}
+
+
+.panel__date {
+	font-weight: 800;
+	font-size: 0.875em;
+	//color:$gray;
+}
+

@@ -1,3 +1,15 @@
+<?php if ((wp_get_post_parent_id()==71) || is_page(71)): ?>
+<div class="sec__header">
+	<div class="wrapper wrapper--wide">  
+			<h1 class="sec__header__title">About</h1>
+			<?php
+        if (has_nav_menu('secondary_navigation')) :
+          wp_nav_menu(array('theme_location' => 'secondary_navigation', 'walker' => new Roots_Nav_Walker(), 'menu_class' => 'nav nav--sub'));
+        endif;
+      ?>
+	</div>
+</div>
+<?php endif ?>
 <div class="page__header">
   <div class="wrapper wrapper--wide">
       <figure class="page__featimage">
@@ -11,4 +23,3 @@
 		<?php the_content(); ?>
   </div>
 </div>
-<?php wp_link_pages(array('before' => '<nav class="pagination">', 'after' => '</nav>')); ?>

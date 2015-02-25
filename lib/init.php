@@ -16,6 +16,9 @@ function roots_setup() {
   register_nav_menus(array(
     'primary_navigation' => __('Primary Navigation', 'roots')
   ));
+  register_nav_menus(array(
+    'secondary_navigation' => __('Secondary Navigation', 'roots')
+  ));
 
   // Add post thumbnails
   // http://codex.wordpress.org/Post_Thumbnails

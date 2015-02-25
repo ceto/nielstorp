@@ -164,7 +164,81 @@ function nt_project_metaboxes( array $meta_boxes ) {
 	);
 
 	return $meta_boxes;
-}
+};
+
+
+
+/*** Timeline Boxes ***/
+add_filter( 'cmb2_meta_boxes', 'nt_timeline_metaboxes' );
+function nt_timeline_metaboxes( array $meta_boxes ) {
+  $prefix = '_data_';
+  $meta_boxes['timeline_metabox'] = array(
+      'id'            => 'timeline_metabox',
+      'title'         => __( 'Page Details', 'cmb2' ),
+      'object_types'  => array( 'page', ), // Post type
+      'show_on'      => array( 'key' => 'page-template', 'value' => 'template-timeline.php' ),
+      'context'       => 'normal',
+      'priority'      => 'high',
+      'show_names'    => true, // Show field names on the left
+      // 'cmb_styles' => false, // false to disable the CMB stylesheet
+      // 'closed'     => true, // Keep the metabox closed by default
+      'fields'        => array(
+        array(
+            'id'          => $prefix . 'timeline',
+            'type'        => 'group',
+            'description' => __( 'Manage Your Timeline', 'cmb' ),
+            'options'     => array(
+                'group_title'   => __( 'Timeline element {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
+                'add_button'    => __( 'Add another element', 'cmb' ),
+                'remove_button' => __( 'Remove element', 'cmb' ),
+                'sortable'      => true, // beta
+            ),
+            // Fields array works the same, except id's only need to be unique for this group. Prefix is not needed.
+            'fields'      => array(
+                array(
+                    'name' => 'Element Title',
+                    'id'   => 'title',
+                    'type' => 'text',
+                    // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+                ),
+                array(
+                    'name' => 'Content',
+                    'description' => 'Add any content you want',
+                    'id'   => 'content',
+                    'type' => 'wysiwyg',
+                    'options'    => array (
+                      'wpautop' => true,
+                      'media_buttons' => false,
+                      'textarea_rows' => get_option('default_post_edit_rows', 5),
+                      'teeny' => true, 
+                    ),
+                ),
+                array(
+                    'name' => 'Date',
+                    'id'   => 'date',
+                    'type' => 'text_date_timestamp',
+                ),
+								array(
+									'name' => 'Add an Image',
+									'desc' => 'Upload an image or enter an URL.',
+									'id' => 'image',
+									'type' => 'file',
+									"options" => array(
+											"url" => false
+										)
+								),
+
+            ),
+        ), /* end of group def*/
+
+
+
+      ),
+  );
+
+	return $meta_boxes;
+};
+
 
 /**
  * Register an employee post type 

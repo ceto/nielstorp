@@ -305,6 +305,13 @@ input[type="checkbox"]#nav__toggle {
       font-size: 0.875em;
     }
 
+    .page-child & {
+      &.menu-about {
+        color:$nt-white;
+        background-color: transparent;
+      }
+    }
+
 
     .blog &.cat-item-all,
     &.current-cat,

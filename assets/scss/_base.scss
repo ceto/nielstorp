@@ -10,6 +10,7 @@ body {
 	font-family: $sans-serif;
 	font-weight: 300;
   line-height: 1.4;
+  overflow-x: hidden;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -17,7 +18,9 @@ h1,h2,h3,h4,h5,h6 {
 	text-transform: uppercase;
 }
 
-
+a {
+  color:$gray;
+}
 .wrapper {
 	@include clearfix();
 	padding:0 1em;
