@@ -45,7 +45,7 @@ Template Name: Timeline Template
 	    		?>
 	    	</figure>
 	      <h3 class="panel__title">
-	        <?php echo ++$i.'× '.$element['title']; ?>
+	        <?php echo $element['title']; ?>
 	      </h3>
 	    </header>
 	    <div class="panel__body">
