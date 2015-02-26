@@ -10,6 +10,13 @@
 	</div>
 </div>
 <?php endif ?>
+<div class="csuszat">
+<?php if ((wp_get_post_parent_id(get_the_id())==71) || is_page(71)): ?>
+  <div class="subtoggler">
+    <a href="#" class="subnav-toggle"><i class="ion ion-android-more-vertical"></i> SHOW MORE</a>
+    <span class="subtoggler__title">About</span>
+  </div>
+<?php endif; ?>
 <div class="page__header">
   <div class="wrapper wrapper--wide">
       <figure class="page__featimage">
@@ -22,4 +29,5 @@
 	<div class="page__content">
 		<?php the_content(); ?>
   </div>
+</div>
 </div>

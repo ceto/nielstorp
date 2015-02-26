@@ -26,36 +26,46 @@ Template Name: Timeline Template
 <?php if ($timeline = get_post_meta( get_the_ID(), '_data_timeline', true )) : ?>
   
 <section class="timeline csuszat">
-	<div class="wrapper wrapper--wide">
-		  <div class="subtoggler">
-      <a href="#" class="subnav-toggle"><i class="ion ion-more"></i></a>
-      <span class="subtoggler__title">Projects</span>
+  <div class="subtoggler">
+      <a href="#" class="subnav-toggle"><i class="ion ion-android-more-vertical"></i> SHOW MORE</a>
+      <span class="subtoggler__title">About</span>
     </div>
+
+	<div class="wrapper wrapper--wide">
+
+    <?php
+    	usort($timeline, function($a, $b) {
+				return $b[date] - $a[date];
+			});
+    ?>
   
   <div class="inner">
 	<?php 
-		$i=0;
+		$i=0;$actyear=date('Y')+1;
 		foreach ( (array) $timeline as $key => $element ) {  ?>
-	  <article class="panel" id="panel-<?php echo $key; ?>">
-	    <header class="panel__header">
-	    	<figure class="panel__fig">
-	    		<?php 
-	    			echo wp_get_attachment_image( $element['image_id'], 'large' );
-	    			//echo $element['image'];
-	    		?>
-	    	</figure>
-	      <h3 class="panel__title">
-	        <?php echo $element['title']; ?>
-	      </h3>
-	    </header>
-	    <div class="panel__body">
-	      <?php echo wpautop($element['content']); ?>
-	    </div>
-	    <div class="panel__footer">
-	      <span class="panel__date"><?php echo date('F, Y',$element['date']); ?></span>
-	    </div>
-	 	</article>
-	<?php } ?>
+			<article class="panel" id="panel-<?php echo $key; ?>">
+				<header class="panel__header">
+					<?php if ($actyear>date('Y',$element['date'])): ?>
+						<span class="timeline__yearlabel"><?php echo $actyear=date('Y',$element['date']);	?></span>
+					<?php endif ?>	 
+					<figure class="panel__fig">
+						<?php 
+							echo wp_get_attachment_image( $element['image_id'], 'large' );
+							//echo $element['image'];
+						?>
+					</figure>
+				  <h3 class="panel__title">
+				    <?php echo $element['title']; ?>
+				  </h3>
+				</header>
+				<div class="panel__body">
+				  <?php echo wpautop($element['content']); ?>
+				</div>
+				<div class="panel__footer">
+				  <span class="panel__date"><?php echo date('F, Y',$element['date']); ?></span>
+				</div>
+			</article>
+		<?php } ?>
 	</div>
 
 

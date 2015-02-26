@@ -3,15 +3,15 @@
 	&:after {
 			content: '';
 			position: absolute;
-			top:2em;
-			bottom: 0;
+			top:2.75em;
+			bottom: 4em;
 			margin:0 auto;
 			left:1.25em;
 			display:block;
 			width:2px;
 			background-color: $gray;
 			@include bp($s2) {
-				left:2.25em;
+				left:3.333em;
 			}
 			@include bp($s3) {
 				top:0;
@@ -23,9 +23,10 @@
 
 	.inner {
 		@include clearfix();
+		position: relative;
 		margin-left: 2em;
 		@include bp($s2) {
-			margin-left: 3em;
+			margin-left: 4.666em;
 		}
 		@include bp($s3) {
 			margin-left: 0;
@@ -34,34 +35,90 @@
 	}
 }
 
+.timeline__yearlabel {
+	position: absolute;
+	z-index: 3;
+	left:-3.9em;
+	bottom:16em;
+	clear:both;
+	display: inline-block;
+	font-size: 0.75em;
+	line-height: 4.5em;
+	font-weight: 700;
+	width:3.5em;
+	height: 3.75em;
+	background-color: $gray;
+	border:4px solid $nt-black;
+	text-align: center;
 
+	@include bp($s2){
+		left:-5.875em;
+	}
+
+
+	@include bp($s3) {
+		
+		left:auto;
+		right:-24%;
+		.panel:nth-of-type(2n) & {
+			left:-23.5%;
+			bottom:8em;
+		}
+	}
+
+	@include bp($s4) {
+		
+		left:auto;
+		right:-23.5%;
+		.panel:nth-of-type(2n) & {
+			left:-23.125%;
+		}
+	}
+
+	@include bp($s5) {
+		
+		left:auto;
+		right:-23%;
+		.panel:nth-of-type(2n) & {
+			left:-22.5%;
+		}
+	}
+}
 .panel {
 	//@include clearfix();
-	margin: 2em 0;
+	margin: 3em 0;
 	text-align: left;
-
+	&:first-child{
+		margin-top: 0;
+	}
 	@include bp($s3) {
 		display: block;
 		width:42%;
-		margin:4em 0;
+		margin:2em 0 4em;
 		float:left;
 		clear:left;
 		
-		&:nth-child(2n) {
+		&:nth-of-type(2n) {
 			float:right;
 			clear:none;
 			//clear:right;
+			margin-top: 2em;
+			margin-bottom: 4em;
 
 		}
 
 		&:first-child{
 			margin-top: 0;
 		}
+		&:nth-of-type(2){
+			margin-top: 16em;
+		}
 	}
 }
 
 .panel__header {
 	background-color: #000;
+	position: relative;
 	
 	
 }
@@ -92,7 +149,7 @@
 		border-bottom:0.75em solid transparent;
 	}
 	@include bp($s3) {
-		.panel:nth-child(2n+1) &:after {
+		.panel:nth-of-type(2n+1) &:after {
 			//display: none;
 			left:100%;
 			border-right: none;
@@ -115,7 +172,7 @@
 		left:-2em;
 		z-index:2;
 		@include bp($s2) {
-			left:-2.875em;
+			left:-3.4em;
 			
 		}
 		@include bp($s3) {
@@ -134,42 +191,25 @@
 	}
 	
 	@include bp($s3) {
-		.panel:nth-child(2n) &:before {
+		.panel:nth-of-type(2n) &:before {
 			left:-21%;
 			right:auto;
 		}
 	}
 	@include bp($s4) {
-		.panel:nth-child(2n) &:before {
+		.panel:nth-of-type(2n) &:before {
 			left:-20.666%;
 			right:auto;
 		}
 	}
 	@include bp($s5) {
-		.panel:nth-child(2n) &:before {
+		.panel:nth-of-type(2n) &:before {
 			left:-20.6%;
 			right:auto;
 		}
 	}
 
 
-	//.panel:nth-child(2n) & {
-
-	// 	&:after {
-	// 		left:auto;
-	// 		right:100%;
-	// 		border-left:none;	
-	// 		border-right:0.75em solid #000;
-	// 		border-top:0.75em solid transparent;
-	// 		border-bottom:0.75em solid transparent;
-	// 	}
-	// 	&:before {
-	// 		left:auto;
-	// 		right:117.125%;
-	// 	}
-	
-
-	//}
 }
 .panel__body {
 	//@include clearfix();
