@@ -83,12 +83,12 @@ function nt_project_taxonomies() {
 
 if ( file_exists(  __DIR__ .'/CMB2/init.php' ) ) { require_once  __DIR__ .'/CMB2/init.php';};
 
-function cmb2_hide_if_no_cats( $field ) {
-	if ( ! has_tag( 'cats', $field->object_id ) ) {
-		return false;
-	}
-	return true;
-}
+// function cmb2_hide_if_no_cats( $field ) {
+// 	if ( ! has_tag( 'cats', $field->object_id ) ) {
+// 		return false;
+// 	}
+// 	return true;
+// }
 
 
 add_filter( 'cmb2_meta_boxes', 'nt_project_metaboxes' );
@@ -97,7 +97,7 @@ function nt_project_metaboxes( array $meta_boxes ) {
 	$meta_boxes['project_metabox'] = array(
 		'id'            => 'project_metabox',
 		'title'         => __( 'Project details', 'nielstorp' ),
-		'object_types'  => array( 'project', ), // Post type
+		'object_types'  => array( 'project', 'competition', ), // Post type
 		'context'       => 'normal',
 		'priority'      => 'high',
 		'show_names'    => true, // Show field names on the left
@@ -238,6 +238,90 @@ function nt_timeline_metaboxes( array $meta_boxes ) {
 
 	return $meta_boxes;
 };
+
+
+
+
+/****** Competition ********/
+
+add_action( 'init', 'nt_competition_init' );
+/**
+ * Register a competition post type and its taxonomy.
+ *
+ */
+function nt_competition_init() {
+	$labels = array(
+		'name'               => _x( 'Competitions', 'post type general name', 'nielstorp' ),
+		'singular_name'      => _x( 'Competition', 'post type singular name', 'nielstorp' ),
+		'menu_name'          => _x( 'Competitions', 'admin menu', 'nielstorp' ),
+		'name_admin_bar'     => _x( 'Competition', 'add new on admin bar', 'nielstorp' ),
+		'add_new'            => _x( 'Add New', 'Competition', 'nielstorp' ),
+		'add_new_item'       => __( 'Add New Competition', 'nielstorp' ),
+		'new_item'           => __( 'New Competition', 'nielstorp' ),
+		'edit_item'          => __( 'Edit Competition', 'nielstorp' ),
+		'view_item'          => __( 'View Competition', 'nielstorp' ),
+		'all_items'          => __( 'All Competitions', 'nielstorp' ),
+		'search_items'       => __( 'Search Competitions', 'nielstorp' ),
+		'parent_item_colon'  => __( 'Parent Competitions:', 'nielstorp' ),
+		'not_found'          => __( 'No Competitions found.', 'nielstorp' ),
+		'not_found_in_trash' => __( 'No Competitions found in Trash.', 'nielstorp' )
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'competition' ),
+		'capability_type'    => 'post',
+		'has_archive'        => 'competitions',
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'yarpp_support'			 => true,
+		'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' )
+	);
+
+	register_post_type( 'competition', $args );
+}
+
+
+/******** Change Feat Image Label on project pages ******/
+add_action('do_meta_boxes', 'nt_comp_image_box');
+function nt_comp_image_box() {
+	remove_meta_box( 'postimagediv', 'competition', 'side' );
+  add_meta_box('postimagediv', __('Competition Thumbnail<br>(min.: 768×768px)','nielstorp'), 'post_thumbnail_meta_box', 'competition', 'side', 'high');
+}
+
+
+add_action( 'init', 'nt_comp_taxonomies', 0 );
+function nt_comp_taxonomies() {
+	$labels = array(
+		'name'              => _x( 'Competion Categories', 'taxonomy general name','nielstorp' ),
+		'singular_name'     => _x( 'Competion Category', 'taxonomy singular name','nielstorp' ),
+		'search_items'      => __( 'Search Competion Categories','nielstorp' ),
+		'all_items'         => __( 'All Competion Categories','nielstorp' ),
+		'parent_item'       => __( 'Parent Competion Category','nielstorp' ),
+		'parent_item_colon' => __( 'Parent Competion Category:','nielstorp' ),
+		'edit_item'         => __( 'Edit Competion Category','nielstorp' ),
+		'update_item'       => __( 'Update Competion Category','nielstorp' ),
+		'add_new_item'      => __( 'Add New Competion Category','nielstorp' ),
+		'new_item_name'     => __( 'New Competion category Name','nielstorp' ),
+		'menu_name'         => __( 'Competion 	Categories','nielstorp' ),
+	);
+
+	$args = array(
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'competition-category' ),
+	);
+
+	register_taxonomy( 'competitions', array( 'competition' ), $args );
+}
 
 
 /**

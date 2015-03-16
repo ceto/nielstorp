@@ -158,6 +158,17 @@ input[type="checkbox"]#nav__toggle {
       }
     }
 
+    .post-type-archive-competition &, .single-competition & {
+      &.menu-news {
+        color:$nt-white;
+        background-color: transparent;
+      }
+      &.menu-competitions {
+        color: $nt-black;
+        background-color: $nt-white;
+      }
+    }
+
     .post-type-archive-employee &  {
       &.menu-news {
         color:$nt-white;
