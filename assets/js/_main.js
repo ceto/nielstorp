@@ -166,10 +166,30 @@ jQuery( document ).ready(function( $ ) {
 
 
 
+    $('#team__theslider').masterslider({
+      width:1920,    // slider standard width
+      height:1024,   // slider standard height
+      space:0,
+      preload:3,
+      autoplay:true,
+      fullwidth:true,
+      autoHeight:true,
+      view:"fade",
+      layout:"boxed",
+      controls : {
+        arrows : {autohide:true},
+      }
+    });
+
+
+
   $('.fulltoggle').click( function(e) {
     e.preventDefault();
     $('.project--single').toggleClass('fullgallery--shown');
     $('#project__theslider').masterslider('setup');
+
+    $('.page-template-template-aboutus').toggleClass('fullgallery--shown');
+    $('#team__theslider').masterslider('setup');
   });
  
 

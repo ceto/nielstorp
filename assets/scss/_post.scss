@@ -186,11 +186,20 @@
 
 
 /****** New "Squared" Posts *****/
+.bloginner {
+	@include bp($s2) {
+		margin:0 -.5em;
+	}
 
+}
 .post--squared {
 	@include clearfix();
 	position: relative;
-	margin:1em;
+	margin:1em 0;
+	@include bp($s1) {
+		padding:0 0;
+		margin:1em 0;
+	}
 	@include bp($s2) {
 		width:50%;
 		float:left;
@@ -211,32 +220,87 @@
 		}
 	}
 
+	// @include bp($s5) {
+	// 	width:25%;
+	// 	&:nth-of-type(3n+1) {
+	// 		clear:none;
+	// 	}
+	// 	&:nth-of-type(4n+1) {
+	// 		clear:left;
+	// 	}
+	// }
+
 }
 
 
 .post--squared__figure {
-	
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
 	@include bp($s1) {
-		width:50%;
-		float:left;
-		padding-right: 1em;
+		position: absolute;
+		left:0;
+		top:0;
+		width:calc(50% - 1em);
+		bottom:0;
+		> a {
+			display: block;
+			position: absolute;
+			left:0;
+			top:0;
+			width:calc(50% - 1em);
+			bottom:0;
+			z-index: 2;
+		}
+		img {
+			visibility: hidden;
+		}
 	}
 
+	@include bp($s2) {
+		left:.5em;
+		width:calc(50% - 1.5em);
+	}
+	
+	img {
+		display: block;
+	}
 }
 
 .post--squared__summary {
 	@include clearfix();
+	position: relative;
 	background-color: $gray-light;	
 	padding: .5em;
+	padding-bottom: 2.5em;
  	@include bp($s1) {
 		width:50%;
 		float:right;
+		min-height: 15em;
+		padding-bottom: 2.5em;
 	}
+	@include bp($s2) {
+		min-height: 19em;
+	}
+	@include bp($s3) {
+		min-height: 16em;
+	}
+	@include bp($s4) {
+		min-height: 18em;
+	}
+	@include bp($s5) {
+		min-height: 16em;
+	}
+
 }
 
 .post--squared .archive__icons {
+	left:.666em;
+	bottom:.333em;
+	z-index: 3;
+
 	i {
-		font-size: 2em;
+		font-size: 1.666em;
 	}
 }
 .post--squared .post__updated {
@@ -244,7 +308,7 @@
 	padding:.125em .25em .25em .25em;
 	font-size: .875em;
 	margin-right: .333em;
-  margin-bottom: .333em;
+  margin-bottom: .125em;
   margin-top:.333em;
   .teteje {
   	margin-bottom: .125em;
@@ -262,14 +326,29 @@
 .post--squared__title {
 	font-size: 1.125em;
 	line-height: 1.125;
-	margin-top: 0;	
+	margin-top: 0;
+	margin-bottom: 0;
+
 	a {
+		color:$nt-white;	
 		text-decoration: none;
+		&:hover, &:focus {
+			color:$yellow;
+		}
 	}
 }
 
 .post--squared__excerpt {
 	font-size: .875em;
+	//min-height: 14em;
+	p {
+		margin-top: 0.25em;
+	}
+	.btn--readmore {
+		font-size: .875em;
+		position: absolute;
+		bottom: 0;
+	}
 }
 
 

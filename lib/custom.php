@@ -242,6 +242,49 @@ function nt_timeline_metaboxes( array $meta_boxes ) {
 
 
 
+/********* About US Meta Boxes **********/
+/*** Timeline Boxes ***/
+add_filter( 'cmb2_meta_boxes', 'nt_aboutus_metaboxes' );
+function nt_aboutus_metaboxes( array $meta_boxes ) {
+  $prefix = '_data_';
+  $meta_boxes['aboutus_metabox'] = array(
+      'id'            => 'aboutus_metabox',
+      'title'         => __( 'About Us Page Details', 'cmb2' ),
+      'object_types'  => array( 'page', ), // Post type
+      'show_on'      => array( 'key' => 'page-template', 'value' => 'template-aboutus.php' ),
+      'context'       => 'normal',
+      'priority'      => 'high',
+      'show_names'    => true, // Show field names on the left
+      // 'cmb_styles' => false, // false to disable the CMB stylesheet
+      // 'closed'     => true, // Keep the metabox closed by default
+      'fields'        => array(
+				array(
+					'name' => 'Team Photos at the Top',
+					'desc' => 'Photos title must be filled. You can select multiple files from the popup.',
+					'id' => $prefix . 'timeline',
+					'type' => 'file_list',
+					'preview_size' => array( 160, 90 ), 
+				),
+				array(
+					'name' => 'Random Photos Below',
+					'desc' => 'Add some high resolution photo.',
+					'id' => $prefix . 'gallery',
+					'type' => 'file_list',
+					'preview_size' => array( 160, 160 ), 
+				),
+
+      ),
+  );
+
+	return $meta_boxes;
+};
+
+
+
+
+
+
+
 /****** Competition ********/
 
 add_action( 'init', 'nt_competition_init' );

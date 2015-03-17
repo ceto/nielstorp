@@ -1,7 +1,17 @@
 <article <?php post_class('post--squared'); ?>>
+
+<?php 
+  $smimage_url_array = wp_get_attachment_image_src(get_post_thumbnail_id(), 'small916', false);
+  $smimage_url = $smimage_url_array[0]; 
+?>
+<style>
+  .post--squared.post-<?php echo get_the_ID(); ?> .post--squared__figure {
+    background-image: url('<?php echo $smimage_url; ?>');
+  }
+</style>
 	<figure class="post--squared__figure">
 		<a href="<?php the_permalink(); ?>">
-			<?php the_post_thumbnail('small916'); ?>
+			<?php the_post_thumbnail('small169'); ?>
 		</a>
     <?php if (get_post_meta( $post->ID , '_postdata_video', 1 )) :?>
       <div class="archive__icons">

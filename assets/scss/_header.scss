@@ -11,6 +11,7 @@
 	line-height: 1em;
 	margin:0;
 	padding:0.666em 0;
+	color:$yellow;
 	@include bp($s2) {
 		float:right;
 	}

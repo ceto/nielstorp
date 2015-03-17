@@ -2570,7 +2570,8 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase; }
 
 a {
-  color: #5b5b5b; }
+  color: #e8d233;
+  text-decoration: none; }
 
 .wrapper {
   padding: 0 1em;
@@ -2624,9 +2625,12 @@ figure {
   display: inline-block;
   padding: 0.333em 0.75em;
   text-transform: uppercase;
-  background-color: #dcdcdc;
-  color: #2E2F2C;
+  background-color: #5b5b5b;
+  color: #dcdcdc;
   text-decoration: none; }
+  .btn:hover, .btn:focus {
+    background-color: #e8d233;
+    color: #2E2F2C; }
 
 .btn--readmore {
   margin: 1em 0; }
@@ -3034,7 +3038,8 @@ img.mfp-img {
   font-size: 1.125em;
   line-height: 1em;
   margin: 0;
-  padding: 0.666em 0; }
+  padding: 0.666em 0;
+  color: #e8d233; }
   @media only screen and (min-width: 768px) {
     .sec__header__title {
       float: right; } }
@@ -3185,7 +3190,8 @@ input[type="checkbox"]#nav__toggle {
     line-height: 1em;
     margin: 0;
     padding: 0.666em 0.75em;
-    border-top: 1px solid #dcdcdc; }
+    border-top: 1px solid #dcdcdc;
+    color: #e8d233; }
     .subtoggler:before, .subtoggler:after {
       content: " ";
       display: table; }
@@ -3196,7 +3202,8 @@ input[type="checkbox"]#nav__toggle {
       text-decoration: none; }
     .subtoggler .subtoggler__title {
       text-transform: uppercase;
-      float: right; }
+      float: right;
+      color: #e8d233; }
   .sec__header {
     width: 12em;
     float: left;
@@ -3282,6 +3289,59 @@ input[type="checkbox"]#nav__toggle {
       .nav--sub li > a:hover, .nav--sub li > a:focus {
         color: inherit;
         background-color: inherit; }
+
+/**** Reference PAge Navigation */
+.refnav {
+  margin: 4em 0; }
+  .refnav:before, .refnav:after {
+    content: " ";
+    display: table; }
+  .refnav:after {
+    clear: both; }
+  .refnav .refnav__wrap {
+    position: relative;
+    text-align: justify; }
+    .refnav .refnav__wrap:after {
+      content: '';
+      width: 100%;
+      display: inline-block; }
+  .refnav hr {
+    border: none;
+    height: 1px;
+    background-color: #5b5b5b;
+    margin-bottom: 1em; }
+  .refnav a {
+    position: relative;
+    display: inline-block;
+    line-height: 1; }
+    .refnav a:hover, .refnav a:focus {
+      color: #e8d233;
+      text-decoration: none; }
+      .refnav a:hover .navtext, .refnav a:focus .navtext {
+        display: inline-block; }
+    .refnav a i {
+      font-size: 3em; }
+    .refnav a .navtext {
+      position: absolute;
+      top: 102%;
+      left: 0;
+      width: 12em;
+      margin: 0;
+      padding: 0;
+      display: none;
+      max-width: 20em;
+      text-align: left;
+      line-height: 1;
+      font-size: 0.75em;
+      font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+      font-weight: 300;
+      text-transform: uppercase; }
+    .refnav a.refnav__all .navtext {
+      left: -.875em; }
+  .refnav a[rel="prev"] .navtext {
+    text-align: right;
+    left: auto;
+    right: 0; }
 
 .post--inlist {
   margin-bottom: 2em; }
@@ -3428,14 +3488,22 @@ input[type="checkbox"]#nav__toggle {
       margin: 2em -26%; } }
 
 /****** New "Squared" Posts *****/
+@media only screen and (min-width: 768px) {
+  .bloginner {
+    margin: 0 -.5em; } }
+
 .post--squared {
   position: relative;
-  margin: 1em; }
+  margin: 1em 0; }
   .post--squared:before, .post--squared:after {
     content: " ";
     display: table; }
   .post--squared:after {
     clear: both; }
+  @media only screen and (min-width: 480px) {
+    .post--squared {
+      padding: 0 0;
+      margin: 1em 0; } }
   @media only screen and (min-width: 768px) {
     .post--squared {
       width: 50%;
@@ -3452,15 +3520,39 @@ input[type="checkbox"]#nav__toggle {
       .post--squared:nth-of-type(3n+1) {
         clear: left; } }
 
-@media only screen and (min-width: 480px) {
-  .post--squared__figure {
-    width: 50%;
-    float: left;
-    padding-right: 1em; } }
+.post--squared__figure {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; }
+  @media only screen and (min-width: 480px) {
+    .post--squared__figure {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: calc(50% - 1em);
+      bottom: 0; }
+      .post--squared__figure > a {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: calc(50% - 1em);
+        bottom: 0;
+        z-index: 2; }
+      .post--squared__figure img {
+        visibility: hidden; } }
+  @media only screen and (min-width: 768px) {
+    .post--squared__figure {
+      left: .5em;
+      width: calc(50% - 1.5em); } }
+  .post--squared__figure img {
+    display: block; }
 
 .post--squared__summary {
+  position: relative;
   background-color: #6b6b6b;
-  padding: .5em; }
+  padding: .5em;
+  padding-bottom: 2.5em; }
   .post--squared__summary:before, .post--squared__summary:after {
     content: " ";
     display: table; }
@@ -3469,17 +3561,35 @@ input[type="checkbox"]#nav__toggle {
   @media only screen and (min-width: 480px) {
     .post--squared__summary {
       width: 50%;
-      float: right; } }
+      float: right;
+      min-height: 15em;
+      padding-bottom: 2.5em; } }
+  @media only screen and (min-width: 768px) {
+    .post--squared__summary {
+      min-height: 19em; } }
+  @media only screen and (min-width: 1024px) {
+    .post--squared__summary {
+      min-height: 16em; } }
+  @media only screen and (min-width: 1280px) {
+    .post--squared__summary {
+      min-height: 18em; } }
+  @media only screen and (min-width: 1600px) {
+    .post--squared__summary {
+      min-height: 16em; } }
 
-.post--squared .archive__icons i {
-  font-size: 2em; }
+.post--squared .archive__icons {
+  left: .666em;
+  bottom: .333em;
+  z-index: 3; }
+  .post--squared .archive__icons i {
+    font-size: 1.666em; }
 
 .post--squared .post__updated {
   background-color: #5b5b5b;
   padding: .125em .25em .25em .25em;
   font-size: .875em;
   margin-right: .333em;
-  margin-bottom: .333em;
+  margin-bottom: .125em;
   margin-top: .333em; }
   .post--squared .post__updated .teteje {
     margin-bottom: .125em; }
@@ -3494,12 +3604,22 @@ input[type="checkbox"]#nav__toggle {
 .post--squared__title {
   font-size: 1.125em;
   line-height: 1.125;
-  margin-top: 0; }
+  margin-top: 0;
+  margin-bottom: 0; }
   .post--squared__title a {
+    color: #dcdcdc;
     text-decoration: none; }
+    .post--squared__title a:hover, .post--squared__title a:focus {
+      color: #e8d233; }
 
 .post--squared__excerpt {
   font-size: .875em; }
+  .post--squared__excerpt p {
+    margin-top: 0.25em; }
+  .post--squared__excerpt .btn--readmore {
+    font-size: .875em;
+    position: absolute;
+    bottom: 0; }
 
 .page-template-default .page__content {
   padding: 2em 0; }
@@ -3605,6 +3725,66 @@ input[type="checkbox"]#nav__toggle {
     #map-canvas {
       height: 100%;
       margin: 0; } }
+
+.aboutpage__fullofphotos {
+  position: relative; }
+  @media only screen and (min-width: 768px) {
+    .aboutpage__fullofphotos {
+      float: left;
+      width: 66.666%;
+      margin: 0 0 2em; } }
+  @media only screen and (min-width: 1600px) {
+    .aboutpage__fullofphotos {
+      width: 50%; } }
+  @media only screen and (min-width: 768px) {
+    .fullgallery--shown .aboutpage__fullofphotos {
+      float: none;
+      width: 100%; } }
+
+@media only screen and (min-width: 768px) {
+  .aboutpage__content {
+    font-size: .75em;
+    float: right;
+    width: 33.333%;
+    padding-left: 1.5em; } }
+@media only screen and (min-width: 1024px) {
+  .aboutpage__content {
+    font-size: .875em;
+    padding-left: 2.5em; } }
+@media only screen and (min-width: 1600px) {
+  .aboutpage__content {
+    width: 50%;
+    padding-left: 5em; } }
+.aboutpage__content > h2:first-child {
+  margin-top: 0; }
+
+.abgallery--tiles {
+  margin-top: 2em; }
+  .abgallery--tiles:before, .abgallery--tiles:after {
+    content: " ";
+    display: table; }
+  .abgallery--tiles:after {
+    clear: both; }
+
+.abgallery__tile {
+  float: left;
+  width: 50%;
+  padding: .5em; }
+  @media only screen and (min-width: 768px) {
+    .abgallery__tile {
+      float: left;
+      width: 33.333%;
+      padding: .5em; } }
+  @media only screen and (min-width: 1024px) {
+    .abgallery__tile {
+      width: 25%; } }
+  @media only screen and (min-width: 1280px) {
+    .abgallery__tile {
+      width: 20%; } }
+  .abgallery__tile a {
+    display: block; }
+  .abgallery__tile img {
+    display: block; }
 
 .timeline {
   position: relative; }
@@ -3838,7 +4018,8 @@ input[type="checkbox"]#nav__toggle {
   font-weight: 800;
   font-size: 2.25em;
   line-height: 1;
-  margin: 0 0 1.5em; }
+  margin: 0 0 1.5em;
+  color: #e8d233; }
 
 .project__content {
   margin: 1em 0 0;
@@ -3882,25 +4063,44 @@ input[type="checkbox"]#nav__toggle {
     margin: 0 0 1em; }
 
 /********** Squared style *******/
-.projectgrid, .employeegrid {
+.projectgrid, .employeegrid, .competitiongrid {
   margin: 0 0.5%;
   margin-top: -1%; }
   @media only screen and (min-width: 480px) {
-    .projectgrid, .employeegrid {
+    .projectgrid, .employeegrid, .competitiongrid {
       margin: 0 0.25%;
       margin-top: -0.5%; } }
   @media only screen and (min-width: 768px) {
-    .projectgrid, .employeegrid {
+    .projectgrid, .employeegrid, .competitiongrid {
       margin: 0 0.25%;
       margin-top: -0.5%; } }
   @media only screen and (min-width: 1024px) {
-    .projectgrid, .employeegrid {
+    .projectgrid, .employeegrid, .competitiongrid {
       margin: 0 0.1666%;
       margin-top: -0.333%; } }
   @media only screen and (min-width: 1600px) {
-    .projectgrid, .employeegrid {
+    .projectgrid, .employeegrid, .competitiongrid {
       margin: 0 0.125%;
       margin-top: -0.25%; } }
+  .yarpp-related .projectgrid, .yarpp-related .employeegrid, .yarpp-related .competitiongrid {
+    margin-left: -.5%;
+    margin-right: -.5%; }
+    @media only screen and (min-width: 480px) {
+      .yarpp-related .projectgrid, .yarpp-related .employeegrid, .yarpp-related .competitiongrid {
+        margin-left: -.25%;
+        margin-right: -.25%; } }
+    @media only screen and (min-width: 768px) {
+      .yarpp-related .projectgrid, .yarpp-related .employeegrid, .yarpp-related .competitiongrid {
+        margin-left: -.25%;
+        margin-right: -.25%; } }
+    @media only screen and (min-width: 1024px) {
+      .yarpp-related .projectgrid, .yarpp-related .employeegrid, .yarpp-related .competitiongrid {
+        margin-left: -.1666%;
+        margin-right: -.1666%; } }
+    @media only screen and (min-width: 1600px) {
+      .yarpp-related .projectgrid, .yarpp-related .employeegrid, .yarpp-related .competitiongrid {
+        margin-left: -.125%;
+        margin-right: -.125%; } }
 
 .square {
   color: #fff;

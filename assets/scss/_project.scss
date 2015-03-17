@@ -70,6 +70,7 @@
 	font-size: 2.25em;
 	line-height: 1;
 	margin:0 0 1.5em;
+	color:$yellow;
 }
 
 .project__content {	
@@ -111,7 +112,8 @@
 .param__item {
 	margin:0 0 0.5em;
 	span {
-		font-weight: 700;	
+		font-weight: 700;
+		//color:$yellow;	
 	}
 }
 
@@ -129,7 +131,7 @@
 /********** Squared style *******/
 
 
-.projectgrid, .employeegrid {
+.projectgrid, .employeegrid, .competitiongrid {
 	margin:0 0.5%;
 	margin-top:-1%;
 	@include bp($s1) {
@@ -148,6 +150,28 @@
 	@include bp($s5) {
 		margin:0 0.125%;
 		margin-top:-0.25%;
+	}
+
+	.yarpp-related & {
+		margin-left: -.5%;
+		margin-right: -.5%;
+		@include bp($s1) {
+			margin-left: -.25%;
+			margin-right: -.25%;
+
+		}
+		@include bp($s2) {
+			margin-left: -.25%;
+			margin-right: -.25%;
+		}
+		@include bp($s3) {
+			margin-left: -.1666%;
+			margin-right: -.1666%;
+		}
+		@include bp($s5) {
+			margin-left: -.125%;
+			margin-right: -.125%;
+		}	
 	}
 }
 
@@ -250,6 +274,7 @@
 	//color:$nt_white;
 	//font-weight: 700;
 	font-size: 1em;
+	//color:$yellow;
 
 	//text-transform: none;
 	

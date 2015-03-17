@@ -19,7 +19,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 a {
-  color:$gray;
+  color:$yellow;
+  text-decoration: none;
+
 }
 .wrapper {
 	@include clearfix();
@@ -84,11 +86,12 @@ figure {
   display: inline-block;
   padding:0.333em 0.75em; 
   text-transform: uppercase;
-  background-color: $nt-white;
-  color: $nt-black;
+  background-color: $gray;
+  color: $nt-white;
   text-decoration: none;
   &:hover, &:focus {
-
+    background-color: $yellow;
+    color:$nt-black;
   }
 }
 

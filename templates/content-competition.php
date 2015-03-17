@@ -62,6 +62,17 @@
         <p class="param__item"><span>Recognition:</span> <?php echo get_post_meta( $post->ID, '_pdata_recognition', true ); ?></p>
         <p class="param__item"><span>Built:</span> <?php echo get_post_meta( $post->ID, '_pdata_built', true ); ?></p>        
       </section>
+        <nav class="refnav">
+        <hr>
+        <div class="refnav__wrap">
+          <?php next_post_link('%link','<i class="ion ion-ios-arrow-left"></i><p class="navtext">%title</p>'); ?>
+          <a href="<?php echo get_post_type_archive_link('project'); ?>" class="refnav__all">
+            <i class="ion ion-grid"></i>
+            <p class="navtext"><?php _e('Show All','nielstorp'); ?></p>
+          </a>
+          <?php previous_post_link('%link','<p class="navtext">%title</p><i class="ion ion-ios-arrow-right"></i>'); ?>
+        </div>
+       </nav>
     </header>
     <div class="project__content">
       <h3 class="pd">Project description</h3>
@@ -81,7 +92,7 @@
         yarpp_related(
           array(
             // Pool options: these determine the "pool" of entities which are considered
-            'post_type' => array('project' ),
+            'post_type' => array('competition' ),
             'show_pass_post' => false, // show password-protected posts
             'past_only' => false, // show only posts which were published before the reference post
             'exclude' => array(), // a list of term_taxonomy_ids. entities with any of these terms will be excluded from consideration.
