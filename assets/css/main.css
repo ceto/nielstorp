@@ -3313,9 +3313,10 @@ input[type="checkbox"]#nav__toggle {
   .refnav a {
     position: relative;
     display: inline-block;
+    color: #dcdcdc;
     line-height: 1; }
     .refnav a:hover, .refnav a:focus {
-      color: #e8d233;
+      color: #fff;
       text-decoration: none; }
       .refnav a:hover .navtext, .refnav a:focus .navtext {
         display: inline-block; }
@@ -3733,9 +3734,6 @@ input[type="checkbox"]#nav__toggle {
       float: left;
       width: 66.666%;
       margin: 0 0 2em; } }
-  @media only screen and (min-width: 1600px) {
-    .aboutpage__fullofphotos {
-      width: 50%; } }
   @media only screen and (min-width: 768px) {
     .fullgallery--shown .aboutpage__fullofphotos {
       float: none;
@@ -3753,13 +3751,13 @@ input[type="checkbox"]#nav__toggle {
     padding-left: 2.5em; } }
 @media only screen and (min-width: 1600px) {
   .aboutpage__content {
-    width: 50%;
-    padding-left: 5em; } }
+    width: 33.333%; } }
 .aboutpage__content > h2:first-child {
   margin-top: 0; }
 
 .abgallery--tiles {
-  margin-top: 2em; }
+  margin: 0 -.5em;
+  margin-top: .5em; }
   .abgallery--tiles:before, .abgallery--tiles:after {
     content: " ";
     display: table; }
@@ -3975,9 +3973,6 @@ input[type="checkbox"]#nav__toggle {
       margin: 0 0 2em;
       float: left;
       width: 66.666%; } }
-  @media only screen and (min-width: 1600px) {
-    .project__gallery {
-      width: 50%; } }
   @media only screen and (min-width: 768px) {
     .fullgallery--shown .project__gallery {
       width: 100%;
@@ -4009,10 +4004,6 @@ input[type="checkbox"]#nav__toggle {
     .project__header {
       font-size: 0.875em;
       padding-left: 2.5em; } }
-  @media only screen and (min-width: 1600px) {
-    .project__header {
-      width: 50%;
-      padding-left: 5em; } }
 
 .project__title {
   font-weight: 800;
@@ -4035,10 +4026,11 @@ input[type="checkbox"]#nav__toggle {
   @media only screen and (min-width: 1600px) {
     .project__content {
       float: left;
-      width: 50%;
-      padding-left: 5em; }
+      width: 33.333%;
+      padding-left: 2.5em; }
       .fullgallery--shown .project__content {
-        padding-left: 0; } }
+        padding-left: 0;
+        width: 66.666%; } }
   .project__content .pd {
     margin-top: 0;
     font-size: 1.25em; }

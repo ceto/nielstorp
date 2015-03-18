@@ -379,11 +379,11 @@ input[type="checkbox"]#nav__toggle {
   a {
     position: relative;
     display: inline-block;
-    //color:$yellow;
+    color:$nt_white;
     line-height: 1;
 
     &:hover,&:focus {
-      color: $yellow;
+      color: #fff;
       text-decoration: none;
       .navtext {
         display: inline-block;

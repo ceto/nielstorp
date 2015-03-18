@@ -8,7 +8,7 @@
     margin: 0 0 2em;
   }
   @include bp($s5) {
-    width: 50%;
+    //width: 50%;
   }
   @include bp($s2) {
     .fullgallery--shown & {
@@ -38,8 +38,8 @@
   }
   @include bp($s5) {
     //font-size: 1em;
-    width: 50%;
-    padding-left: 5em;
+    width: 33.333%;
+    //padding-left: 5em;
   }
   > h2:first-child {
     margin-top: 0;
@@ -47,9 +47,11 @@
 }
 
 
+
 .abgallery--tiles {
 	@include clearfix();
-	margin-top: 2em;
+  margin:0 -.5em;
+  margin-top: .5em;
 }
 .abgallery__tile {
   float: left;

@@ -67,7 +67,7 @@ Template Name: About US Template
 						$galleryfiles = get_post_meta( $post->ID , '_data_gallery', 1 );
 						if ($galleryfiles!='') {
 					?>
-						<div class="abgallery abgallery--tiles">
+						<div class="abgallery abgallery--tiles popup--gallery">
 							
 		          <?php foreach ( (array) $galleryfiles as $attachment_id => $attachment_url ) { ?>
 								<?php
@@ -83,7 +83,7 @@ Template Name: About US Template
 								?>
 
 								<div class="abgallery__tile">
-									<a href="<?php echo $image_url; ?>">
+									<a href="<?php echo $image_url; ?>" title="<?php echo $image_title; ?>">
 										<img src="<?php echo $thumb_url; ?>" alt="<?php echo $image_title; ?>"/>
 									</a>
 								</div>
