@@ -43,7 +43,7 @@ Template Name: Contact Template
   function initialize() {
 
     var mapOptions = {
-      center: new google.maps.LatLng(47.505175, 19.054692),
+      center: new google.maps.LatLng(59.927734, 10.724215),
       zoom: 14,
       zoomControl: false,
       zoomControlOptions: {style: google.maps.ZoomControlStyle.DEFAULT,},
@@ -61,7 +61,7 @@ Template Name: Contact Template
     }
     map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
     //var image = '<?php echo get_stylesheet_directory_uri(); ?>/assets/img/flag.png';
-    var myLatLng = new google.maps.LatLng(47.505175, 19.054692);
+    var myLatLng = new google.maps.LatLng(59.927734, 10.724215);
     var officeMarker = new google.maps.Marker({
       position: myLatLng,
       map: map,

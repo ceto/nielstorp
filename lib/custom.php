@@ -462,6 +462,11 @@ function nt_employee_metaboxes( array $meta_boxes ) {
 		// 'cmb_styles' => false, // false to disable the CMB stylesheet
 		'fields'        => array(
 			array(
+				'name' => __( 'Job', 'nielstorp' ),
+				'id'   => $prefix . 'job',
+				'type' => 'text_medium',
+			),
+			array(
 				'name' => __( 'Email', 'nielstorp' ),
 				'id'   => $prefix . 'email',
 				'type' => 'text_email',
