@@ -21,6 +21,7 @@ module.exports = function(grunt) {
     'assets/vendor/magnific-popup/dist/jquery.magnific-popup.js',
     'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js',
     'assets/vendor/isotope/dist/isotope.pkgd.min.js',
+    'assets/vendor/masterslider/jquery.easing.min.js',
     'assets/vendor/masterslider/masterslider.js',
     'assets/js/plugins/*.js',
     'assets/js/_*.js'
