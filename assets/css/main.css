@@ -4194,22 +4194,15 @@ input[type="checkbox"]#nav__toggle {
     .square__details a:hover, .square__details a:focus {
       color: #fff; }
 
-.home .document {
-  background-image: url('../img/hero_small.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover; }
-  @media only screen and (min-width: 1024px) {
-    .home .document {
-      background-image: url('../img/hero.jpg'); } }
-
-.home__banner {
-  min-height: 3em;
-  background-color: #2E2F2C;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%; }
+.page-template-template-home {
+  background-color: #2E2F2C; }
+  .page-template-template-home .banner {
+    min-height: 3em;
+    background-color: #2E2F2C;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; }
 
 .sitefooter {
   clear: both;

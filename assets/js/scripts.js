@@ -10033,6 +10033,23 @@ jQuery( document ).ready(function( $ ) {
     });
 
 
+    $('#home__theslider').masterslider({
+      width:1920,    // slider standard width
+      height:1024,   // slider standard height
+      space:0,
+      preload:3,
+      autoplay:true,
+      fullwidth:true,
+      autoHeight:true,
+      view:"fade",
+      layout:"fullscreen",
+      controls : {
+        //arrows : {autohide:true},
+        bullets : {autohide:true}
+      }
+    });
+
+
 
   $('.fulltoggle').click( function(e) {
     e.preventDefault();

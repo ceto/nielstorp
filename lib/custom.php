@@ -510,6 +510,40 @@ function nt_posts_metaboxes( array $meta_boxes ) {
 }
 
 
+
+
+add_filter( 'cmb2_meta_boxes', 'nt_home_metaboxes' );
+function nt_home_metaboxes( array $meta_boxes ) {
+	/**
+	 * Apartment Metaboxes
+	*/
+  $prefix = '_homemeta_';
+
+  $meta_boxes['member'] = array(
+    'id'         => 'homemeta',
+    'title'      => 'Home details',
+    'object_types'  => array( 'page'), // Post type
+    'show_on'      => array( 'key' => 'page-template', 'value' => 'template-home.php' ),
+    'context'    => 'normal',
+    'priority'   => 'high',
+    'show_names' => true, // Show field names on the left
+    'fields'     => array (
+			array(
+				'name' => 'Slider',
+				'desc' => 'Select multiple images from gallery to add homepage slider',
+				'id'   => $prefix.'slides',
+				'type' => 'file_list',
+				'preview_size' => array( 160, 90 ), // Default: array( 50, 50 )
+			)
+			
+    )
+   ); 
+ 
+  return $meta_boxes;
+}
+
+
+
 function nt_post_class($classes) {
   if (get_post_type()=='project' ) {
 		$classes[] = 'project-'.get_the_ID();
