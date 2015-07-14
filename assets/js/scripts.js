@@ -10039,8 +10039,11 @@ jQuery( document ).ready(function( $ ) {
       space:0,
       preload:3,
       autoplay:true,
+      loop:true,
       fullwidth:true,
       autoHeight:true,
+      overPause:false,
+      speed:17,
       view:"fade",
       layout:"fullscreen",
       controls : {
