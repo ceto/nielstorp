@@ -559,7 +559,7 @@ add_filter('post_class', 'nt_post_class');
 
 function nt_modify_num_projempl($query)
 {
-    if ( ($query->is_main_query()) && ($query->is_tax('projects') || $query->is_tax('department') || $query->is_post_type_archive(array('project','employee')) ) && (!is_admin()) ) {
+    if ( ($query->is_main_query()) && ($query->is_tax('projects') || $query->is_tax('competitions') || $query->is_tax('department') || $query->is_post_type_archive(array('project','competition','employee')) ) && (!is_admin()) ) {
       $query->set('posts_per_page', -1);
       if ( !($query->is_category() ) ) {
         $query->set('orderby', 'title');
