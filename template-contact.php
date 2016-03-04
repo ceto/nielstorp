@@ -7,7 +7,7 @@ Template Name: Contact Template
 <?php while (have_posts()) : the_post(); ?>
 
 <div class="wrapper wrapper--wide">
-	
+
 
 	<div class="contactpage__content">
 		<div class="incsi">
@@ -16,8 +16,8 @@ Template Name: Contact Template
 			</div>
 			<div class="jobbja">
 				<h3>Follow Us</h3>
-				<a href="#"><i class="ion ion-social-facebook"></i>Facebook</a>
-				<a href="#"><i class="ion ion-social-instagram"></i>Instagram</a>
+				<a target="_blank" href="https://www.facebook.com/Niels-Torp-Arkitekter-966095843424952/"><i class="ion ion-social-facebook"></i>Facebook</a>
+				<a target="_blank" href="https://www.instagram.com/nielstorparkitekter/"><i class="ion ion-social-instagram"></i>Instagram</a>
 			</div>
 		</div>
 		<section class="mapblock">
