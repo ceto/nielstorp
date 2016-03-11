@@ -157,7 +157,7 @@ function nt_project_metaboxes( array $meta_boxes ) {
 				'desc' => 'Add some high resolution project photo. You can select multiple files from the popup',
 				'id' => $prefix . 'gallery',
 				'type' => 'file_list',
-				'preview_size' => array( 160, 90 ), 
+				'preview_size' => array( 160, 90 ),
 			),
 
 		),
@@ -210,7 +210,7 @@ function nt_timeline_metaboxes( array $meta_boxes ) {
                       'wpautop' => true,
                       'media_buttons' => false,
                       'textarea_rows' => get_option('default_post_edit_rows', 5),
-                      'teeny' => true, 
+                      'teeny' => true,
                     ),
                 ),
                 array(
@@ -263,14 +263,14 @@ function nt_aboutus_metaboxes( array $meta_boxes ) {
 					'desc' => 'Photos title must be filled. You can select multiple files from the popup.',
 					'id' => $prefix . 'timeline',
 					'type' => 'file_list',
-					'preview_size' => array( 160, 90 ), 
+					'preview_size' => array( 160, 90 ),
 				),
 				array(
 					'name' => 'Random Photos Below',
 					'desc' => 'Add some high resolution photo.',
 					'id' => $prefix . 'gallery',
 					'type' => 'file_list',
-					'preview_size' => array( 160, 160 ), 
+					'preview_size' => array( 160, 160 ),
 				),
 
       ),
@@ -368,7 +368,7 @@ function nt_comp_taxonomies() {
 
 
 /**
- * Register an employee post type 
+ * Register an employee post type
  *
  */
 
@@ -535,10 +535,10 @@ function nt_home_metaboxes( array $meta_boxes ) {
 				'type' => 'file_list',
 				'preview_size' => array( 160, 90 ), // Default: array( 50, 50 )
 			)
-			
+
     )
-   ); 
- 
+   );
+
   return $meta_boxes;
 }
 
@@ -566,11 +566,11 @@ function nt_modify_num_projempl($query)
         $query->set('order', 'ASC');
       }
 
-      
+
     }
 
 }
- 
+
 add_action('pre_get_posts', 'nt_modify_num_projempl');
 
 
@@ -583,4 +583,12 @@ function nt_DequeueYarppStyle()
 }
 add_action('wp_footer', 'nt_DequeueYarppStyle');
 
+function my_theme_remove_assets_header() {
+  wp_dequeue_style('yarppWidgetCss');
+}
+add_action( 'wp_print_styles', 'my_theme_remove_assets_header' );
 
+function my_theme_remove_assets_footer() {
+  wp_dequeue_style('yarppRelatedCss');
+}
+add_action( 'get_footer', 'my_theme_remove_assets_footer' );
