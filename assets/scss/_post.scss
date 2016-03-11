@@ -71,7 +71,7 @@
 		transform:translateY(-50%);
 		transform:translateX(-50%);
 		display: block;
-		
+
 		color:inherit;
 		outline: none;
 		transition: all .4s ease-in;
@@ -115,12 +115,12 @@
 	@include bp($s2) {
 		position: absolute;
 		left:0;
-		float:none;	
+		float:none;
 	}
 	@include bp($s3) {
 		font-size: 1.25em;
 		margin-top: 0;
-	
+
 	}
 
 }
@@ -261,7 +261,7 @@
 		left:.5em;
 		width:calc(50% - 1.5em);
 	}
-	
+
 	img {
 		display: block;
 	}
@@ -270,7 +270,7 @@
 .post--squared__summary {
 	@include clearfix();
 	position: relative;
-	background-color: $gray-light;	
+	background-color: $gray-light;
 	padding: .5em;
 	padding-bottom: 2.5em;
  	@include bp($s1) {
@@ -328,9 +328,10 @@
 	line-height: 1.125;
 	margin-top: 0;
 	margin-bottom: 0;
+	overflow:hidden;
 
 	a {
-		color:$nt-white;	
+		color:$nt-white;
 		text-decoration: none;
 		&:hover, &:focus {
 			color:$yellow;
@@ -340,6 +341,7 @@
 
 .post--squared__excerpt {
 	font-size: .875em;
+	overflow: hidden;
 	//min-height: 14em;
 	p {
 		margin-top: 0.25em;

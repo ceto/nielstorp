@@ -21,7 +21,7 @@
   background-size: 100% auto;
 
   @include hide-text();
-  
+
   @include bp($s3) {
     width: 175px;
     height: 30px;
@@ -82,7 +82,7 @@ input[type="checkbox"]#nav__toggle {
 .navbar__navigation {
   //min-height: 0;
   height: 0;
-  //visibility: hidden; 
+  //visibility: hidden;
   opacity:0;
   overflow: hidden;
   margin: 0 -1em;
@@ -129,7 +129,7 @@ input[type="checkbox"]#nav__toggle {
 
 
       float: left;
-			
+
 			margin-bottom: 0;
       margin-right: .333em;
     }
@@ -217,14 +217,14 @@ input[type="checkbox"]#nav__toggle {
     padding:0.666em 0.75em;
     border-top: 1px solid $nt_white;
     color:$yellow;
-    
+
     a {
       color:inherit;
       text-decoration: none;
     }
 
     .subnav-toggle {
-      
+
     }
 
     .subtoggler__title {
@@ -240,7 +240,7 @@ input[type="checkbox"]#nav__toggle {
     float:left;
 
     transition: margin .4s ease;
-    
+
     margin-left: -100%;
     .subnav_isactive & {
       margin-left: 0;
@@ -253,12 +253,12 @@ input[type="checkbox"]#nav__toggle {
     position: relative;
     @include clearfix();
     min-height: 100vh;
-    
+
     width: 100%;
     margin: 0 auto;
-    
+
     float:left;
-    
+
     margin-right:0;
     transition: margin .4s ease;
     .subnav_isactive & {
@@ -426,4 +426,33 @@ input[type="checkbox"]#nav__toggle {
       right:0;
     }
   }
+}
+
+
+
+.pager {
+  @include clearfix();
+  list-style-type: none;
+  padding:0;
+  margin:4rem 0 0;
+  li a {
+    display: inline-block;
+    padding:0.333em 0.75em;
+    text-transform: uppercase;
+    background-color: $gray;
+    color: $nt-white;
+    text-decoration: none;
+    &:hover, &:focus {
+      background-color: $yellow;
+      color:$nt-black;
+    }
+  }
+
+  .previous {
+    float:left;
+  }
+  .next {
+    float:right;
+  }
+
 }

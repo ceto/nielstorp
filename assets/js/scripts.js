@@ -6513,7 +6513,7 @@ MSSliderEvent.DESTROY				= 'ms_destroy';//dev\slider\Slide.js
 				if(this.htween.reset)this.htween.reset();
 				else	 			 this.htween.stop(true);
 			} 
-			this.htween = CTween.animate(this.slideController.view.$element , 500 , {height:value} , {ease:'easeOutQuad'});
+			this.htween = CTween.animate(this.slideController.view.$element , 500 , {height:value} , {ease:'easeOutQuart'});
 		}else
 			this.slideController.view.$element.height(value);
 	};

@@ -27,14 +27,29 @@ body {
  * and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
   display: block; }
 
 /**
  * 1. Correct `inline-block` display not defined in IE 8/9.
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
-audio, canvas, progress, video {
+audio,
+canvas,
+progress,
+video {
   display: inline-block;
   /* 1 */
   vertical-align: baseline;
@@ -52,7 +67,8 @@ audio:not([controls]) {
  * Address `[hidden]` styling not present in IE 8/9/10.
  * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
  */
-[hidden], template {
+[hidden],
+template {
   display: none; }
 
 /* Links
@@ -66,7 +82,8 @@ a {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-a:active, a:hover {
+a:active,
+a:hover {
   outline: 0; }
 
 /* Text-level semantics
@@ -80,7 +97,8 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
-b, strong {
+b,
+strong {
   font-weight: bold; }
 
 /**
@@ -113,7 +131,8 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-sub, sup {
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -163,7 +182,10 @@ pre {
 /**
  * Address odd `em`-unit font size rendering in all browsers.
  */
-code, kbd, pre, samp {
+code,
+kbd,
+pre,
+samp {
   font-family: monospace, monospace;
   font-size: 1em; }
 
@@ -179,7 +201,11 @@ code, kbd, pre, samp {
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
-button, input, optgroup, select, textarea {
+button,
+input,
+optgroup,
+select,
+textarea {
   color: inherit;
   /* 1 */
   font: inherit;
@@ -199,7 +225,8 @@ button {
  * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
  */
-button, select {
+button,
+select {
   text-transform: none; }
 
 /**
@@ -209,7 +236,10 @@ button, select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-button, html input[type="button"], input[type="reset"], input[type="submit"] {
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
   cursor: pointer;
@@ -218,13 +248,15 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-button[disabled], html input[disabled] {
+button[disabled],
+html input[disabled] {
   cursor: default; }
 
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-button::-moz-focus-inner, input::-moz-focus-inner {
+button::-moz-focus-inner,
+input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
@@ -242,7 +274,8 @@ input {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
-input[type="checkbox"], input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -253,7 +286,8 @@ input[type="checkbox"], input[type="radio"] {
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
-input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   height: auto; }
 
 /**
@@ -272,7 +306,8 @@ input[type="search"] {
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
-input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
 /**
@@ -315,7 +350,8 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-td, th {
+td,
+th {
   padding: 0; }
 
 /*============ Colors Definition ===========*/
@@ -2560,7 +2596,7 @@ html {
 body {
   background-color: #2E2F2C;
   color: #dcdcdc;
-  font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.4;
   overflow-x: hidden; }
@@ -2637,6 +2673,8 @@ figure {
 
 .alert {
   margin: 6em 0 1em; }
+  .error404 .alert {
+    margin-top: 0; }
 
 /* Magnific Popup CSS */
 .mfp-bg {
@@ -2992,16 +3030,13 @@ img.mfp-img {
 @media all and (max-width: 900px) {
   .mfp-arrow {
     -webkit-transform: scale(0.75);
-    -ms-transform: scale(0.75);
-        transform: scale(0.75); }
+    transform: scale(0.75); }
   .mfp-arrow-left {
     -webkit-transform-origin: 0;
-    -ms-transform-origin: 0;
-        transform-origin: 0; }
+    transform-origin: 0; }
   .mfp-arrow-right {
     -webkit-transform-origin: 100%;
-    -ms-transform-origin: 100%;
-        transform-origin: 100%; }
+    transform-origin: 100%; }
   .mfp-container {
     padding-left: 6px;
     padding-right: 6px; } }
@@ -3050,6 +3085,7 @@ img.mfp-img {
 .navbar:before, .navbar:after {
   content: " ";
   display: table; }
+
 .navbar:after {
   clear: both; }
 
@@ -3062,7 +3098,7 @@ img.mfp-img {
   width: 148px;
   height: 26px;
   margin: .5em 0;
-  background-image: url('../img/logo_mini.png');
+  background-image: url("../img/logo_mini.png");
   background-repeat: no-repeat;
   background-position: left center;
   background-size: 100% auto;
@@ -3077,7 +3113,7 @@ img.mfp-img {
     .navbar__brand {
       width: 439px;
       height: 30px;
-      background-image: url('../img/logo_full.png'); } }
+      background-image: url("../img/logo_full.png"); } }
 
 .navbar__toggle {
   display: block;
@@ -3334,7 +3370,7 @@ input[type="checkbox"]#nav__toggle {
       text-align: left;
       line-height: 1;
       font-size: 0.75em;
-      font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+      font-family: "Open Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
       font-weight: 300;
       text-transform: uppercase; }
     .refnav a.refnav__all .navtext {
@@ -3343,6 +3379,30 @@ input[type="checkbox"]#nav__toggle {
     text-align: right;
     left: auto;
     right: 0; }
+
+.pager {
+  list-style-type: none;
+  padding: 0;
+  margin: 4rem 0 0; }
+  .pager:before, .pager:after {
+    content: " ";
+    display: table; }
+  .pager:after {
+    clear: both; }
+  .pager li a {
+    display: inline-block;
+    padding: 0.333em 0.75em;
+    text-transform: uppercase;
+    background-color: #5b5b5b;
+    color: #dcdcdc;
+    text-decoration: none; }
+    .pager li a:hover, .pager li a:focus {
+      background-color: #a9c92f;
+      color: #2E2F2C; }
+  .pager .previous {
+    float: left; }
+  .pager .next {
+    float: right; }
 
 .post--inlist {
   margin-bottom: 2em; }
@@ -3400,10 +3460,8 @@ input[type="checkbox"]#nav__toggle {
     top: 25%;
     left: 50%;
     -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
             transform: translateY(-50%);
     -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
             transform: translateX(-50%);
     display: block;
     color: inherit;
@@ -3606,7 +3664,8 @@ input[type="checkbox"]#nav__toggle {
   font-size: 1.125em;
   line-height: 1.125;
   margin-top: 0;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  overflow: hidden; }
   .post--squared__title a {
     color: #dcdcdc;
     text-decoration: none; }
@@ -3614,7 +3673,8 @@ input[type="checkbox"]#nav__toggle {
       color: #a9c92f; }
 
 .post--squared__excerpt {
-  font-size: .875em; }
+  font-size: .875em;
+  overflow: hidden; }
   .post--squared__excerpt p {
     margin-top: 0.25em; }
   .post--squared__excerpt .btn--readmore {
@@ -3745,13 +3805,16 @@ input[type="checkbox"]#nav__toggle {
     float: right;
     width: 33.333%;
     padding-left: 1.5em; } }
+
 @media only screen and (min-width: 1024px) {
   .aboutpage__content {
     font-size: .875em;
     padding-left: 2.5em; } }
+
 @media only screen and (min-width: 1600px) {
   .aboutpage__content {
     width: 33.333%; } }
+
 .aboutpage__content > h2:first-child {
   margin-top: 0; }
 
@@ -4269,7 +4332,8 @@ input[type="checkbox"]#nav__toggle {
 .ms-slide-auto-height {
   display: table; }
 
-.ms-loading-container .ms-loading, .ms-slide .ms-slide-loading {
+.ms-loading-container .ms-loading,
+.ms-slide .ms-slide-loading {
   width: 36px;
   height: 36px;
   background: url(../vendor/masterslider/style/loading-2.gif) no-repeat center white;
@@ -4311,7 +4375,6 @@ input[type="checkbox"]#nav__toggle {
 .ms-slide {
   position: absolute;
   -webkit-transform: translateZ(0px);
-  -ms-transform: translateZ(0px);
   transform: translateZ(0px);
   -webkit-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
@@ -4324,14 +4387,15 @@ input[type="checkbox"]#nav__toggle {
   left: 24px;
   bottom: 4%;
   right: 24px;
-  font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
   text-transform: uppercase;
   color: #fff;
   font-weight: 800;
   text-shadow: 1px 1px 1px #000;
   text-align: center; }
 
-.ms-slide .ms-slide-bgcont, .ms-slide .ms-slide-bgvideocont {
+.ms-slide .ms-slide-bgcont,
+.ms-slide .ms-slide-bgvideocont {
   position: absolute;
   overflow: hidden;
   width: 100%; }
@@ -4340,9 +4404,9 @@ input[type="checkbox"]#nav__toggle {
   z-index: 105;
   height: 100%; }
 
-.ms-slide .ms-slide-bgvideocont, .ms-slide-bgvideocont > video {
+.ms-slide .ms-slide-bgvideocont,
+.ms-slide-bgvideocont > video {
   -webkit-transform: translateZ(0.3px);
-  -ms-transform: translateZ(0.3px);
   transform: translateZ(0.3px); }
 
 .ms-slide .ms-slide-bgvideo {
@@ -4499,9 +4563,11 @@ input[type="checkbox"]#nav__toggle {
   color: #DBDBDB;
   margin-top: 7px; }
 
-.ms-slide .ms-slide-vcbtn, .ms-slide .ms-slide-layers, .ms-slide .ms-slide-vpbtn, .ms-slide .ms-slide-video {
+.ms-slide .ms-slide-vcbtn,
+.ms-slide .ms-slide-layers,
+.ms-slide .ms-slide-vpbtn,
+.ms-slide .ms-slide-video {
   -webkit-transform: translateZ(0.44px);
-  -ms-transform: translateZ(0.44px);
   transform: translateZ(0.44px); }
 
 .ms-video-img {
@@ -4522,7 +4588,7 @@ input[type="checkbox"]#nav__toggle {
   position: relative;
   margin: 1em auto 0;
   color: #fff;
-  font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
   font-weight: 700;
   text-transform: uppercase; }
 
@@ -4691,7 +4757,6 @@ input[type="checkbox"]#nav__toggle {
     -o-transform: scale(0.5);
     -ms-transform: scale(0.5);
     opacity: 1; }
-
   100% {
     transform: scale(0.5);
     -webkit-transform: scale(0.5);
@@ -4704,7 +4769,6 @@ input[type="checkbox"]#nav__toggle {
   0% {
     -webkit-transform: scale(0.5);
     opacity: 1; }
-
   100% {
     -webkit-transform: scale(1.5);
     opacity: 0; } }
@@ -4720,7 +4784,8 @@ input[type="checkbox"]#nav__toggle {
  *  Master Slider
  *  Default Skin
  */
-.ms-skin-default .ms-slide .ms-slide-vpbtn, .ms-skin-default .ms-video-btn {
+.ms-skin-default .ms-slide .ms-slide-vpbtn,
+.ms-skin-default .ms-video-btn {
   width: 50px;
   height: 51px;
   background: url(../vendor/masterslider/skins/jbv/light-skin-1.png) no-repeat -14px -150px;
@@ -4736,7 +4801,8 @@ input[type="checkbox"]#nav__toggle {
   right: 30px; }
 
 /* controls */
-.ms-skin-default .ms-nav-next, .ms-skin-default .ms-nav-prev {
+.ms-skin-default .ms-nav-next,
+.ms-skin-default .ms-nav-prev {
   width: 30px;
   background: url(../vendor/masterslider/skins/jbv/light-skin-1.png);
   background-position: -89px -26px;
@@ -4773,7 +4839,8 @@ input[type="checkbox"]#nav__toggle {
   z-index: 210;
   cursor: auto; }
 
-.ms-skin-default .ms-tooltip-top .ms-tooltip-arrow, .ms-skin-default .ms-tooltip-bottom .ms-tooltip-arrow {
+.ms-skin-default .ms-tooltip-top .ms-tooltip-arrow,
+.ms-skin-default .ms-tooltip-bottom .ms-tooltip-arrow {
   border-left: solid 10px transparent;
   border-right: solid 10px transparent;
   position: absolute;
@@ -4792,7 +4859,8 @@ input[type="checkbox"]#nav__toggle {
   border-bottom-color: rgba(240, 240, 240, 0.88);
   top: -10px; }
 
-.ms-skin-default .ms-tooltip-right .ms-tooltip-arrow, .ms-skin-default .ms-tooltip-left .ms-tooltip-arrow {
+.ms-skin-default .ms-tooltip-right .ms-tooltip-arrow,
+.ms-skin-default .ms-tooltip-left .ms-tooltip-arrow {
   border-top: solid 10px transparent;
   border-bottom: solid 10px transparent;
   position: absolute;
@@ -4848,8 +4916,13 @@ input[type="checkbox"]#nav__toggle {
   margin-left: -1px; }
 
 /* retina */
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  .ms-skin-default .ms-slide .ms-slide-vpbtn, .ms-skin-default .ms-video-btn, .ms-skin-default .ms-slide .ms-slide-vcbtn, .ms-skin-default .ms-nav-next, .ms-skin-default .ms-nav-prev, .ms-skin-default .ms-bullet {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .ms-skin-default .ms-slide .ms-slide-vpbtn,
+  .ms-skin-default .ms-video-btn,
+  .ms-skin-default .ms-slide .ms-slide-vcbtn,
+  .ms-skin-default .ms-nav-next,
+  .ms-skin-default .ms-nav-prev,
+  .ms-skin-default .ms-bullet {
     background-image: url(../vendor/masterslider/skins/jbv/light-skin-1-retina.png);
     background-size: 152px 225px; } }
 /*# sourceMappingURL=main.css.map */
