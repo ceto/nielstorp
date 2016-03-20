@@ -15,7 +15,7 @@
   height: 26px;
   margin: .5em 0;
 
-  background-image: url('../img/logo_mini.png');
+  background-image: url('../img/logo_plus.png');
   background-repeat: no-repeat;
   background-position: left center;
   background-size: 100% auto;
@@ -23,7 +23,7 @@
   @include hide-text();
 
   @include bp($s3) {
-    width: 175px;
+    width: 220px;
     height: 30px;
   }
   @include bp($s4) {
@@ -287,6 +287,13 @@ input[type="checkbox"]#nav__toggle {
     float: left;
     margin:0 0;
     padding:0 0;
+    max-width: calc(100% - 6rem);
+    .post-type-archive-competition & {
+      max-width: calc(100% - 10rem);
+    }
+    .post-type-archive-employee & {
+      max-width: calc(100% - 8rem);
+    }
   }
   li {
     font-size: 0.75em;
