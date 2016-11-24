@@ -32,12 +32,7 @@ module.exports = function(grunt) {
       options: {
         jshintrc: '.jshintrc'
       },
-      all: [
-        'Gruntfile.js',
-        'assets/js/*.js',
-        '!assets/js/scripts.js',
-        '!assets/**/*.min.*'
-      ]
+      all: ['Gruntfile.js', 'assets/js/*.js', '!assets/js/scripts.js', '!assets/**/*.min.*']
     },
     sass: {
       dev: {

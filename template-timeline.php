@@ -8,8 +8,8 @@ Template Name: Timeline Template
 
 	<?php if ((wp_get_post_parent_id(get_the_id())==71) || is_page(71)): ?>
 		<div class="sec__header">
-			<div class="wrapper wrapper--wide">  
-					<h1 class="sec__header__title">About</h1>
+			<div class="wrapper wrapper--wide">
+					<h1 class="sec__header__title"><?= __('About','nt') ?></h1>
 					<?php
 		        if (has_nav_menu('secondary_navigation')) :
 		          wp_nav_menu(array('theme_location' => 'secondary_navigation', 'walker' => new Roots_Nav_Walker(), 'menu_class' => 'nav nav--sub'));
@@ -21,14 +21,14 @@ Template Name: Timeline Template
 
 
 
-	
+
 
 <?php if ($timeline = get_post_meta( get_the_ID(), '_data_timeline', true )) : ?>
-  
+
 <section class="timeline csuszat">
   <div class="subtoggler">
-      <a href="#" class="subnav-toggle"><i class="ion ion-android-more-vertical"></i> SHOW MORE</a>
-      <span class="subtoggler__title">About</span>
+      <a href="#" class="subnav-toggle"><i class="ion ion-android-more-vertical"></i> <?= __('SHOW MORE','nt') ?></a>
+      <span class="subtoggler__title"><?= __('About','nt') ?></span>
     </div>
 
 	<div class="wrapper wrapper--wide">
@@ -38,18 +38,18 @@ Template Name: Timeline Template
 				return $b[date] - $a[date];
 			});
     ?>
-  
+
   <div class="inner">
-	<?php 
+	<?php
 		$i=0;$actyear=date('Y')+1;
 		foreach ( (array) $timeline as $key => $element ) {  ?>
 			<article class="panel" id="panel-<?php echo $key; ?>">
 				<header class="panel__header">
 					<?php if ($actyear>date('Y',$element['date'])): ?>
 						<span class="timeline__yearlabel"><?php echo $actyear=date('Y',$element['date']);	?></span>
-					<?php endif ?>	 
+					<?php endif ?>
 					<figure class="panel__fig">
-						<?php 
+						<?php
 							echo wp_get_attachment_image( $element['image_id'], 'large' );
 							//echo $element['image'];
 						?>
@@ -70,7 +70,7 @@ Template Name: Timeline Template
 
 
 	</div>
-</section> 
+</section>
 
 <?php endif; ?>
 

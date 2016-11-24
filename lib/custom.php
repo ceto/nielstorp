@@ -403,7 +403,7 @@ function nt_employee_init() {
 		'has_archive'        => 'employees',
 		'hierarchical'       => false,
 		'menu_position'      => null,
-		'supports'           => array( 'title', 'thumbnail' )
+		'supports'           => array( 'title', 'thumbnail', 'custom-fields' )
 	);
 
 	register_post_type( 'employee', $args );

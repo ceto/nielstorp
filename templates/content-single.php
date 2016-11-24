@@ -29,7 +29,7 @@
       </div>
     </div>
     <footer class="post__footer">
-      <?php wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>')); ?>
+      <?php wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pages:', 'nt'), 'after' => '</p></nav>')); ?>
     </footer>
     <?php //comments_template('/templates/comments.php'); ?>
   </article>

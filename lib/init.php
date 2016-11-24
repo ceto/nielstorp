@@ -5,7 +5,7 @@
 function roots_setup() {
   // Make theme available for translation
   // Community translations can be found at https://github.com/roots/roots-translations
-  load_theme_textdomain('roots', get_template_directory() . '/lang');
+  load_theme_textdomain('nt', get_template_directory() . '/lang');
 
   // Enable plugins to manage the document title
   // http://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
@@ -25,7 +25,7 @@ function roots_setup() {
   // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
   // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
-  
+
   add_image_size('large31',1500, 500, true);
   add_image_size('medium31',1200, 400, true);
   add_image_size('small31', 768, 256, true);

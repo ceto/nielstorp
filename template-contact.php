@@ -15,7 +15,7 @@ Template Name: Contact Template
 				<?php the_content(); ?>
 			</div>
 			<div class="jobbja">
-				<h3>Follow Us</h3>
+				<h3><?= __('Follow Us','nt') ?></h3>
 				<a target="_blank" href="https://www.facebook.com/Niels-Torp-Arkitekter-966095843424952/"><i class="ion ion-social-facebook"></i>Facebook</a>
 				<a target="_blank" href="https://www.instagram.com/nielstorparkitekter/"><i class="ion ion-social-instagram"></i>Instagram</a>
 			</div>

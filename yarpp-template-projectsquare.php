@@ -5,7 +5,7 @@ Description: Requires a theme which supports post thumbnails
 Author: Gabor Szabó <szabogabi@gmail.com>
 */ ?>
 
-	<h3 class="related__title">Similar Projects</h3>
+	<h3 class="related__title"><?= __('Similar Projects','nt') ?></h3>
 	<?php if (have_posts()):?>
 		<section class="projectgrid projectgrid--similar">
 			<?php while (have_posts()) : the_post(); ?>

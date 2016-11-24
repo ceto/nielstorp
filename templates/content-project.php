@@ -23,7 +23,7 @@
               <a href="<?php echo str_replace('watch?v=','embed/',get_post_meta( $post->ID , '_pdata_video', 1 )); ?>" data-type="video">
                 <?php the_title(); ?> video
               </a>
-              <div class="ms-info"><?php _e('Press play to start video','nt');   ?></div>
+              <div class="ms-info"><?= __('Press play to start video','nt')  ?></div>
             </div>
           <?php endif; ?>
 
@@ -55,12 +55,12 @@
     <header class="project__header">
       <h1 class="project__title"><?php the_title(); ?></h1>
       <section class="project__params">
-        <h3 class="param__title">Project details</h3>
-        <p class="param__item"><span>Location:</span> <?php echo get_post_meta( $post->ID, '_pdata_location', true ); ?></p>
-        <p class="param__item"><span>Size:</span> <?php echo get_post_meta( $post->ID, '_pdata_size', true ); ?></p>
-        <p class="param__item"><span>Client:</span> <?php echo get_post_meta( $post->ID, '_pdata_client', true ); ?></p>
-        <p class="param__item"><span>Recognition:</span> <?php echo get_post_meta( $post->ID, '_pdata_recognition', true ); ?></p>
-        <p class="param__item"><span>Built:</span> <?php echo get_post_meta( $post->ID, '_pdata_built', true ); ?></p>
+        <h3 class="param__title"><?= __('Project details','nt') ?></h3>
+        <p class="param__item"><span><?= __('Location','nt') ?>:</span> <?php echo get_post_meta( $post->ID, '_pdata_location', true ); ?></p>
+        <p class="param__item"><span><?= __('Size','nt') ?>:</span> <?php echo get_post_meta( $post->ID, '_pdata_size', true ); ?></p>
+        <p class="param__item"><span><?= __('Client','nt') ?>:</span> <?php echo get_post_meta( $post->ID, '_pdata_client', true ); ?></p>
+        <p class="param__item"><span><?= __('Recognition','nt') ?>:</span> <?php echo get_post_meta( $post->ID, '_pdata_recognition', true ); ?></p>
+        <p class="param__item"><span><?= __('Built:','nt') ?></span> <?php echo get_post_meta( $post->ID, '_pdata_built', true ); ?></p>
       </section>
 
       <nav class="refnav">
@@ -69,7 +69,7 @@
           <?php next_post_link('%link','<i class="ion ion-ios-arrow-left"></i><span>Previous project</span><p class="navtext">%title</p>'); ?>
           <a href="<?php echo get_post_type_archive_link('project'); ?>" class="refnav__all">
             <i class="ion ion-grid"></i>
-            <p class="navtext"><?php _e('Show All','nielstorp'); ?></p>
+            <p class="navtext"><?= __('Show All','nt') ?></p>
           </a>
           <?php previous_post_link('%link','<p class="navtext">%title</p><span>Next project</span><i class="ion ion-ios-arrow-right"></i>'); ?>
         </div>
