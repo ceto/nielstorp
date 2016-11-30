@@ -66,17 +66,17 @@
       <nav class="refnav">
         <hr>
         <div class="refnav__wrap">
-          <?php next_post_link('%link','<i class="ion ion-ios-arrow-left"></i><span>Previous project</span><p class="navtext">%title</p>'); ?>
+          <?php next_post_link('%link','<i class="ion ion-ios-arrow-left"></i><span>'.__('Previous project','nt').'</span><p class="navtext">%title</p>'); ?>
           <a href="<?php echo get_post_type_archive_link('project'); ?>" class="refnav__all">
             <i class="ion ion-grid"></i>
             <p class="navtext"><?= __('Show All','nt') ?></p>
           </a>
-          <?php previous_post_link('%link','<p class="navtext">%title</p><span>Next project</span><i class="ion ion-ios-arrow-right"></i>'); ?>
+          <?php previous_post_link('%link','<p class="navtext">%title</p><span>'.__('Next project','nt').'</span><i class="ion ion-ios-arrow-right"></i>'); ?>
         </div>
        </nav>
     </header>
     <div class="project__content">
-      <h3 class="pd">Project description</h3>
+      <h3 class="pd"><?= __('Project description','nt') ?></h3>
       <?php the_content(); ?>
     </div>
     <footer class="project__footer">

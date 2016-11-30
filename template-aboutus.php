@@ -6,10 +6,10 @@ Template Name: About US Template
 
 <?php while (have_posts()) : the_post(); ?>
 
-	<?php if ((wp_get_post_parent_id(get_the_id())==71) || is_page(71)): ?>
+	<?php if ( ($post->post_parent > 0) || has_children() ) : ?>
 		<div class="sec__header">
-			<div class="wrapper wrapper--wide">  
-					<h1 class="sec__header__title">About</h1>
+			<div class="wrapper wrapper--wide">
+					<h1 class="sec__header__title"><?= __('About','nt') ?></h1>
 					<?php
 		        if (has_nav_menu('secondary_navigation')) :
 		          wp_nav_menu(array('theme_location' => 'secondary_navigation', 'walker' => new Roots_Nav_Walker(), 'menu_class' => 'nav nav--sub'));
@@ -21,21 +21,21 @@ Template Name: About US Template
 
 <section class="about csuszat">
   <div class="subtoggler">
-  	<a href="#" class="subnav-toggle"><i class="ion ion-android-more-vertical"></i> SHOW MORE</a>
-    <span class="subtoggler__title">About</span>
+  	<a href="#" class="subnav-toggle"><i class="ion ion-android-more-vertical"></i> <?= __('SHOW MORE','nt') ?> </a>
+    <span class="subtoggler__title"><?= __('About','nt') ?></span>
   </div>
 
 	<div class="wrapper wrapper--wide">
 		<div class="aboutpage__fullofphotos">
 
 		    <section class="team__gallery">
-					
-					<?php 
+
+					<?php
 						$galleryfiles = get_post_meta( $post->ID , '_data_timeline', 1 );
 						if ($galleryfiles!='') {
 					?>
 						<div class="project__theslider master-slider ms-skin-default" id="team__theslider">
-							
+
 		          <?php foreach ( (array) $galleryfiles as $attachment_id => $attachment_url ) { ?>
 								<?php
 
@@ -56,19 +56,19 @@ Template Name: About US Template
 							<?php } ?>
 						</div>
 					<?php } ?>
-				
+
 	    </section>
 
 
 
 			<section class="about__gallery">
-					
-					<?php 
+
+					<?php
 						$galleryfiles = get_post_meta( $post->ID , '_data_gallery', 1 );
 						if ($galleryfiles!='') {
 					?>
 						<div class="abgallery abgallery--tiles popup--gallery">
-							
+
 		          <?php foreach ( (array) $galleryfiles as $attachment_id => $attachment_url ) { ?>
 								<?php
 
@@ -90,7 +90,7 @@ Template Name: About US Template
 							<?php } ?>
 						</div>
 					<?php }  ?>
-				
+
 	    </section>
 
 

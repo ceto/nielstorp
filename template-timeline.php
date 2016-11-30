@@ -6,7 +6,7 @@ Template Name: Timeline Template
 
 <?php while (have_posts()) : the_post(); ?>
 
-	<?php if ((wp_get_post_parent_id(get_the_id())==71) || is_page(71)): ?>
+	<?php if ( ($post->post_parent > 0) || has_children() ) : ?>
 		<div class="sec__header">
 			<div class="wrapper wrapper--wide">
 					<h1 class="sec__header__title"><?= __('About','nt') ?></h1>
@@ -18,10 +18,6 @@ Template Name: Timeline Template
 			</div>
 		</div>
 	<?php endif ?>
-
-
-
-
 
 <?php if ($timeline = get_post_meta( get_the_ID(), '_data_timeline', true )) : ?>
 
@@ -73,15 +69,6 @@ Template Name: Timeline Template
 </section>
 
 <?php endif; ?>
-
-
-
-
-
-
-
-
-
 
 
 

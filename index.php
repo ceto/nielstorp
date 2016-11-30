@@ -7,7 +7,7 @@
   <?php if (!have_posts()) : ?>
     <div class="wrapper wrapper--normal">
       <div class="alert alert-warning">
-        <?php _e('Sorry, no results were found.', 'roots'); ?>
+        <?php _e('Sorry, no results were found.', 'nt'); ?>
       </div>
     </div>
     <?php get_search_form(); ?>
@@ -25,8 +25,8 @@
     <nav class="post-nav">
       <div class="wrapper wrapper--wide">
         <ul class="pager">
-          <li class="previous"><?php next_posts_link(__('&larr; Older posts', 'roots')); ?></li>
-          <li class="next"><?php previous_posts_link(__('Newer posts &rarr;', 'roots')); ?></li>
+          <li class="previous"><?php next_posts_link(__('&larr; Older posts', 'nt')); ?></li>
+          <li class="next"><?php previous_posts_link(__('Newer posts &rarr;', 'nt')); ?></li>
         </ul>
       </div>
     </nav>

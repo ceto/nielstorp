@@ -4,7 +4,7 @@
   <div class="wrapper wrapper--fullwidth csuszat">
   	<div class="subtoggler">
       <a href="#" class="subnav-toggle"><i class="ion ion-funnel"></i></a>
-      <span class="subtoggler__title">Employees</span>
+      <span class="subtoggler__title"><?= __('Employees','nt') ?></span>
     </div>
     <section id="js-isotopegrid" class="js-isotopegrid employeegrid">
 
