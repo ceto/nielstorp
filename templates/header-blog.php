@@ -4,12 +4,12 @@
 	  <ul class="nav nav--sub">
 		  <?php
 				$args = array(
-					'show_option_all'    => 'All',
+					'show_option_all'    => __('All','nt'),
 					'hide_empty'         => 0,
 					'hierarchical'       => 0,
 					'exclude'            => '1',
 					'title_li'           => '',
-					'show_option_none'   => __( 'No categories' ),
+					'show_option_none'   => __( 'No categories','nt' )
 				);
 				wp_list_categories( $args );
 			?>
