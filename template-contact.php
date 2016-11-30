@@ -37,7 +37,7 @@ Template Name: Contact Template
 
 <?php endwhile; ?>
 <!-- Google MAps -->
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1XHuuc0MYn0XENfrUHB8emleXvEA1aew"></script>
 <script>
 
   function initialize() {
