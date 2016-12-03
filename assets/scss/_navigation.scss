@@ -1,10 +1,47 @@
+.banner__inner {
+  position: relative;
+}
+.headaside {
+   @include clearfix();
+  position: absolute;
+  right:2em;
+  top:0;
+  padding:.25em 0;
+  line-height: 1;
+  @include bp($s2) {
+   right:1em;
+   padding-top:.875em;
+    //background-color: $nt-white;
+  }
+
+  //lang
+  ul {
+    margin:0;
+    padding:0 0;
+    list-style-type: none;
+    > li {
+      display: inline-block;
+      text-align: right;
+      font-size: .75em;
+      &:not(:last-child):after {
+        content: ' | ';
+      }
+      @include bp($s2) {
+        font-size: .75em;
+      }
+      > a {
+        color:$nt-white;
+      }
+    }
+  }
+}
 .navbar {
   @include clearfix();
 }
 
 .navbar__header {
   @include bp($s2) {
-    float: right;
+    float: left;
   }
 }
 
@@ -21,6 +58,9 @@
   background-size: 100% auto;
 
   @include hide-text();
+  @include bp($s2) {
+    margin-top:3.75em;
+  }
 
   @include bp($s3) {
     width: 220px;
@@ -89,8 +129,9 @@ input[type="checkbox"]#nav__toggle {
   transition: opacity .2s ease-in, height .2s ease-in;
 
   @include bp($s2) {
-    margin:0 0;
-    min-height: none;
+    float: right;
+    margin:3.5em 0 0;
+    min-height: auto;
     height: auto;
     visibility:visible;
     opacity:1;
@@ -284,7 +325,7 @@ input[type="checkbox"]#nav__toggle {
 
   @include clearfix();
   @include bp($s2) {
-    float: left;
+    float: right;
     margin:0 0;
     padding:0 0;
     max-width: calc(100% - 6rem);
@@ -322,7 +363,7 @@ input[type="checkbox"]#nav__toggle {
     }
 
     @include bp($s3) {
-      font-size: 0.875em;
+      //font-size: 0.875em;
     }
 
     .page-child & {

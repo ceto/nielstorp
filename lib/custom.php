@@ -1,4 +1,8 @@
 <?php
+define('ICL_DONT_LOAD_NAVIGATION_CSS', true);
+define('ICL_DONT_LOAD_LANGUAGE_SELECTOR_CSS', true);
+define('ICL_DONT_LOAD_LANGUAGES_JS', true);
+
 add_action( 'init', 'nt_project_init' );
 /**
  * Register a project post type and its taxonomy.

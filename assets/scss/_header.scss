@@ -3,7 +3,13 @@
 	z-index:9;
 }
 .sec__header {
-	border-top: 1px solid $nt-white;
+
+	padding-bottom: .5em;
+	//padding-top: .5em;
+	//margin-bottom: .125em;
+
+	border-top: 1px solid rgba($nt-white,.5);
+	//border-bottom: 1px solid rgba($nt-white,.5);
 }
 
 .sec__header__title {
@@ -13,9 +19,11 @@
 	padding:0.666em 0;
 	color:$yellow;
 	@include bp($s2) {
-		float:right;
+		padding-top: .75em;
+		padding-bottom: .333em;
+		float:left;
 	}
 	@include bp($s3) {
-		font-size:1.333em;
+		//font-size:1.125em;
 	}
 }
