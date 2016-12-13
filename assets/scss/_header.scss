@@ -19,9 +19,10 @@
 	padding:0.666em 0;
 	color:$yellow;
 	@include bp($s2) {
-		padding-top: .75em;
+		padding-top: .5em;
 		padding-bottom: .333em;
-		float:left;
+		padding-right: 1rem;
+		float: right;
 	}
 	@include bp($s3) {
 		//font-size:1.125em;

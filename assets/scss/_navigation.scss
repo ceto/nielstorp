@@ -6,12 +6,15 @@
   position: absolute;
   right:2em;
   top:0;
-  padding:.25em 0;
+  padding:.2em 0;
   line-height: 1;
   @include bp($s2) {
    right:1em;
-   padding-top:.875em;
+   padding:.75em 0 0;
     //background-color: $nt-white;
+  }
+  @include bp($s3) {
+    padding-top:1em;
   }
 
   //lang
@@ -21,16 +24,28 @@
     list-style-type: none;
     > li {
       display: inline-block;
-      text-align: right;
-      font-size: .75em;
-      &:not(:last-child):after {
-        content: ' | ';
+      vertical-align: middle;
+      text-align: center;
+      font-size: .666em;
+      font-weight:700;
+      white-space: nowrap;
+      text-overflow:ellipsis;
+      overflow: hidden;
+      max-width:3rem;
+      padding:0 .1875em;
+      overflow:hidden;
+      &:not(:last-child) {
+        //border-right:1px solid rgba($nt-white,.5);
       }
       @include bp($s2) {
-        font-size: .75em;
+        font-size: .666em;
       }
       > a {
         color:$nt-white;
+        img {
+          display:block;
+          margin:0 auto .25em auto;
+        }
       }
     }
   }
@@ -40,8 +55,13 @@
 }
 
 .navbar__header {
+  position: relative;
   @include bp($s2) {
-    float: left;
+    float: right;
+    padding-right: 7rem;
+  }
+  @include bp($s4) {
+    //padding-right: 7rem;
   }
 }
 
@@ -59,10 +79,11 @@
 
   @include hide-text();
   @include bp($s2) {
-    margin-top:3.75em;
+    margin-top:.666em;
   }
 
   @include bp($s3) {
+    margin-top:.75em;
     width: 220px;
     height: 30px;
   }
@@ -129,8 +150,8 @@ input[type="checkbox"]#nav__toggle {
   transition: opacity .2s ease-in, height .2s ease-in;
 
   @include bp($s2) {
-    float: right;
-    margin:3.5em 0 0;
+    float: left;
+    margin:0 0 0;
     min-height: auto;
     height: auto;
     visibility:visible;
@@ -225,7 +246,7 @@ input[type="checkbox"]#nav__toggle {
     > a {
       display: block;
 
-      padding: 1em .666em;
+      padding: 1.25em .666em 1.125em;
 
       text-decoration: none;
       text-transform: uppercase;
@@ -325,15 +346,15 @@ input[type="checkbox"]#nav__toggle {
 
   @include clearfix();
   @include bp($s2) {
-    float: right;
+    float: left;
     margin:0 0;
     padding:0 0;
-    max-width: calc(100% - 6rem);
+    max-width: calc(100% - 7rem);
     .post-type-archive-competition & {
-      max-width: calc(100% - 10rem);
+      max-width: calc(100% - 11rem);
     }
     .post-type-archive-employee & {
-      max-width: calc(100% - 8rem);
+      max-width: calc(100% - 9rem);
     }
   }
   li {
@@ -385,7 +406,7 @@ input[type="checkbox"]#nav__toggle {
     > a {
       display: block;
 
-      padding: 1.25em .666em;
+      padding: 1em .666em;
 
       text-decoration: none;
       text-transform: uppercase;
