@@ -17,6 +17,7 @@
     padding-top:1em;
   }
 
+
   //lang
   ul {
     margin:0;
@@ -61,7 +62,7 @@
     padding-right: 7rem;
   }
   @include bp($s4) {
-    //padding-right: 7rem;
+    padding-right: 7.5rem;
   }
 }
 

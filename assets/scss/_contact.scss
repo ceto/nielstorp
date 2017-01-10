@@ -27,6 +27,9 @@
 			float:left;
 			width:55%;
 		}
+		@include bp($s4) {
+			width:45%;
+		}
 	}
 
 	.jobbja {
@@ -34,6 +37,9 @@
 		@include bp($s1) {
 			float:left;
 			width:45%;
+		}
+		@include bp($s4) {
+			width:55%;
 		}
 		a {
 			display: inline-block;
@@ -43,9 +49,10 @@
 			text-decoration: none;
 			color:$nt_white;
 			margin-right: 1em;
+			margin-bottom: 1em;
 			i {
 				display: block;
-				font-size: 3.5em;
+				font-size: 3em;
 			}
 			&:hover,&:focus {
 				color:#fff;

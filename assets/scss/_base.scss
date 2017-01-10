@@ -50,6 +50,24 @@ a {
 	max-width:$s5;
 }
 
+.wrapper--tricky {
+  @include bp($s2) {
+    padding: 0 2em;
+
+
+  }
+  @include bp($s3) {
+    padding: 0 3em;
+  }
+  @include bp($s4) {
+    padding: 0 4.5em;
+  }
+  @include bp($s5) {
+    padding: 0 .5em;
+    margin-left: calc(50vw - 703px);
+  }
+}
+
 .wrapper--fullwidth {
 	padding: 0 0;
 }

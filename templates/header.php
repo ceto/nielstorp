@@ -1,5 +1,5 @@
 <header class="banner navbar" role="banner">
-  <div class="wrapper wrapper--wide">
+  <div class="wrapper wrapper--tricky">
     <div class="banner__inner">
     <div class="navbar__header">
       <label class="navbar__toggle" for="nav__toggle"><i class="ion ion-navicon"></i></label>
