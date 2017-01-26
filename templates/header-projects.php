@@ -5,7 +5,7 @@
 
 			<li class="js-isotopefilter__item filter__item-all active">
 				<a href="<?php echo get_post_type_archive_link('project'); ?>" data-filter-value="*">
-					<?= __('All','nt') ?>
+					<?= __('All<span> Proj.</span>','nt') ?>
 				</a>
 			</li>
 			<?php $filtlist=get_terms('projects',array('hide_empty' => false)); ?>

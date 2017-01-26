@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-30 22:27+0000\n"
+"POT-Creation-Date: 2017-01-26 11:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -14,35 +14,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco - https://localise.biz/"
 
+#: archive-competition.php:7 templates/header-competitions.php:3
+msgid "Competitions"
+msgstr ""
+
 #: archive-employee.php:7 templates/header-employees.php:3
 msgid "Employees"
 msgstr ""
 
-#. Name of the template
-msgid "Contact Template"
-msgstr ""
-
-#: template-contact.php:18
-msgid "Follow Us"
-msgstr ""
-
-#. Name of the template
-msgid "Timeline Template"
-msgstr ""
-
-#: template-timeline.php:12 template-timeline.php:27 template-aboutus.php:12
-#: template-aboutus.php:25 templates/content-page.php:4
-#: templates/content-page.php:17
-msgid "About"
-msgstr ""
-
-#: template-timeline.php:26 template-aboutus.php:24
-#: templates/content-page.php:16
-msgid "SHOW MORE"
-msgstr ""
-
-#: yarpp-template-projectsquare.php:8
-msgid "Similar Projects"
+#: archive-project.php:7 templates/header-projects.php:3
+msgid "Projects"
 msgstr ""
 
 #: index.php:5 templates/header-blog.php:3
@@ -61,8 +42,27 @@ msgstr ""
 msgid "Newer posts &rarr;"
 msgstr ""
 
-#: archive-competition.php:7 templates/header-competitions.php:3
-msgid "Competitions"
+#. Name of the template
+msgid "About US Template"
+msgstr ""
+
+#: template-aboutus.php:12 template-aboutus.php:25 template-timeline.php:12
+#: template-timeline.php:27 templates/content-page.php:4
+#: templates/content-page.php:17
+msgid "About"
+msgstr ""
+
+#: template-aboutus.php:24 template-timeline.php:26
+#: templates/content-page.php:16
+msgid "SHOW MORE"
+msgstr ""
+
+#. Name of the template
+msgid "Contact Template"
+msgstr ""
+
+#: template-contact.php:18
+msgid "Follow Us"
 msgstr ""
 
 #. Name of the template
@@ -70,29 +70,15 @@ msgid "Home Template with Slides"
 msgstr ""
 
 #. Name of the template
-msgid "About US Template"
+msgid "Timeline Template"
 msgstr ""
 
-#: archive-project.php:7 templates/header-projects.php:3
-msgid "Projects"
+#: yarpp-template-projectsquare.php:8
+msgid "Similar Projects"
 msgstr ""
 
-#: templates/header-competitions.php:8 templates/header-employees.php:7
-#: templates/header-blog.php:7 templates/header-projects.php:8
-msgid "All"
-msgstr ""
-
-#: templates/content-single.php:32
-msgid "Pages:"
-msgstr ""
-
-#: templates/footer.php:6
-msgid ""
-"&copy; 2014-2017 &middot; All rights are reserved! &middot; Niels Torp as "
-"Arkitekter &middot; Industrigaten 59 &middot; 0357, Oslo <br> Phone: <a "
-"href=\"tel:+47 23 36 68 00\">+47 23 36 68 00</a> &middot; Fax: +47 23 36 68 "
-"01 &middot; eMail: <a href=\"mailto:firmapost@nielstorp.no\">"
-"firmapost@nielstorp.no</a>"
+#: lib/extras.php:6
+msgid "Continue reading"
 msgstr ""
 
 #: templates/content-competition.php:26 templates/content-project.php:26
@@ -139,16 +125,41 @@ msgstr ""
 msgid "Project description"
 msgstr ""
 
-#: templates/header-blog.php:12
-msgid "No categories"
-msgstr ""
-
 #: templates/content-project.php:63
 msgid "Built:"
 msgstr ""
 
-#: lib/extras.php:6
-msgid "Continue reading"
+#: templates/content-single.php:32
+msgid "Pages:"
+msgstr ""
+
+#: templates/footer.php:6
+msgid ""
+"&copy; 2014 &middot; All rights are reserved! &middot; Niels Torp as "
+"Arkitekter &middot; Industrigaten 59 &middot; 0357, Oslo <br> Phone: <a "
+"href=\"tel:+47 23 36 68 00\">+47 23 36 68 00</a> &middot; Fax: +47 23 36 68 "
+"01 &middot; eMail: <a href=\"mailto:firmapost@nielstorp.no\">"
+"firmapost@nielstorp.no</a>"
+msgstr ""
+
+#: templates/header-blog.php:7
+msgid "All<span> Posts</span>"
+msgstr ""
+
+#: templates/header-blog.php:12
+msgid "No categories"
+msgstr ""
+
+#: templates/header-competitions.php:7
+msgid "All<span> Comp.</span>"
+msgstr ""
+
+#: templates/header-employees.php:7
+msgid "All<span> Empl.</span>"
+msgstr ""
+
+#: templates/header-projects.php:8
+msgid "All<span> Proj.</span>"
 msgstr ""
 
 #. Name of the theme

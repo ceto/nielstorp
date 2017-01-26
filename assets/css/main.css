@@ -3133,8 +3133,7 @@ img.mfp-img {
       text-overflow: ellipsis;
       overflow: hidden;
       max-width: 3rem;
-      padding: 0 .1875em;
-      overflow: hidden; }
+      padding: 0 .1875em .2em; }
       @media only screen and (min-width: 865px) {
         .headaside ul > li {
           font-size: .666em; } }
@@ -3400,6 +3399,8 @@ input[type="checkbox"]#nav__toggle {
       .nav--sub li > a:hover, .nav--sub li > a:focus {
         color: inherit;
         background-color: inherit; }
+      .nav--sub li > a > span {
+        display: none; }
 
 /**** Reference PAge Navigation */
 .refnav {

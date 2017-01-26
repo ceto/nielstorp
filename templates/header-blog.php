@@ -4,7 +4,7 @@
 	  <ul class="nav nav--sub">
 		  <?php
 				$args = array(
-					'show_option_all'    => __('All','nt'),
+					'show_option_all'    => __('All<span> Posts</span>','nt'),
 					'hide_empty'         => 0,
 					'hierarchical'       => 0,
 					'exclude'            => '1',

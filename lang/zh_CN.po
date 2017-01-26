@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Niels Torp Arkitekter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-30 22:27+0000\n"
-"PO-Revision-Date: 2016-11-30 22:27+0000\n"
+"POT-Creation-Date: 2017-01-26 11:59+0000\n"
+"PO-Revision-Date: 2017-01-26 12:01+0000\n"
 "Last-Translator: Gábor Szabó <szabogabi@gmail.com>\n"
 "Language-Team: Chinese (China)\n"
 "Language: zh-CN\n"
@@ -14,11 +14,11 @@ msgstr ""
 "X-Generator: Loco - https://localise.biz/"
 
 #. Name of the template
-msgid "Contact Template"
+msgid "About US Template"
 msgstr ""
 
 #. Name of the template
-msgid "Timeline Template"
+msgid "Contact Template"
 msgstr ""
 
 #. Name of the template
@@ -26,11 +26,7 @@ msgid "Home Template with Slides"
 msgstr ""
 
 #. Name of the template
-msgid "About US Template"
-msgstr ""
-
-#: templates/content-single.php:32
-msgid "Pages:"
+msgid "Timeline Template"
 msgstr ""
 
 #: templates/content-competition.php:26 templates/content-project.php:26
@@ -77,13 +73,42 @@ msgstr ""
 msgid "Project description"
 msgstr ""
 
+#: templates/content-project.php:63
+msgid "Built:"
+msgstr ""
+
+#: templates/content-single.php:32
+msgid "Pages:"
+msgstr ""
+
+#: templates/footer.php:6
+msgid ""
+"&copy; 2014 &middot; All rights are reserved! &middot; Niels Torp as "
+"Arkitekter &middot; Industrigaten 59 &middot; 0357, Oslo <br> Phone: <a "
+"href=\"tel:+47 23 36 68 00\">+47 23 36 68 00</a> &middot; Fax: +47 23 36 68 "
+"01 &middot; eMail: <a href=\"mailto:firmapost@nielstorp.no\">"
+"firmapost@nielstorp.no</a>"
+msgstr ""
+
+#: templates/header-blog.php:7
+msgid "All<span> Posts</span>"
+msgstr "全部新闻"
+
 #: templates/header-blog.php:12
 msgid "No categories"
 msgstr ""
 
-#: templates/content-project.php:63
-msgid "Built:"
-msgstr ""
+#: templates/header-competitions.php:7
+msgid "All<span> Comp.</span>"
+msgstr "全部项⺫"
+
+#: templates/header-employees.php:7
+msgid "All<span> Empl.</span>"
+msgstr "全体成员"
+
+#: templates/header-projects.php:8
+msgid "All<span> Proj.</span>"
+msgstr "全部项⺫"
 
 #. Name of the theme
 msgid "Niels Torp Arkitekter"
@@ -107,28 +132,17 @@ msgstr ""
 msgid "http://hydrogene.hu/"
 msgstr ""
 
+#: archive-competition.php:7 templates/header-competitions.php:3
+msgid "Competitions"
+msgstr "竞赛"
+
 #: archive-employee.php:7 templates/header-employees.php:3
 msgid "Employees"
 msgstr "团队"
 
-#: template-contact.php:18
-msgid "Follow Us"
-msgstr "关注我们"
-
-#: template-timeline.php:12 template-timeline.php:27 template-aboutus.php:12
-#: template-aboutus.php:25 templates/content-page.php:4
-#: templates/content-page.php:17
-msgid "About"
-msgstr "联系我们"
-
-#: template-timeline.php:26 template-aboutus.php:24
-#: templates/content-page.php:16
-msgid "SHOW MORE"
-msgstr "显示更多"
-
-#: yarpp-template-projectsquare.php:8
-msgid "Similar Projects"
-msgstr "类似项目"
+#: archive-project.php:7 templates/header-projects.php:3
+msgid "Projects"
+msgstr "项目"
 
 #: index.php:5 templates/header-blog.php:3
 msgid "News"
@@ -146,31 +160,24 @@ msgstr "&larr;  上一篇文章"
 msgid "Newer posts &rarr;"
 msgstr "下一篇文章 &rarr;"
 
-#: archive-competition.php:7 templates/header-competitions.php:3
-msgid "Competitions"
-msgstr "竞赛"
+#: template-aboutus.php:12 template-aboutus.php:25 template-timeline.php:12
+#: template-timeline.php:27 templates/content-page.php:4
+#: templates/content-page.php:17
+msgid "About"
+msgstr "联系我们"
 
-#: archive-project.php:7 templates/header-projects.php:3
-msgid "Projects"
-msgstr "项目"
+#: template-aboutus.php:24 template-timeline.php:26
+#: templates/content-page.php:16
+msgid "SHOW MORE"
+msgstr "显示更多"
 
-#: templates/header-competitions.php:8 templates/header-employees.php:7
-#: templates/header-blog.php:7 templates/header-projects.php:8
-msgid "All"
-msgstr "全部项目"
+#: template-contact.php:18
+msgid "Follow Us"
+msgstr "关注我们"
 
-#: templates/footer.php:6
-msgid ""
-"&copy; 2014-2017 &middot; All rights are reserved! &middot; Niels Torp as "
-"Arkitekter &middot; Industrigaten 59 &middot; 0357, Oslo <br> Phone: <a "
-"href=\"tel:+47 23 36 68 00\">+47 23 36 68 00</a> &middot; Fax: +47 23 36 68 "
-"01 &middot; eMail: <a href=\"mailto:firmapost@nielstorp.no\">"
-"firmapost@nielstorp.no</a>"
-msgstr ""
-"&copy; 2014-2017 &middot; 保留所有权利 &middot; Niels Torp as Arkitekter &middot; "
-"Industrigaten 59 &middot; 0357, Oslo <br> 电话: <a href=\"tel:+47 23 36 68 "
-"00\">+47 23 36 68 00</a> &middot; 传真: +47 23 36 68 01 &middot; 电子邮件: <a "
-"href=\"mailto:firmapost@nielstorp.no\">firmapost@nielstorp.no</a>"
+#: yarpp-template-projectsquare.php:8
+msgid "Similar Projects"
+msgstr "类似项目"
 
 #: lib/extras.php:6
 msgid "Continue reading"
