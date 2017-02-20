@@ -1,5 +1,6 @@
 <?php get_template_part('templates/head'); ?>
 <body <?php body_class(); ?>>
+<?php if (ICL_LANGUAGE_CODE!=='zh-hans') : ?>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -9,6 +10,7 @@
   ga('create', 'UA-74996631-1', 'auto');
   ga('send', 'pageview');
 </script>
+<?php endif; ?>
 
   <!--[if lt IE 9]>
     <div class="alert alert-warning">

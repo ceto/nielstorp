@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-26 11:58+0000\n"
+"POT-Creation-Date: 2017-02-10 15:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -14,16 +14,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#: archive-competition.php:7 templates/header-competitions.php:3
-msgid "Competitions"
+#. Name of the template
+msgid "About US Template"
 msgstr ""
 
-#: archive-employee.php:7 templates/header-employees.php:3
-msgid "Employees"
+#: template-aboutus.php:12 template-aboutus.php:25 template-timeline.php:12
+#: template-timeline.php:27 templates/content-page.php:4
+#: templates/content-page.php:17
+msgid "About"
 msgstr ""
 
-#: archive-project.php:7 templates/header-projects.php:3
-msgid "Projects"
+#: template-aboutus.php:24 template-timeline.php:26
+#: templates/content-page.php:16
+msgid "SHOW MORE"
 msgstr ""
 
 #: index.php:5 templates/header-blog.php:3
@@ -42,19 +45,16 @@ msgstr ""
 msgid "Newer posts &rarr;"
 msgstr ""
 
-#. Name of the template
-msgid "About US Template"
+#: archive-project.php:7 templates/header-projects.php:3
+msgid "Projects"
 msgstr ""
 
-#: template-aboutus.php:12 template-aboutus.php:25 template-timeline.php:12
-#: template-timeline.php:27 templates/content-page.php:4
-#: templates/content-page.php:17
-msgid "About"
+#: archive-employee.php:7 templates/header-employees.php:3
+msgid "Employees"
 msgstr ""
 
-#: template-aboutus.php:24 template-timeline.php:26
-#: templates/content-page.php:16
-msgid "SHOW MORE"
+#: yarpp-template-projectsquare.php:8
+msgid "Similar Projects"
 msgstr ""
 
 #. Name of the template
@@ -69,77 +69,20 @@ msgstr ""
 msgid "Home Template with Slides"
 msgstr ""
 
-#. Name of the template
-msgid "Timeline Template"
+#: archive-competition.php:7 templates/header-competitions.php:3
+msgid "Competitions"
 msgstr ""
 
-#: yarpp-template-projectsquare.php:8
-msgid "Similar Projects"
+#. Name of the template
+msgid "Timeline Template"
 msgstr ""
 
 #: lib/extras.php:6
 msgid "Continue reading"
 msgstr ""
 
-#: templates/content-competition.php:26 templates/content-project.php:26
-msgid "Press play to start video"
-msgstr ""
-
-#: templates/content-competition.php:58 templates/content-project.php:58
-msgid "Project details"
-msgstr ""
-
-#: templates/content-competition.php:59 templates/content-project.php:59
-msgid "Location"
-msgstr ""
-
-#: templates/content-competition.php:60 templates/content-project.php:60
-msgid "Size"
-msgstr ""
-
-#: templates/content-competition.php:61 templates/content-project.php:61
-msgid "Client"
-msgstr ""
-
-#: templates/content-competition.php:62 templates/content-project.php:62
-msgid "Recognition"
-msgstr ""
-
-#: templates/content-competition.php:63
-msgid "Built"
-msgstr ""
-
-#: templates/content-competition.php:68 templates/content-project.php:69
-msgid "Previous project"
-msgstr ""
-
-#: templates/content-competition.php:71 templates/content-project.php:72
-msgid "Show All"
-msgstr ""
-
-#: templates/content-competition.php:73 templates/content-project.php:74
-msgid "Next project"
-msgstr ""
-
-#: templates/content-competition.php:78 templates/content-project.php:79
-msgid "Project description"
-msgstr ""
-
-#: templates/content-project.php:63
-msgid "Built:"
-msgstr ""
-
-#: templates/content-single.php:32
-msgid "Pages:"
-msgstr ""
-
-#: templates/footer.php:6
-msgid ""
-"&copy; 2014 &middot; All rights are reserved! &middot; Niels Torp as "
-"Arkitekter &middot; Industrigaten 59 &middot; 0357, Oslo <br> Phone: <a "
-"href=\"tel:+47 23 36 68 00\">+47 23 36 68 00</a> &middot; Fax: +47 23 36 68 "
-"01 &middot; eMail: <a href=\"mailto:firmapost@nielstorp.no\">"
-"firmapost@nielstorp.no</a>"
+#: templates/header-projects.php:8
+msgid "All<span> Proj.</span>"
 msgstr ""
 
 #: templates/header-blog.php:7
@@ -150,16 +93,73 @@ msgstr ""
 msgid "No categories"
 msgstr ""
 
+#: templates/content-project.php:26 templates/content-competition.php:26
+msgid "Press play to start video"
+msgstr ""
+
+#: templates/content-project.php:58 templates/content-competition.php:58
+msgid "Project details"
+msgstr ""
+
+#: templates/content-project.php:59 templates/content-competition.php:59
+msgid "Location"
+msgstr ""
+
+#: templates/content-project.php:60 templates/content-competition.php:60
+msgid "Size"
+msgstr ""
+
+#: templates/content-project.php:61 templates/content-competition.php:61
+msgid "Client"
+msgstr ""
+
+#: templates/content-project.php:62 templates/content-competition.php:62
+msgid "Recognition"
+msgstr ""
+
+#: templates/content-project.php:63
+msgid "Built:"
+msgstr ""
+
+#: templates/content-project.php:69 templates/content-competition.php:68
+msgid "Previous project"
+msgstr ""
+
+#: templates/content-project.php:72 templates/content-competition.php:71
+msgid "Show All"
+msgstr ""
+
+#: templates/content-project.php:74 templates/content-competition.php:73
+msgid "Next project"
+msgstr ""
+
+#: templates/content-project.php:79 templates/content-competition.php:78
+msgid "Project description"
+msgstr ""
+
+#: templates/footer.php:6
+msgid ""
+"&copy; 2014-2017 &middot; All rights are reserved! &middot; Niels Torp as "
+"Arkitekter &middot; Industrigaten 59 &middot; 0357, Oslo <br> Phone: <a "
+"href=\"tel:+47 23 36 68 00\">+47 23 36 68 00</a> &middot; Fax: +47 23 36 68 "
+"01 &middot; eMail: <a href=\"mailto:firmapost@nielstorp.no\">"
+"firmapost@nielstorp.no</a>"
+msgstr ""
+
 #: templates/header-competitions.php:7
 msgid "All<span> Comp.</span>"
 msgstr ""
 
-#: templates/header-employees.php:7
-msgid "All<span> Empl.</span>"
+#: templates/content-competition.php:63
+msgid "Built"
 msgstr ""
 
-#: templates/header-projects.php:8
-msgid "All<span> Proj.</span>"
+#: templates/content-single.php:32
+msgid "Pages:"
+msgstr ""
+
+#: templates/header-employees.php:7
+msgid "All<span> Empl.</span>"
 msgstr ""
 
 #. Name of the theme

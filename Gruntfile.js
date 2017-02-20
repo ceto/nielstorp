@@ -167,7 +167,7 @@ module.exports = function(grunt) {
     'notify'
   ]);
   grunt.registerTask('build', [
-    'jshint',
+    //'jshint',
     'sass:build',
     'autoprefixer:build',
     'uglify',

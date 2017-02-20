@@ -39,6 +39,7 @@ Template Name: Contact Template
 
 
 <?php endwhile; ?>
+<?php if (ICL_LANGUAGE_CODE!=='zh-hans') : ?>
 <!-- Google MAps -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1XHuuc0MYn0XENfrUHB8emleXvEA1aew"></script>
 <script>
@@ -77,3 +78,4 @@ Template Name: Contact Template
   google.maps.event.addDomListener(window, 'load', initialize);
 
 </script>
+<?php endif; ?>
