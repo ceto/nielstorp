@@ -3852,7 +3852,11 @@ input[type="checkbox"]#nav__toggle {
   height: 300px;
   position: relative;
   overflow: hidden;
-  background-color: #dcdcdc; }
+  background-color: #dcdcdc;
+  background-image: url(../img/map.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
   .mapblock:before, .mapblock:after {
     content: " ";
     display: table; }

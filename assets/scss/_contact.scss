@@ -64,14 +64,19 @@
 }
 
 .mapblock {
+  @include clearfix();
 	margin:2em 0 0;
 	width:auto;
-  @include clearfix();
+
   clear:both;
   height:300px;
   position: relative;
   overflow: hidden;
   background-color: $nt_white;
+	background-image: url(../img/map.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 
 
 	&:after {
