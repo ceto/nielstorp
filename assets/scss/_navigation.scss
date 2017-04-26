@@ -210,33 +210,33 @@ input[type="checkbox"]#nav__toggle {
     }
 
     .post-type-archive-project &, .single-project & {
-      &.menu-news {
+      &.menu-news, &.menu-%e6%96%b0%e9%97%bb {
         color:$nt-white;
         background-color: transparent;
       }
-      &.menu-projects {
+      &.menu-projects, &.menu-%e9%a1%b9%e7%9b%ae {
         color: $nt-black;
         background-color: $nt-white;
       }
     }
 
     .post-type-archive-competition &, .single-competition & {
-      &.menu-news {
+      &.menu-news, &.menu-%e6%96%b0%e9%97%bb {
         color:$nt-white;
         background-color: transparent;
       }
-      &.menu-competitions {
+      &.menu-competitions, &.menu-%e7%ab%9e%e8%b5%9b {
         color: $nt-black;
         background-color: $nt-white;
       }
     }
 
     .post-type-archive-employee &  {
-      &.menu-news {
+      &.menu-news, &.menu-%e6%96%b0%e9%97%bb {
         color:$nt-white;
         background-color: transparent;
       }
-      &.menu-employees {
+      &.menu-employees, &.menu-%e5%9b%a2%e9%98%9f {
         color: $nt-black;
         background-color: $nt-white;
       }
