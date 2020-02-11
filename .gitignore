@@ -3,4 +3,5 @@
 .DS_Store
 node_modules
 assets/vendor/*
+!assets/vendor/masterslider
 !assets/vendor/jquery/dist/jquery.min.js
