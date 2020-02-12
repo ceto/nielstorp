@@ -2601,7 +2601,12 @@ body {
   line-height: 1.4;
   overflow-x: hidden; }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 300;
   text-transform: uppercase; }
 
@@ -2650,18 +2655,23 @@ a {
 
 @media only screen and (min-width: 1600px) {
   .wrapper--tricky {
-    padding: 0 .5em;
+    padding: 0 0.5em;
     margin-left: calc(50vw - 703px); } }
 
 .wrapper--fullwidth {
   padding: 0 0; }
+  @media only screen and (min-width: 1045px) {
+    .wrapper--fullwidth {
+      padding: 0 1em; } }
 
 .document {
   min-height: 100vh;
   min-height: calc(100vh - 48px); }
 
 /****** Some Resets *****/
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box; }
 
 img {
@@ -3079,7 +3089,7 @@ img.mfp-img {
   z-index: 9; }
 
 .sec__header {
-  padding-bottom: .5em;
+  padding-bottom: 0.5em;
   border-top: 1px solid rgba(220, 220, 220, 0.5); }
 
 .sec__header__title {
@@ -3090,9 +3100,8 @@ img.mfp-img {
   color: #a9c92f; }
   @media only screen and (min-width: 865px) {
     .sec__header__title {
-      padding-top: .5em;
-      padding-bottom: .333em;
-      padding-right: 1rem;
+      padding-top: 0.5em;
+      padding-bottom: 0.333em;
       float: right; } }
 
 .banner__inner {
@@ -3100,9 +3109,9 @@ img.mfp-img {
 
 .headaside {
   position: absolute;
-  right: 2em;
+  right: 40px;
   top: 0;
-  padding: 0.2em 0;
+  padding: 0.25em 0 0;
   line-height: 1; }
   .headaside:before, .headaside:after {
     content: " ";
@@ -3111,11 +3120,11 @@ img.mfp-img {
     clear: both; }
   @media only screen and (min-width: 865px) {
     .headaside {
-      right: 1em;
-      padding: 0.75em 0 0; } }
+      right: 160px;
+      padding: 0.666em 0 0; } }
   @media only screen and (min-width: 1045px) {
     .headaside {
-      padding-top: 1em; } }
+      right: 240px; } }
   .headaside ul {
     margin: 0;
     padding: 0 0;
@@ -3152,10 +3161,10 @@ img.mfp-img {
   @media only screen and (min-width: 865px) {
     .navbar__header {
       float: right;
-      padding-right: 7rem; } }
+      padding-left: 7rem; } }
   @media only screen and (min-width: 1340px) {
     .navbar__header {
-      padding-right: 7.5rem; } }
+      padding-left: 7.5rem; } }
 
 .navbar__brand {
   display: block;
@@ -3201,7 +3210,7 @@ input[type="checkbox"]#nav__toggle {
   visibility: hidden;
   opacity: 0; }
   input[type="checkbox"]#nav__toggle:checked + .navbar__navigation {
-    height: 25em;
+    height: 28em;
     opacity: 1; }
 
 .navbar__navigation {
@@ -3763,11 +3772,11 @@ input[type="checkbox"]#nav__toggle {
 .contactpage__ill {
   text-align: center;
   margin-top: 3em; }
-  @media only screen and (min-width: 865px) {
+  @media only screen and (min-width: 1045px) {
     .contactpage__ill {
       float: left;
-      width: 50%;
-      padding-right: 2em;
+      width: 66.666%;
+      padding-right: 1em;
       margin-top: 8em; } }
 
 .contactpage__content {
@@ -3777,46 +3786,35 @@ input[type="checkbox"]#nav__toggle {
     display: table; }
   .contactpage__content:after {
     clear: both; }
-  @media only screen and (min-width: 865px) {
+  @media only screen and (min-width: 1045px) {
     .contactpage__content {
       margin-top: 6em;
       float: right;
-      width: 50%;
-      padding-left: 2em; } }
-  .contactpage__content .incsi:before, .contactpage__content .incsi:after {
-    content: " ";
-    display: table; }
-  .contactpage__content .incsi:after {
-    clear: both; }
-  @media only screen and (min-width: 480px) {
-    .contactpage__content .balja {
-      float: left;
-      width: 55%; } }
-  @media only screen and (min-width: 1340px) {
-    .contactpage__content .balja {
-      width: 45%; } }
-  .contactpage__content .jobbja {
-    margin-top: .333em; }
-    @media only screen and (min-width: 480px) {
-      .contactpage__content .jobbja {
-        float: left;
-        width: 45%; } }
-    @media only screen and (min-width: 1340px) {
-      .contactpage__content .jobbja {
-        width: 55%; } }
-    .contactpage__content .jobbja a {
+      width: 33.333%;
+      padding-left: 1em; } }
+  .contactpage__content .incsi {
+    margin: 0 auto;
+    max-width: 400px; }
+  .contactpage__content .soci {
+    margin-top: 1.333em; }
+    .contactpage__content .soci:before, .contactpage__content .soci:after {
+      content: " ";
+      display: table; }
+    .contactpage__content .soci:after {
+      clear: both; }
+    .contactpage__content .soci a {
       display: inline-block;
       text-align: center;
-      font-size: .75em;
+      font-size: 0.75em;
       line-height: 1;
       text-decoration: none;
       color: #dcdcdc;
       margin-right: 1em;
       margin-bottom: 1em; }
-      .contactpage__content .jobbja a i {
+      .contactpage__content .soci a i {
         display: block;
         font-size: 3em; }
-      .contactpage__content .jobbja a:hover, .contactpage__content .jobbja a:focus {
+      .contactpage__content .soci a:hover, .contactpage__content .soci a:focus {
         color: #fff; }
 
 .mapblock {
@@ -3838,7 +3836,7 @@ input[type="checkbox"]#nav__toggle {
     clear: both; }
   .mapblock:after {
     z-index: 1;
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     left: 0;

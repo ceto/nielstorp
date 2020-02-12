@@ -1,106 +1,89 @@
 .contactpage__ill {
-	text-align: center;
-	margin-top: 3em;
-	@include bp($s2) {
-		float:left;
-		width:50%;
-		padding-right: 2em;
-		margin-top: 8em;
-	}
+  text-align: center;
+  margin-top: 3em;
+  @include bp($s3) {
+    float: left;
+    width: 66.666%;
+    padding-right: 1em;
+    margin-top: 8em;
+  }
 }
 
 .contactpage__content {
-	@include clearfix();
-	margin-top: 4em;
-	@include bp($s2) {
-		margin-top: 6em;
-		float:right;
-		width:50%;
-		padding-left: 2em;
-	}
+  @include clearfix();
+  margin-top: 4em;
+  @include bp($s3) {
+    margin-top: 6em;
+    float: right;
+    width: 33.333%;
+    padding-left: 1em;
+  }
 
-	.incsi {
-		@include clearfix();
-	}
-	.balja {
-		@include bp($s1) {
-			float:left;
-			width:55%;
-		}
-		@include bp($s4) {
-			width:45%;
-		}
-	}
+  .incsi {
+    margin: 0 auto;
+    max-width: 400px;
+  }
 
-	.jobbja {
-		margin-top: .333em;
-		@include bp($s1) {
-			float:left;
-			width:45%;
-		}
-		@include bp($s4) {
-			width:55%;
-		}
-		a {
-			display: inline-block;
-			text-align: center;
-			font-size: .75em;
-			line-height: 1;
-			text-decoration: none;
-			color:$nt_white;
-			margin-right: 1em;
-			margin-bottom: 1em;
-			i {
-				display: block;
-				font-size: 3em;
-			}
-			&:hover,&:focus {
-				color:#fff;
-			}
-		}
-	}
-
-
+  .soci {
+    @include clearfix();
+    margin-top: 1.333em;
+    a {
+      display: inline-block;
+      text-align: center;
+      font-size: 0.75em;
+      line-height: 1;
+      text-decoration: none;
+      color: $nt_white;
+      margin-right: 1em;
+      margin-bottom: 1em;
+      i {
+        display: block;
+        font-size: 3em;
+      }
+      &:hover,
+      &:focus {
+        color: #fff;
+      }
+    }
+  }
 }
 
 .mapblock {
   @include clearfix();
-	margin:2em 0 0;
-	width:auto;
+  margin: 2em 0 0;
+  width: auto;
 
-  clear:both;
-  height:300px;
+  clear: both;
+  height: 300px;
   position: relative;
   overflow: hidden;
   background-color: $nt_white;
-	background-image: url(../img/map.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
+  background-image: url(../img/map.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
-
-	&:after {
-		z-index: 1;
-		content: '';
-		display: block;
-		position: absolute;
-		left:0;
-		top:0;
-		width: 100%;
-		height: 100%;
-		box-shadow:inset 0 0 150px 0 rgba(0,0,0,0.875);
-		visibility: visible;
-	}
-	&:hover, &:focus {
-		&:after{
-			visibility: hidden;
-		}
-	}
+  &:after {
+    z-index: 1;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 150px 0 rgba(0, 0, 0, 0.875);
+    visibility: visible;
+  }
+  &:hover,
+  &:focus {
+    &:after {
+      visibility: hidden;
+    }
+  }
 }
 
 #map-canvas {
-
-
   height: 300px;
   margin: 0 -1em;
   padding: 0;

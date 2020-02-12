@@ -5,31 +5,34 @@ html {
   text-rendering: optimizeLegibility;
 }
 body {
-	background-color: $nt-black;
-	color: $nt-white;
-	font-family: $sans-serif;
-	font-weight: 300;
+  background-color: $nt-black;
+  color: $nt-white;
+  font-family: $sans-serif;
+  font-weight: 300;
   line-height: 1.4;
   overflow-x: hidden;
 }
 
-h1,h2,h3,h4,h5,h6 {
-	font-weight: 300;
-	text-transform: uppercase;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 a {
-  color:$yellow;
+  color: $yellow;
   text-decoration: none;
-
 }
 .wrapper {
-	@include clearfix();
-	padding:0 1em;
-	margin:0 auto;
-	@include bp($s2) {
+  @include clearfix();
+  padding: 0 1em;
+  margin: 0 auto;
+  @include bp($s2) {
     padding: 0 2em;
-
   }
   @include bp($s3) {
     padding: 0 3em;
@@ -43,18 +46,16 @@ a {
 }
 
 .wrapper--normal {
-	max-width:$s3;
+  max-width: $s3;
 }
 
 .wrapper--wide {
-	max-width:$s5;
+  max-width: $s5;
 }
 
 .wrapper--tricky {
   @include bp($s2) {
     padding: 0 2em;
-
-
   }
   @include bp($s3) {
     padding: 0 3em;
@@ -63,16 +64,17 @@ a {
     padding: 0 4.5em;
   }
   @include bp($s5) {
-    padding: 0 .5em;
+    padding: 0 0.5em;
     margin-left: calc(50vw - 703px);
   }
 }
 
 .wrapper--fullwidth {
-	padding: 0 0;
+  padding: 0 0;
+  @include bp($s3) {
+    padding: 0 1em;
+  }
 }
-
-
 
 .document {
   min-height: 100vh;
@@ -81,45 +83,45 @@ a {
 
 /****** Some Resets *****/
 
-
-
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
 img {
   max-width: 100%;
-  height:auto;
+  height: auto;
 }
 #map-canvas img {
   max-width: inherit;
 }
 
 figure {
-  margin:0;
+  margin: 0;
 }
-
 
 .btn {
   display: inline-block;
-  padding:0.333em 0.75em;
+  padding: 0.333em 0.75em;
   text-transform: uppercase;
   background-color: $gray;
   color: $nt-white;
   text-decoration: none;
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-color: $yellow;
-    color:$nt-black;
+    color: $nt-black;
   }
 }
 
 .btn--readmore {
-  margin:1em 0;
+  margin: 1em 0;
 }
 
 .alert {
   margin: 6em 0 1em;
-  .error404 &{
+  .error404 & {
     margin-top: 0;
   }
 }
