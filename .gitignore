@@ -5,3 +5,4 @@ node_modules
 assets/vendor/*
 !assets/vendor/masterslider
 !assets/vendor/jquery/dist/jquery.min.js
+dploy.yaml
