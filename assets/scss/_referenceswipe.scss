@@ -1,0 +1,41 @@
+.referenceswipe {
+  padding: 0 0 0 0;
+  position: relative;
+
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  scrollbar-width: none;
+
+  @include bp($s3) {
+    margin-left: -1em;
+    margin-right: -1em;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.referenceswipe__item {
+  flex: 0 0 auto;
+  margin-left: 1em;
+}
+
+.refcarousel {
+  @include bp($s3) {
+    margin-left: -1em;
+    margin-right: -1em;
+  }
+}
+
+.refcarousel__item {
+  // width: auto !important;
+}
+
+.slick-slide {
+  // width: auto !important;
+  padding: 0 1em 0 0;
+  background-color: $nt-black;
+}

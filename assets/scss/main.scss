@@ -1,23 +1,24 @@
-
-@import 'normalize';
-@import 'bits';
-@import 'mixins';
-@import 'ionicons.min';
-@import 'base';
-@import 'js';
-@import 'magnific-popup.scss';
-@import 'header';
-@import 'navigation';
-@import 'post';
-@import 'page';
-@import 'contact';
-@import 'aboutus';
-@import 'timeline';
-@import 'project';
-@import 'employee';
-@import 'home';
-@import 'footer';
-@import 'masterslider';
-@import 'ms-style';
-
-
+@import "normalize";
+@import "bits";
+@import "mixins";
+@import "ionicons.min";
+@import "base";
+@import "js";
+@import "magnific-popup.scss";
+@import "header";
+@import "navigation";
+@import "post";
+@import "page";
+@import "contact";
+@import "aboutus";
+@import "timeline";
+@import "project";
+@import "employee";
+@import "home";
+@import "footer";
+@import "masterslider";
+@import "ms-style";
+@import "referenceswipe";
+@import "referencecard";
+@import "../vendor/slick-carousel/slick/slick.scss";
+@import "slick-theme";

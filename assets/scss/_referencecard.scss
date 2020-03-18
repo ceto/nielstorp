@@ -1,0 +1,65 @@
+.referencecard {
+  position: relative;
+  overflow: hidden;
+  background-color: $nt-black;
+  padding-bottom: 0;
+  margin: 0;
+  height: auto;
+
+  a {
+    position: relative;
+    display: block;
+  }
+
+  img {
+    display: block;
+    transition-timing-function: ease-in;
+    transition-duration: 0.333s;
+    transition-property: transform;
+    transform-origin: left bottom;
+    max-width: none;
+    object-fit: cover;
+    height: calc(13rem + 20vw);
+    width: auto;
+  }
+  .icon {
+    font-size: 3.5rem;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+
+    transform: translateX(-50%) translateY(-50%);
+
+    fill: #fff !important;
+  }
+
+  a:hover,
+  a:focus {
+    img {
+      //transform: scale(1.0333);
+    }
+    .icon {
+      //filter: invert(1);
+    }
+  }
+}
+
+.referencecard__title {
+  display: none;
+  font-size: 0.875rem;
+  line-height: 1.125;
+
+  margin: 0 0 0.0875em;
+  a {
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      //color: $primary-color;
+      text-decoration: none;
+    }
+  }
+}

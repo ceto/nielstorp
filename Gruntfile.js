@@ -1,9 +1,9 @@
-'use strict';
+"use strict";
 module.exports = function(grunt) {
   // Load all tasks
-  require('load-grunt-tasks')(grunt);
+  require("load-grunt-tasks")(grunt);
   // Show elapsed time
-  require('time-grunt')(grunt);
+  require("time-grunt")(grunt);
 
   var jsFileList = [
     // 'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js',
@@ -18,55 +18,61 @@ module.exports = function(grunt) {
     // 'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js',
     // 'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js',
     // 'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js',
-    'assets/vendor/magnific-popup/dist/jquery.magnific-popup.js',
-    'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js',
-    'assets/vendor/isotope/dist/isotope.pkgd.min.js',
-    'assets/vendor/masterslider/jquery.easing.min.js',
-    'assets/vendor/masterslider/masterslider.js',
-    'assets/js/plugins/*.js',
-    'assets/js/_*.js'
+    "assets/vendor/magnific-popup/dist/jquery.magnific-popup.js",
+    "assets/vendor/imagesloaded/imagesloaded.pkgd.min.js",
+    "assets/vendor/isotope/dist/isotope.pkgd.min.js",
+    "assets/vendor/masterslider/jquery.easing.min.js",
+    "assets/vendor/masterslider/masterslider.js",
+    "assets/vendor/slick-carousel/slick/slick.js",
+    "assets/js/plugins/*.js",
+    "assets/js/_*.js"
   ];
 
   grunt.initConfig({
     jshint: {
       options: {
-        jshintrc: '.jshintrc'
+        jshintrc: ".jshintrc"
       },
-      all: ['Gruntfile.js', 'assets/js/*.js', '!assets/js/scripts.js', '!assets/**/*.min.*']
+      all: [
+        "Gruntfile.js",
+        "assets/js/*.js",
+        "!assets/js/scripts.js",
+        "!assets/**/*.min.*"
+      ]
     },
     sass: {
       dev: {
         files: {
-          'assets/css/main.css': ['assets/scss/main.scss']
+          "assets/css/main.css": ["assets/scss/main.scss"]
         },
         options: {
-          outputStyle: 'nested',
+          outputStyle: "nested",
           sourceMap: true
         }
       },
       build: {
         files: {
-          'assets/css/main.min.css': ['assets/scss/main.scss']
+          "assets/css/main.min.css": ["assets/scss/main.scss"]
         },
         options: {
-          outputStyle: 'compressed',
+          outputStyle: "compressed",
           sourceMap: true
         }
       }
     },
     concat: {
       options: {
-        separator: ';',
+        separator: ";"
       },
       dist: {
         src: [jsFileList],
-        dest: 'assets/js/scripts.js',
-      },
+        dest: "assets/js/scripts.js"
+      }
     },
     uglify: {
       dist: {
         files: {
-          'assets/js/scripts.min.js': [jsFileList]
+          "assets/js/scripts.min.js": [jsFileList]
         }
       }
     },
@@ -75,21 +81,18 @@ module.exports = function(grunt) {
         options: {
           map: true
         },
-        src: 'assets/css/main.css'
+        src: "assets/css/main.css"
       },
       build: {
-        src: 'assets/css/main.min.css'
+        src: "assets/css/main.min.css"
       }
     },
     modernizr: {
       build: {
-        devFile: 'assets/vendor/modernizr/modernizr.js',
-        outputFile: 'assets/js/vendor/modernizr.min.js',
+        devFile: "assets/vendor/modernizr/modernizr.js",
+        outputFile: "assets/js/vendor/modernizr.min.js",
         files: {
-          'src': [
-            ['assets/js/scripts.min.js'],
-            ['assets/css/main.min.css']
-          ]
+          src: [["assets/js/scripts.min.js"], ["assets/css/main.min.css"]]
         },
         extra: {
           shiv: false
@@ -103,14 +106,14 @@ module.exports = function(grunt) {
         options: {
           format: true,
           length: 32,
-          manifest: 'assets/manifest.json',
+          manifest: "assets/manifest.json",
           querystring: {
-            style: 'roots_css',
-            script: 'roots_js'
+            style: "roots_css",
+            script: "roots_js"
           }
         },
         files: {
-          'lib/scripts.php': 'assets/{css,js}/{main,scripts}.min.{css,js}'
+          "lib/scripts.php": "assets/{css,js}/{main,scripts}.min.{css,js}"
         }
       }
     },
@@ -123,21 +126,12 @@ module.exports = function(grunt) {
     },
     watch: {
       sass: {
-        files: [
-          'assets/scss/*.scss',
-          'assets/scss/**/*.scss'
-        ],
-        tasks: [
-          'sass:dev',
-          'autoprefixer:dev'
-        ]
+        files: ["assets/scss/*.scss", "assets/scss/**/*.scss"],
+        tasks: ["sass:dev", "autoprefixer:dev"]
       },
       js: {
-        files: [
-          jsFileList,
-          '<%= jshint.all %>'
-        ],
-        tasks: ['jshint', 'concat']
+        files: [jsFileList, "<%= jshint.all %>"],
+        tasks: ["jshint", "concat"]
       },
       livereload: {
         // Browser live reloading
@@ -146,33 +140,31 @@ module.exports = function(grunt) {
           livereload: true
         },
         files: [
-          'assets/css/main.css',
-          'assets/js/scripts.js',
-          'templates/*.php',
-          '*.php'
+          "assets/css/main.css",
+          "assets/js/scripts.js",
+          "templates/*.php",
+          "*.php"
         ]
       }
     }
   });
 
   // Register tasks
-  grunt.registerTask('default', [
-    'dev'
+  grunt.registerTask("default", ["dev"]);
+  grunt.registerTask("dev", [
+    "jshint",
+    "sass:dev",
+    "autoprefixer:dev",
+    "concat",
+    "notify"
   ]);
-  grunt.registerTask('dev', [
-    'jshint',
-    'sass:dev',
-    'autoprefixer:dev',
-    'concat',
-    'notify'
-  ]);
-  grunt.registerTask('build', [
-    //'jshint',
-    'sass:build',
-    'autoprefixer:build',
-    'uglify',
-    'modernizr',
-    'version',
-    'notify'
+  grunt.registerTask("build", [
+    "jshint",
+    "sass:build",
+    "autoprefixer:build",
+    "uglify",
+    "modernizr",
+    "version",
+    "notify"
   ]);
 };
