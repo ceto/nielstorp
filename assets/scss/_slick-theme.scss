@@ -7,9 +7,9 @@
 // "\2192" outputs ascii character "→"
 // "\2022" outputs ascii character "•"
 
-$slick-font-path: "./fonts/" !default;
+$slick-font-path: "../fonts/" !default;
 $slick-font-family: "slick" !default;
-$slick-loader-path: "./" !default;
+$slick-loader-path: "../img/" !default;
 $slick-arrow-color: white !default;
 $slick-dot-color: black !default;
 $slick-dot-color-active: $slick-dot-color !default;
@@ -68,6 +68,7 @@ $slick-opacity-not-active: 0.5 !default;
 .slick-prev,
 .slick-next {
   position: absolute;
+  z-index: 1;
   display: block;
   height: 3rem;
   width: 3rem;
@@ -112,10 +113,10 @@ $slick-opacity-not-active: 0.5 !default;
 }
 
 .slick-prev {
-  left: -0.5rem;
+  left: 0.5rem;
   [dir="rtl"] & {
     left: auto;
-    right: -0.5rem;
+    right: 0.5rem;
   }
   &:before {
     content: $slick-prev-character;
@@ -190,7 +191,7 @@ $slick-opacity-not-active: 0.5 !default;
         width: inherit;
         height: inherit;
         font-family: $slick-font-family;
-        font-size: 2rem;
+        font-size: .75rem;
         line-height: 1;
         text-align: center;
         color: white;
@@ -203,5 +204,30 @@ $slick-opacity-not-active: 0.5 !default;
       color: $yellow;
       opacity: $slick-opacity-default;
     }
+  }
+}
+
+.refcarousel {
+  .slick-slide {
+    // width: auto !important;
+    padding: 0 1em 0 0;
+    background-color: $nt-black;
+  }
+}
+
+
+.refcarouselmono {
+  .slick-slide {
+    transition: opacity .2s ease-in;
+  }
+  .slick-slide[aria-hidden=true] {
+    opacity: .05;
+  }
+}
+
+
+.refnavi {
+  .slick-slide {
+    padding: 0 .75em 0 0;
   }
 }

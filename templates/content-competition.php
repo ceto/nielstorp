@@ -1,49 +1,65 @@
 <?php while (have_posts()) : the_post(); ?>
+<br>
   <article <?php post_class('project--single'); ?>>
   <div class="wrapper wrapper--wide">
     <section class="project__gallery">
 
-			<?php
-				$galleryfiles = get_post_meta( $post->ID , '_pdata_gallery', 1 );
-				if ($galleryfiles!='') {
-			?>
-        <a href="#" class="fulltoggle"><i class="ion ion-arrow-expand"></i></a>
-				<div class="project__theslider master-slider ms-skin-default" id="project__theslider">
+    <?php $galleryfiles = get_post_meta( $post->ID , '_pdata_gallery', 1 ); ?>
+        <?php if ($galleryfiles!='') : ?>
+          <section id="referenceswipe" class="refcarouselmono" itemscope itemtype="http://schema.org/ImageGallery">
+            <?php foreach ( (array) $galleryfiles as $attachment_id => $attachment_url ) : ?>
+              <?php
+                $image_url_array = wp_get_attachment_image_src($attachment_id, 'full', true);
+                $image_url = $image_url_array[0];
+              ?>
+              <div class="refcarousel__item">
+                <?php
+                    $ratio=56.25;
+                    $psattr='data-size="1600x900';
+                    $titi=wp_get_attachment_image_src($attachment_id, 'full', true);
+                    $ratio = $titi[2] / $titi[1] * 100;
+                    $targimage = wp_get_attachment_image_src($attachment_id, 'full', true);
+                    $psattr = 'data-imagetarget="'.$targimage[0].'" data-size="'.$targimage['1'].'x'.$targimage['2'].'"';
+                ?>
+                <figure class="referencecard" style="/* padding-bottom: <?= $ratio ?>%*/" itemscope itemtype="http://schema.org/ImageObject">
+                  <a href="<?php echo '#'; //echo $targimage[0]; ?>" <?= $psattr; ?>>
+                    <?= wp_get_attachment_image($attachment_id, 'full', true); ?>
+                  </a>
+                  <figcaption class="referencecard__title"><?php the_title(); ?></figcaption>
+                </figure>
+              </div>
+            <?php endforeach; ?>
+          </section>
+          <br>
+          <nav id="refnavi" class="refnavi">
+          <?php foreach ( (array) $galleryfiles as $attachment_id => $attachment_url ) : ?>
+              <?php
+                $image_url_array = wp_get_attachment_image_src($attachment_id, 'tiny11', true);
+                $image_url = $image_url_array[0];
+              ?>
+              <div class="refnavi__item">
+                <?php
+                    $ratio=56.25;
+                    $psattr='data-size="1600x900';
+                    $titi=wp_get_attachment_image_src($attachment_id, 'tiny11', true);
+                    $ratio = $titi[2] / $titi[1] * 100;
+                    $targimage = wp_get_attachment_image_src($attachment_id, 'tiny11', true);
+                    $psattr = 'data-imagetarget="'.$targimage[0].'" data-size="'.$targimage['1'].'x'.$targimage['2'].'"';
+                ?>
+                <figure class="refnavcard" style="/* padding-bottom: <?= $ratio ?>%*/" itemscope itemtype="http://schema.org/ImageObject">
+                  <a href="<?php echo '#'; //echo $targimage[0]; ?>" <?= $psattr; ?>>
+                    <?= wp_get_attachment_image($attachment_id, 'tiny11', true); ?>
+                  </a>
+                </figure>
+              </div>
+            <?php endforeach; ?>
 
-          <?php if (get_post_meta( $post->ID , '_pdata_video', 1 )) :?>
-            <?php
-              $image_url_array = wp_get_attachment_image_src(get_post_meta( $post->ID , '_pdata_videoimg_id', 1 ), 'full', true);
-              $image_url = $image_url_array[0];
-              $thumb_url_array = wp_get_attachment_image_src(get_post_meta( $post->ID , '_pdata_videoimg_id', 1 ), 'tiny169', true);
-              $thumb_url = $thumb_url_array[0];
-            ?>
-            <div class="ms-slide">
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/vendor/masterslider/blank.gif" data-src="<?php echo $image_url; ?>" alt="<?php the_title(); ?>"/>
-              <img src="<?php echo $thumb_url; ?>" width="480" height="270" alt="<?php the_title(); ?>" class="ms-thumb"/>
-              <a href="<?php echo str_replace('watch?v=','embed/',get_post_meta( $post->ID , '_pdata_video', 1 )); ?>" data-type="video">
-                <?php the_title(); ?> video
-              </a>
-              <div class="ms-info"><?php _e('Press play to start video','nt');   ?></div>
-            </div>
-          <?php endif; ?>
+          </nav>
 
-          <?php foreach ( (array) $galleryfiles as $attachment_id => $attachment_url ) { ?>
-						<?php
-							$image_url_array = wp_get_attachment_image_src($attachment_id, 'full', true);
-							$image_url = $image_url_array[0];
-							$thumb_url_array = wp_get_attachment_image_src($attachment_id, 'tiny169', true);
-							$thumb_url = $thumb_url_array[0];
-						?>
 
-						<div class="ms-slide">
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/vendor/masterslider/blank.gif" data-src="<?php echo $image_url; ?>" alt="<?php the_title(); ?>"/>
-							<img src="<?php echo $thumb_url; ?>" width="480" height="270" alt="<?php the_title(); ?>" class="ms-thumb"/>
-							<div class="ms-info"><?php the_title(); ?></div>
-						</div>
-					<?php } ?>
-				</div>
-			<?php } else { the_post_thumbnail('large169'); } ?>
-
+        <?php else : ?>
+          <?php the_post_thumbnail('large169'); ?>
+        <?php endif; ?>
 
 
 

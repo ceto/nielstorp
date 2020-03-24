@@ -5023,10 +5023,6 @@ input[type="checkbox"]#nav__toggle {
     margin-left: -1em;
     margin-right: -1em; } }
 
-.slick-slide {
-  padding: 0 1em 0 0;
-  background-color: #2E2F2C; }
-
 .referencecard {
   position: relative;
   overflow: hidden;
@@ -5140,13 +5136,13 @@ input[type="checkbox"]#nav__toggle {
 
 /* Slider */
 .slick-loading .slick-list {
-  background: #fff url("./ajax-loader.gif") center center no-repeat; }
+  background: #fff url("../img/ajax-loader.gif") center center no-repeat; }
 
 /* Icons */
 @font-face {
   font-family: "slick";
-  src: url("./fonts/slick.eot");
-  src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
+  src: url("../fonts/slick.eot");
+  src: url("../fonts/slick.eot?#iefix") format("embedded-opentype"), url("../fonts/slick.woff") format("woff"), url("../fonts/slick.ttf") format("truetype"), url("../fonts/slick.svg#slick") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -5154,6 +5150,7 @@ input[type="checkbox"]#nav__toggle {
 .slick-prev,
 .slick-next {
   position: absolute;
+  z-index: 1;
   display: block;
   height: 3rem;
   width: 3rem;
@@ -5194,10 +5191,10 @@ input[type="checkbox"]#nav__toggle {
     -moz-osx-font-smoothing: grayscale; }
 
 .slick-prev {
-  left: -0.5rem; }
+  left: 0.5rem; }
   [dir="rtl"] .slick-prev {
     left: auto;
-    right: -0.5rem; }
+    right: 0.5rem; }
   .slick-prev:before {
     content: "←"; }
     [dir="rtl"] .slick-prev:before {
@@ -5259,7 +5256,7 @@ input[type="checkbox"]#nav__toggle {
         width: inherit;
         height: inherit;
         font-family: "slick";
-        font-size: 2rem;
+        font-size: .75rem;
         line-height: 1;
         text-align: center;
         color: white;
@@ -5269,4 +5266,17 @@ input[type="checkbox"]#nav__toggle {
     .slick-dots li.slick-active button:before {
       color: #a9c92f;
       opacity: 0.85; }
+
+.refcarousel .slick-slide {
+  padding: 0 1em 0 0;
+  background-color: #2E2F2C; }
+
+.refcarouselmono .slick-slide {
+  transition: opacity .2s ease-in; }
+
+.refcarouselmono .slick-slide[aria-hidden=true] {
+  opacity: .05; }
+
+.refnavi .slick-slide {
+  padding: 0 .75em 0 0; }
 /*# sourceMappingURL=main.css.map */

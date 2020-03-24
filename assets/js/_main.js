@@ -70,7 +70,6 @@
 jQuery(document).ready(function($) {
   $(".refcarousel").slick({
     mobileFirst: true,
-    arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: false,
@@ -79,7 +78,37 @@ jQuery(document).ready(function($) {
     centerMode: true,
     variableWidth: true,
     dots: true,
-    arrows: true
+    arrows: true,
+
+  });
+  $(".refcarouselmono").slick({
+    mobileFirst: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 3000,
+    infinite: true,
+    centerMode: true,
+    variableWidth: true,
+    dots: false,
+    arrows: true,
+    asNavFor: '.refnavi'
+  });
+
+
+  $(".refnavi").slick({
+    mobileFirst: true,
+    slidesToShow: 7,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 3000,
+    infinite: true,
+    centerMode: true,
+    // variableWidth: true,
+    dots: false,
+    arrows: false,
+    focusOnSelect: true,
+    asNavFor: '.refcarouselmono',
   });
 
   $(".subnav-toggle").click(function() {
